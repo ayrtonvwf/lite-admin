@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug": "pug -o dist -P -w src/pug",
-    "sass": "node-sass -w src/scss -o dist/css"
+    "sass": "node-sass -w src/scss -o dist/css",
+    "live": "browser-sync start -s dist -f dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.18.12",
     "node-sass": "^4.5.3",
     "pug-cli": "^1.0.0-alpha6"
   }
