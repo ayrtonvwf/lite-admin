@@ -44,22 +44,27 @@ body {
 .header-pane {
   position: absolute;
   background: white;
-  right: 0px;
-  top: 50px;
+  right: 20px;
+  top: 52px;
   margin-top: 0px;
   display: none;
   z-index: 10; }
   .header-pane:target {
     display: block; }
+  @media (max-width: 720px) {
+    .header-pane {
+      top: 102px; } }
 
 .ticket-pane {
   list-style: none;
   padding: 0px;
   min-width: 250px;
-  margin-right: 20px;
   margin-bottom: 0px;
-  max-height: calc(100vh - 50px);
+  max-height: calc(100vh - 52px);
   overflow-y: auto; }
+  @media (max-width: 720px) {
+    .ticket-pane {
+      max-height: calc(100vh - 102px); } }
 
 .ticket-link {
   display: block;
@@ -74,6 +79,37 @@ body {
   display: block;
   color: #666666;
   margin-top: 3px; }
+
+.user-pane {
+  width: 250px;
+  height: 250px; }
+
+.user-background {
+  background: #3c8dbc;
+  height: 200px;
+  color: white;
+  text-align: center;
+  padding-top: 50px; }
+
+.user-icon {
+  font-size: 60px !important;
+  display: block !important;
+  margin-bottom: 5px; }
+
+.user-buttons {
+  display: flex; }
+
+.user-btn {
+  margin: auto;
+  display: block;
+  height: 34px;
+  border: 1px solid #b8c7ce;
+  font-size: 13px;
+  color: #666666;
+  margin-top: 8px;
+  padding: 0px 15px;
+  line-height: 34px;
+  text-decoration: none; }
 
 /**************************/
 .container {
