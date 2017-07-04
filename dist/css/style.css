@@ -196,7 +196,16 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #b8c7ce;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: background .2s; }
+  .menu-link:hover {
+    background: #1f1f1f;
+    border-left-color: #3c8dbc; }
+
+.menu-active {
+  color: white;
+  background: #262626;
+  border-left-color: #3c8dbc; }
 
 .menu-close {
   position: absolute;

@@ -203,6 +203,16 @@ body {
     line-height: 20px;
     color: $snow;
     text-decoration: none;
+    transition: background .2s;
+    &:hover {
+        background: darken($black, 8);
+        border-left-color: $blue;
+    }
+}
+.menu-active {
+    color: white;
+    background: darken($black, 5);
+    border-left-color: $blue;
 }
 .menu-close {
     position: absolute;
