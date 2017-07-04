@@ -84,6 +84,11 @@ body {
   width: 250px;
   height: 250px; }
 
+.user-close {
+  position: absolute;
+  top: -52px;
+  right: -20px; }
+
 .user-background {
   background: #3c8dbc;
   height: 200px;
