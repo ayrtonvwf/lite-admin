@@ -99,8 +99,16 @@ body {
         position: absolute;
         &:target {
             height: 100%;
+            animation-name: show_close_menu;
+            animation-duration: 1s;
+            overflow: visible;
         }
     }
+}
+@keyframes show_close_menu {
+    0% {overflow: hidden}
+    99% {overflow: hidden}
+    100% {overflow: visible}
 }
 .search {
     width: 100%;
@@ -155,5 +163,6 @@ body {
     text-decoration: none;
 }
 .menu-close {
-    background: red;
+    position: absolute;
+    margin-top: -50px;
 }
