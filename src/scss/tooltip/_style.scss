@@ -1,0 +1,36 @@
+.tooltip {
+    position: relative;
+    &::before {
+        content:attr(title);
+        display: block;
+        opacity: 0;
+        position: absolute;
+        background: black;
+        color: white;
+        bottom: calc(100% + 2px);
+        padding: 3px 7px;
+        border-radius: 4px;
+        transition: opacity .7s;
+        z-index: 10;
+        max-width: 200px;
+        min-width: 100px;
+        pointer-events: none;
+        text-align: center;
+        font-size: 13px;
+    }
+    &:hover::before {
+        opacity: 1;
+    }
+}
+.tooltip-right::before {
+    margin-left: 2px;
+    left: 100%;
+    bottom: auto;
+}
+.tooltip-left::before {
+    margin-left: 0px;
+    left: auto;
+    right: 100%;
+    bottom: auto;
+    margin-right: 2px;
+}
