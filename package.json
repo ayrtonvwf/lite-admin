@@ -1,7 +1,8 @@
 {
   "name": "lite-admin",
   "version": "1.0.0",
-  "description": "ayrtonvwf/lite-admin",
+  "description": "",
+  "respository": "ayrtonvwf/lite-admin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
