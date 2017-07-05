@@ -36,13 +36,13 @@ body {
     padding: 15px;
     margin-right: auto;
 
-    @media (max-width: $small) {
+    @media (max-width: $medium) {
         width: 100%;
     }
 }
 .menu-toggle {
     margin-right: auto;
-    @media (min-width: #{$small + 1px}) {
+    @media (min-width: #{$medium + 1px}) {
         display: none;
     }
 }
@@ -57,7 +57,7 @@ body {
     &:target {
         display: block;
     }
-    @media (max-width: $small) {
+    @media (max-width: $medium) {
         top: 102px;
     }
 }
@@ -68,7 +68,7 @@ body {
     margin-bottom: 0px;
     max-height: calc(100vh - 52px);
     overflow-y: auto;
-    @media (max-width: $small) {
+    @media (max-width: $medium) {
         max-height: calc(100vh - 102px);
     }
 }
@@ -133,7 +133,7 @@ body {
     width: 230px;
     overflow: hidden;
     z-index: 10;
-    @media (max-width: 720px) {
+    @media (max-width: $medium) {
         align-self: flex-start;
         transition: max-height 1s;
         width: 100%;
@@ -217,4 +217,11 @@ body {
 .menu-close {
     position: absolute;
     margin-top: -50px;
+}
+/************************/
+.content {
+    width: calc(100% - 230px);
+    @media (max-width: $medium) {
+        width: 100%;
+    }
 }

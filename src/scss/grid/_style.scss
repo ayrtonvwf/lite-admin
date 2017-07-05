@@ -1,0 +1,38 @@
+@import 'config';
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    margin: $margin;
+    width: 100%;
+}
+@for $i from 1 through 12 {
+    $width: calc(#{percentage($i/12)} - #{2*$margin});
+    .lg-#{$i} {
+        @media (min-width: ($medium + 1px)) {
+            width: $width !important;
+        }
+    }
+    .md-#{$i} {
+        @media (min-width: ($small + 1px)) and (max-width: $medium) {
+            width: $width !important;
+        }
+    }
+    .sm-#{$i} {
+        @media (max-width: $small) {
+            width: $width;
+        }
+    }
+}
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.green {
+    background: green;
+}
