@@ -225,3 +225,17 @@ body {
         width: 100%;
     }
 }
+/************************/
+.box {
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px $snow;
+    border-top: 3px solid $blue;
+}
+.box-header {
+    border-bottom: 1px solid $snow;
+    font-size: 18px;
+    padding: 3px 5px 7px 5px;
+    color: $black;
+}
