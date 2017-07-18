@@ -462,3 +462,15 @@ body {
   right: 100%;
   bottom: auto;
   margin-right: 2px; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+  .table th {
+    text-align: left;
+    padding: 5px 10px; }
+  .table tbody > tr:hover {
+    background: #f0f0f0; }
+  .table td {
+    border-top: 1px solid lightgray;
+    padding: 5px 10px; }

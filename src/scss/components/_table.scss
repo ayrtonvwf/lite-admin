@@ -1,0 +1,16 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        text-align: left;
+        padding: 5px 10px;
+    }
+    tbody>tr:hover {
+        background: rgb(240, 240, 240);
+    }
+    td {
+        border-top: 1px solid lightgray;
+        padding: 5px 10px;
+    }
+}
