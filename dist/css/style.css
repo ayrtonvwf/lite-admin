@@ -474,3 +474,9 @@ body {
   .table td {
     border-top: 1px solid lightgray;
     padding: 5px 10px; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
