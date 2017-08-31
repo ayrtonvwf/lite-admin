@@ -1,13 +1,13 @@
 doctype html
 html
     head
-        title Infomec
+        title LiteAdmin
         meta(charset='utf-8')
         link(rel='stylesheet' href='css/style.css')
         link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     body
         header.header
-            a.header-button.main-button(href='index.html') InfoMec
+            a.header-button.main-button(href='index.html') LiteAdmin
             a.header-button.menu-toggle(href='#menu')
                 i.fa.fa-bars
             a.header-button(href='#pane-tickets')
@@ -91,14 +91,15 @@ html
                             | Valdir José Alvez
                             br
                             | hoje
+            a.header-pane-close(href='#')
             .header-pane.user-pane#pane-user
-                a(href='#').header-button.user-close Ayrton
                 .user-background
                     i.fa.fa-user.user-icon
                     | Ayrton
                 .user-buttons
                     a.user-btn(href='#') Editar
                     a.user-btn(href='#') Sair
+            a.header-pane-close(href='#')
         div.container
             nav.menu#menu
                 a.menu-close.header-button(href='#')

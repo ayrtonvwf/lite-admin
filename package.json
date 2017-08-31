@@ -8,13 +8,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug": "pug -o dist -P -w src/pug",
     "sass": "node-sass -w src/scss -o dist/css",
+    "prefix": "postcss dist/css/style.css --use autoprefixer -d dist/css/",
     "live": "browser-sync start -s dist -f dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "browser-sync": "^2.18.12",
     "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "postcss-flexibility": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6"
-  }
+  },
+  "browserlist": [
+    "> 1% in BR",
+    "ie >= 7"
+  ]
 }
