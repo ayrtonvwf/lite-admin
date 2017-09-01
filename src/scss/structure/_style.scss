@@ -219,6 +219,7 @@ body {
 }
 /************************/
 .content {
+    padding: 5px;
     width: calc(100% - 230px);
     @media (max-width: $medium) {
         width: 100%;

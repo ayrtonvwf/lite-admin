@@ -1,38 +1,70 @@
 @import 'config';
 
+$sm-viewport: 'min-width: 48em';
+$md-viewport: 'min-width: 64em';
+$lg-viewport: 'min-width: 75em';
+
 .row {
-    width: 100%;
     display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
     flex-wrap: wrap;
 }
-.col {
-    margin: $margin;
-    width: 100%;
-}
+
 @for $i from 1 through 12 {
-    $width: calc(#{percentage($i/12)} - #{2*$margin});
-    .lg-#{$i} {
-        @media (min-width: ($medium + 1px)) {
-            width: $width !important;
-        }
+    .col-xs-#{$i} {
+        flex: 0 0 auto;
+        padding-right: #{$half-gutter-width};
+        padding-left: #{$half-gutter-width};
+        flex-basis: #{percentage($i/12)};
+        max-width: #{percentage($i/12)};
     }
-    .md-#{$i} {
-        @media (min-width: ($small + 1px)) and (max-width: $medium) {
-            width: $width !important;
-        }
+    .col-xs-offset-#{$i} {
+        margin-left: #{percentage($i/12)};
     }
-    .sm-#{$i} {
-        @media (max-width: $small) {
-            width: $width;
+}
+
+@media (#{$container-sm}) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            flex: 0 0 auto;
+            padding-right: #{$half-gutter-width};
+            padding-left: #{$half-gutter-width};
+            flex-basis: #{percentage($i/12)};
+            max-width: #{percentage($i/12)};
+        }
+        .col-sm-offset-#{$i} {
+            margin-left: #{percentage($i/12)};
         }
     }
 }
-.red {
-    background: red;
+
+@media (#{$md-viewport}) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            flex: 0 0 auto;
+            padding-right: #{$half-gutter-width};
+            padding-left: #{$half-gutter-width};
+            flex-basis: #{percentage($i/12)};
+            max-width: #{percentage($i/12)};
+        }
+        .col-md-offset-#{$i} {
+            margin-left: #{percentage($i/12)};
+        }
+    }
 }
-.blue {
-    background: blue;
-}
-.green {
-    background: green;
+
+@media (#{$lg-viewport}) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            flex: 0 0 auto;
+            padding-right: #{$half-gutter-width};
+            padding-left: #{$half-gutter-width};
+            flex-basis: #{percentage($i/12)};
+            max-width: #{percentage($i/12)};
+        }
+        .col-lg-offset-#{$i} {
+            margin-left: #{percentage($i/12)};
+        }
+    }
 }
