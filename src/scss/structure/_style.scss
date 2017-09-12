@@ -10,6 +10,7 @@ body {
     margin: 0px;
     font-family: sans-serif;
     background: $background;
+    overflow-x: hidden;
 }
 .header {
     background: $blue;

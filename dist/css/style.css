@@ -8,7 +8,8 @@ div, header, nav, main, footer, section, article, aside {
 body {
   margin: 0px;
   font-family: sans-serif;
-  background: #ecf0f5; }
+  background: #ecf0f5;
+  overflow-x: hidden; }
 
 .header {
   background: #3c8dbc;
