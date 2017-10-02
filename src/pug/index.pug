@@ -91,6 +91,7 @@ html
                             | Valdir José Alvez
                             br
                             | hoje
+            a.header-pane-close(href='#')
             .header-pane.user-pane#pane-user
                 a(href='#').header-button.user-close Ayrton
                 .user-background
@@ -99,6 +100,7 @@ html
                 .user-buttons
                     a.user-btn(href='#') Editar
                     a.user-btn(href='#') Sair
+            a.header-pane-close(href='#')
         div.container
             nav.menu#menu
                 a.menu-close.header-button(href='#')
@@ -200,8 +202,21 @@ html
                                     option Teste 2
                                     option Teste 3
                             .col-xs-4
-                                input#field_3.checkbox(type='checkbox')
-                                label.label(for='field_3') Teste de checkbox
+                                label.label
+                                    input.checkbox(type='checkbox')
+                                    | Teste de checkbox
                             .col-xs-4
-                                input#field_4.radio(type='radio')
-                                label.label(for='field_4') Teste de radio
+                                label.label
+                                    input.radio(type='radio')
+                                    | Teste de radio
+                        .row
+                            .col-xs-12
+                                ul.pagination
+                                    li.active
+                                        a(href='#') 1
+                                    li
+                                        a(href='#') 2
+                                    li
+                                        a(href='#') 3
+                                    li
+                                        a(href='#') »

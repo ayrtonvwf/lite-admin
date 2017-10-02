@@ -1,0 +1,17 @@
+.pagination {
+    padding: 0px;
+    &>li {
+        display: inline-block;
+        &>a {
+            display: block;
+            background-color: lightgray;
+            padding: 0px 12px;
+            line-height: 30px;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+}

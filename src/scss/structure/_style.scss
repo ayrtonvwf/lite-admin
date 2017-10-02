@@ -1,6 +1,6 @@
 @import 'config';
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 div, header, nav, main, footer, section, article, aside {
