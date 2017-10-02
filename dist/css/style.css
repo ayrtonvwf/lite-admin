@@ -1127,7 +1127,8 @@ body {
 .pagination {
   padding: 0px; }
   .pagination > li {
-    display: inline-block; }
+    display: inline-block;
+    margin: 1px; }
     .pagination > li > a {
       display: block;
       background-color: lightgray;

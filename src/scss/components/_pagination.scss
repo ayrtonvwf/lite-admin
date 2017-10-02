@@ -2,6 +2,7 @@
     padding: 0px;
     &>li {
         display: inline-block;
+        margin: 1px;
         &>a {
             display: block;
             background-color: lightgray;
