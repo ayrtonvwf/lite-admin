@@ -15,7 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^7.1.2",
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "postcss-flexibility": "^2.0.0",

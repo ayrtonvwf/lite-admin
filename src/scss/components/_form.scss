@@ -10,7 +10,6 @@
 .checkbox {
     display: inline-block;
     appearance: none;
-    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     background-color: white;
@@ -38,7 +37,6 @@
 .radio {
     display: inline-block;
     appearance: none;
-    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -64,39 +62,3 @@
         }
     }
 }
-/*
-.radio {
-    display: none;
-    &+.label {
-        cursor: pointer;
-        padding-left: 25px;
-        line-height: 20px;
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 20px;
-            border-radius: 10px;
-            left: 15px;
-            height: 20px;
-            padding-right: 1px;
-            line-height: 18px;
-            border: 1px solid blue;
-            box-sizing: border-box;
-            top: 3px;
-            margin-right: 5px;
-            color: blue;
-            text-align: center;
-            font-size: 40px;
-        }
-        &:hover::before {
-            border-width: 2px;
-            line-height: 16px;
-        }
-    }
-    &:checked+.label::before {
-        content: "•";
-
-    }
-}
-*/
