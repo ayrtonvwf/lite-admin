@@ -984,7 +984,8 @@ body {
   border-radius: 3px;
   cursor: pointer;
   -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  transition: background-color .2s;
+  text-decoration: none; }
 
 .btn-green {
   background: #00a65a; }
@@ -1152,3 +1153,45 @@ body {
 
 .alert-yellow {
   background-color: orange; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 20px;
+  background-color: white;
+  z-index: 10;
+  width: 800px;
+  left: calc(50% - 400px); }
+  @media (max-width: 800px) {
+    .modal {
+      width: 90%;
+      left: 5%; } }
+  .modal:target {
+    display: block; }
+
+.modal-header {
+  padding: 10px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #374850;
+  border-bottom: 1px solid lightgray; }
+
+.modal-body {
+  padding: 10px; }
+
+.modal-footer {
+  border-top: 1px solid lightgray;
+  padding: 2px; }
+
+.modal-close {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 9; }
+  .modal:target + .modal-close {
+    display: block; }
