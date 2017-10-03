@@ -139,88 +139,91 @@ html
                     |  Dados da Empresa
             main.content
                 .row
-                    h1.content-title
-                        i.fa.fa-users Título da página
+                    .col-xs-12
+                        h1.content-title
+                            i.fa.fa-users Título da página
                 .row
-                    .box.col-lg-6
-                        .box-header
-                            i.fa.fa-users
-                            |  Teste de cabeçalho
-                        .row
-                            .col-sm-12
-                                button.btn-green.tooltip.tooltip-right(title='teste de tooltip que vai quebrar o layout') Teste
-                                button.btn-yellow
-                                    i.fa.fa-users
-                                a.btn-red.tooltip(title='olha só que legal esse tooltip') Test
-                                a.btn-blue.btn-small.tooltip.tooltip-left(title='outro tooltip')
-                                    i.fa.fa-edit
-                        .row
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                            .col-sm-6.col-md-4.col-lg-2.red a
-                        .row
-                            .col-sm-12
-                                table.table
-                                    thead
-                                        tr
-                                            th Nome
-                                            th Telefone
-                                            th &nbsp;
-                                    tbody
-                                        tr
-                                            td Ayrton
-                                            td (45) 9 9853-1262
-                                            td.text-right
-                                                a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                    i.fa.fa-fw.fa-trash
-                                        tr
-                                            td Ayrton
-                                            td (45) 9 9853-1262
-                                            td.text-right
-                                                a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                    i.fa.fa-fw.fa-trash
-                                        tr
-                                            td Ayrton
-                                            td (45) 9 9853-1262
-                                            td.text-right
-                                                a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                    i.fa.fa-fw.fa-trash
-                                    tfoot
-                                        tr
-                                            td(colspan='3') #[b Total:] 3
-                        .row
-                            .col-xs-4
-                                label.label(for="field_1") Teste de campo
-                                input#field_1.input(placeholder='Teste de campo')
-                            .col-xs-4
-                                label.label(for="field_2") Teste de combo
-                                select#field_2.input
-                                    option Teste 1
-                                    option Teste 2
-                                    option Teste 3
-                            .col-xs-4
-                                label.label
-                                    input.checkbox(type='checkbox')
-                                    | Teste de checkbox
-                            .col-xs-4
-                                label.label
-                                    input.radio(type='radio')
-                                    | Teste de radio
-                        .row
-                            .col-xs-12
-                                ul.pagination
-                                    li.active
-                                        a(href='#') 1
-                                    li
-                                        a(href='#') 2
-                                    li
-                                        a(href='#') 3
-                                    li
-                                        a(href='#') »
-                    .box.col-md-6
-                        .alert.alert-red teste
-                        .alert.alert-blue teste
-                        .alert.alert-yellow teste
+                    .col-lg-6
+                        .box
+                            .box-header
+                                i.fa.fa-users
+                                |  Teste de cabeçalho
+                            .row
+                                .col-sm-12
+                                    button.btn-green.tooltip.tooltip-right(title='teste de tooltip que vai quebrar o layout') Teste
+                                    button.btn-yellow
+                                        i.fa.fa-users
+                                    a.btn-red.tooltip(title='olha só que legal esse tooltip') Test
+                                    a.btn-blue.btn-small.tooltip.tooltip-left(title='outro tooltip')
+                                        i.fa.fa-edit
+                            .row
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                                .col-sm-6.col-md-4.col-lg-2.red a
+                            .row
+                                .col-sm-12
+                                    table.table
+                                        thead
+                                            tr
+                                                th Nome
+                                                th Telefone
+                                                th &nbsp;
+                                        tbody
+                                            tr
+                                                td Ayrton
+                                                td (45) 9 9853-1262
+                                                td.text-right
+                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                        i.fa.fa-fw.fa-trash
+                                            tr
+                                                td Ayrton
+                                                td (45) 9 9853-1262
+                                                td.text-right
+                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                        i.fa.fa-fw.fa-trash
+                                            tr
+                                                td Ayrton
+                                                td (45) 9 9853-1262
+                                                td.text-right
+                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                        i.fa.fa-fw.fa-trash
+                                        tfoot
+                                            tr
+                                                td(colspan='3') #[b Total:] 3
+                            .row
+                                .col-xs-4
+                                    label.label(for="field_1") Teste de campo
+                                    input#field_1.input(placeholder='Teste de campo')
+                                .col-xs-4
+                                    label.label(for="field_2") Teste de combo
+                                    select#field_2.input
+                                        option Teste 1
+                                        option Teste 2
+                                        option Teste 3
+                                .col-xs-4
+                                    label.label
+                                        input.checkbox(type='checkbox')
+                                        | Teste de checkbox
+                                .col-xs-4
+                                    label.label
+                                        input.radio(type='radio')
+                                        | Teste de radio
+                            .row
+                                .col-xs-12
+                                    ul.pagination
+                                        li.active
+                                            a(href='#') 1
+                                        li
+                                            a(href='#') 2
+                                        li
+                                            a(href='#') 3
+                                        li
+                                            a(href='#') »
+                    .col-md-6
+                        .box
+                            .alert.alert-red teste
+                            .alert.alert-blue teste
+                            .alert.alert-yellow teste
