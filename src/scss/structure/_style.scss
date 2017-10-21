@@ -143,18 +143,20 @@ body {
     width: 230px;
     overflow: hidden;
     z-index: 5;
-    @media (max-width: $medium) {
+}
+@media (max-width: $medium) {
+    .menu {
         align-self: flex-start;
         transition: max-height 1s;
         width: 100%;
         max-height: 0px;
         position: absolute;
-        &:target {
-            max-height: 100%;
-            animation-name: show_close_menu;
-            animation-duration: 1s;
-            overflow: visible;
-        }
+    }
+    .menu:target {
+        max-height: 100%;
+        animation-name: show_close_menu;
+        animation-duration: 1s;
+        overflow: visible;
     }
 }
 @keyframes show_close_menu {
