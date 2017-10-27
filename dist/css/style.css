@@ -1147,13 +1147,16 @@ body {
   margin: 5px 0px; }
 
 .alert-red {
-  background-color: salmon; }
+  background-color: #e47365; }
 
 .alert-blue {
-  background-color: lightblue; }
+  background-color: #5fa4cc; }
 
 .alert-yellow {
-  background-color: orange; }
+  background-color: #f5b043; }
+
+.alert-green {
+  background-color: #00d976; }
 
 .modal {
   display: none;
