@@ -4,11 +4,14 @@
     margin: 5px 0px;
 }
 .alert-red {
-    background-color: salmon;
+    background-color: lighten($red, 10);
 }
 .alert-blue {
-    background-color: lightblue;
+    background-color: lighten($blue, 10);
 }
 .alert-yellow {
-    background-color: orange;
+    background-color: lighten($yellow, 10);
+}
+.alert-green {
+    background-color: lighten($green, 10);
 }
