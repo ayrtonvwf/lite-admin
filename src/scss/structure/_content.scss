@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 50px);
+}
+.content {
+    padding: 5px 10px;
+    width: calc(100% - 230px);
+    @media (max-width: $medium) {
+        width: 100%;
+    }
+}
+.content-title {
+    margin: 7px 0px;
+    font-size: 25px;
+}

@@ -1,0 +1,83 @@
+.menu {
+    background: $softblack;
+    width: 230px;
+    overflow: hidden;
+    z-index: 5;
+}
+@media (max-width: $medium) {
+    .menu {
+        align-self: flex-start;
+        transition: max-height 1s;
+        width: 100%;
+        max-height: 0px;
+        position: absolute;
+    }
+    .menu:target {
+        max-height: 100%;
+        animation-name: show_close_menu;
+        animation-duration: 1s;
+        overflow: visible;
+    }
+}
+@keyframes show_close_menu {
+    0% {overflow: hidden}
+    99% {overflow: hidden}
+    100% {overflow: visible}
+}
+.search {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+.search-input {
+    width: calc(100% - 37px);
+    height: 37px;
+    padding: 0px 10px;
+    background: $darkgray;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    color: $gray;
+    outline: none;
+    &::placeholder {
+      color: $lightgray;
+    }
+    &:focus {
+        background: white;
+    }
+}
+.search-submit {
+    width: 37px;
+    height: 37px;
+    background: $darkgray;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: $lightgray;
+    cursor: pointer;
+    .search-input:focus+& {
+        background: white;
+        color: $gray;
+    }
+}
+.menu-link {
+    display: block;
+    padding: 12px 15px;
+    border-left: 3px solid transparent;
+    font-size: 14px;
+    line-height: 20px;
+    color: $snow;
+    text-decoration: none;
+    transition: background .2s;
+    &:hover {
+        background: darken($black, 8);
+        border-left-color: $blue;
+    }
+}
+.menu-active {
+    color: white;
+    background: darken($black, 5);
+    border-left-color: $blue;
+}
+.menu-close {
+    position: absolute;
+    margin-top: -50px;
+}

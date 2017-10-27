@@ -132,16 +132,6 @@ body {
   line-height: 34px;
   text-decoration: none; }
 
-/**************************/
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  min-height: calc(100vh - 50px); }
-
 .menu {
   background: #222d32;
   width: 230px;
@@ -241,7 +231,15 @@ body {
   position: absolute;
   margin-top: -50px; }
 
-/************************/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  min-height: calc(100vh - 50px); }
+
 .content {
   padding: 5px 10px;
   width: calc(100% - 230px); }
