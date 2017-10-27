@@ -1,241 +1,125 @@
-doctype html
-html
-    head
-        title Infomec
-        meta(charset='utf-8')
-        link(rel='stylesheet' href='css/style.css')
-        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    body
-        header.header
-            a.header-button.main-button(href='index.html') InfoMec
-            a.header-button.menu-toggle(href='#menu')
-                i.fa.fa-bars
-            a.header-button(href='#pane-tickets')
-                i.fa.fa-calendar
-            a.header-button(href='#pane-user') Ayrton
-            ul.header-pane.ticket-pane#pane-tickets
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Troca de óleo
-                        span.ticket-description
-                            | Valdir José Alvez
-                            br
-                            | hoje
-            a.header-pane-close(href='#')
-            .header-pane.user-pane#pane-user
-                a(href='#').header-button.user-close Ayrton
-                .user-background
-                    i.fa.fa-user.user-icon
-                    | Ayrton
-                .user-buttons
-                    a.user-btn(href='#') Editar
-                    a.user-btn(href='#') Sair
-            a.header-pane-close(href='#')
-        div.container
-            nav.menu#menu
-                a.menu-close.header-button(href='#')
-                    i.fa.fa-bars
-                form(action='#')
-                    div.search
-                        input.search-input(type='search' placeholder='Buscar cliente...')
-                        button.search-submit(type='submit')
-                            i.fa.fa-search
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-user
-                    |  Cadastrar Cliente
-                a(href='#').menu-link.menu-active
-                    i.fa.fa-fw.fa-car
-                    |  Cadastrar Carro
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-file-text-o
-                    |  Cadastrar Ordem
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-calendar
-                    |  Lembretes
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-calendar-check-o
-                    |  Lembretes Automáticos
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-wrench
-                    |  Serviços
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-industry
-                    |  Fornecedores
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-history
-                    |  Histórico
-                a(href='#').menu-link
-                    i.fa.fa-fw.fa-bank
-                    |  Dados da Empresa
-            main.content
+extends layout.pug
+
+block content
+    .row
+        .col-xs-12
+            h1.content-title
+                i.fa.fa-users Página inicial
+    .row
+        .col-md-6
+            .box
+                .box-header Formulário
+                .row
+                    .col-xs-6
+                        label.label(for='input') Teste de campo
+                        input#input.input(placeholder='Teste de campo')
+                    .col-xs-6
+                        label.label(for='select') Teste de combo
+                        select#select.input
+                            option Teste 1
+                            option Teste 2
+                            option Teste 3
                 .row
                     .col-xs-12
-                        h1.content-title
-                            i.fa.fa-users Título da página
+                        label.label(for='textarea') Teste de Textarea
+                        textarea#textarea.input(placeholder='Teste de textarea')
                 .row
-                    .col-lg-6
-                        .box
-                            .box-header
-                                i.fa.fa-users
-                                |  Teste de cabeçalho
-                            .row
-                                .col-sm-12
-                                    button.btn-green.tooltip.tooltip-right(title='teste de tooltip que vai quebrar o layout') Teste
-                                    button.btn-yellow
-                                        i.fa.fa-users
-                                    a.btn-red.tooltip(title='olha só que legal esse tooltip') Test
-                                    a.btn-blue.btn-small.tooltip.tooltip-left(title='outro tooltip')
-                                        i.fa.fa-edit
-                            .row
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                                .col-sm-6.col-md-4.col-lg-2.red a
-                            .row
-                                .col-sm-12
-                                    table.table
-                                        thead
-                                            tr
-                                                th Nome
-                                                th Telefone
-                                                th &nbsp;
-                                        tbody
-                                            tr
-                                                td Ayrton
-                                                td (45) 9 9853-1262
-                                                td.text-right
-                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                        i.fa.fa-fw.fa-trash
-                                            tr
-                                                td Ayrton
-                                                td (45) 9 9853-1262
-                                                td.text-right
-                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                        i.fa.fa-fw.fa-trash
-                                            tr
-                                                td Ayrton
-                                                td (45) 9 9853-1262
-                                                td.text-right
-                                                    a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                                        i.fa.fa-fw.fa-trash
-                                        tfoot
-                                            tr
-                                                td(colspan='3') #[b Total:] 3
-                            .row
-                                .col-xs-4
-                                    label.label(for="field_1") Teste de campo
-                                    input#field_1.input(placeholder='Teste de campo')
-                                .col-xs-4
-                                    label.label(for="field_2") Teste de combo
-                                    select#field_2.input
-                                        option Teste 1
-                                        option Teste 2
-                                        option Teste 3
-                                .col-xs-4
-                                    label.label
-                                        input.checkbox(type='checkbox')
-                                        | Teste de checkbox
-                                .col-xs-4
-                                    label.label
-                                        input.radio(type='radio')
-                                        | Teste de radio
-                            .row
-                                .col-xs-12
-                                    ul.pagination
-                                        li.active
-                                            a(href='#') 1
-                                        li
-                                            a(href='#') 2
-                                        li
-                                            a(href='#') 3
-                                        li
-                                            a(href='#') »
-                                    input.abc(type="checkbox")
-                                    | adsgasdg
-                    .col-md-6
-                        .box
-                            .alert.alert-red teste
-                            .alert.alert-blue teste
-                            .alert.alert-yellow teste
-                    .col-md-6
-                        .box
-                            a.btn-green(href='#modal') Modal
-                            .modal#modal
-                                h2.modal-header Cabeçalho do modal legal
-                                .modal-body asgasdadsgdgs
-                                .modal-footer.text-right
-                                    a.btn-red(href='#') Fechar
-                                    button.btn-green Enviar
-                            a.modal-close(href='#')
+                    .col-xs-6
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.checkbox(type='checkbox')
+                                    | Opção 1
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.checkbox(type='checkbox')
+                                    | Opção 2
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.checkbox(type='checkbox')
+                                    | Opção 3
+                    .col-xs-6
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.radio(type='radio' name='radio')
+                                    | Opção 1
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.radio(type='radio' name='radio')
+                                    | Opção 2
+                        .row
+                            .col-xs-12
+                                label.label
+                                    input.radio(type='radio' name='radio')
+                                    | Opção 3
+                .row
+                    .col-xs-12
+                        a(href='#').btn-green Link
+                        button.btn-yellow Botão
+                        button.btn-red.tooltip(title='Tooltip') Tooltip
+                        button.btn-blue.btn-small Pequeno
+            .box
+                .box-header Tabela
+                .row
+                    .col-sm-12
+                        table.table
+                            thead
+                                tr
+                                    th Nome
+                                    th Telefone
+                                    th &nbsp;
+                            tbody
+                                tr
+                                    td John Doe
+                                    td (12) 1234-1234
+                                    td.text-right
+                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                            i.fa.fa-fw.fa-trash
+                                tr
+                                    td Grace Jhonson
+                                    td (12) 3456-7890
+                                    td.text-right
+                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                            i.fa.fa-fw.fa-trash
+                                tr
+                                    td Dam Brice
+                                    td (99) 9 9999-9999
+                                    td.text-right
+                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                            i.fa.fa-fw.fa-trash
+                            tfoot
+                                tr
+                                    td(colspan='3') #[b Total:] 3
+        .col-md-6
+            .box
+                .box-header Mensagens
+                .alert.alert-red #[b Erro!] Algo de errado ocorreu. Tente novamente!
+                .alert.alert-yellow #[b Atenção!] Sua conta vai expirar em uma semana!
+                .alert.alert-blue #[b Hey!] A nova versão do sistema já está disponível!
+            .box
+                .box-header Utilidades
+                .row
+                    .col-xs-12
+                        ul.pagination
+                            li.active
+                                a(href='#') 1
+                            li
+                                a(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') »
+                .row
+                    .col-xs-12
+                        a.btn-green(href='#modal') Abrir modal
+                        .modal#modal
+                            h2.modal-header Cabeçalho do modal
+                            .modal-body Conteúdo do modal
+                            .modal-footer.text-right
+                                a.btn-red(href='#') Fechar
+                                button.btn-green Enviar
+                        a.modal-close(href='#')

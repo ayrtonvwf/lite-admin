@@ -1,0 +1,63 @@
+doctype html
+html
+    head
+        title Infomec
+        meta(charset='utf-8')
+        link(rel='stylesheet' href='css/style.css')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    body
+        header.header
+            a.header-button.main-button(href='index.html') LiteAdmin
+            a.header-button.menu-toggle(href='#menu')
+                i.fa.fa-bars
+            a.header-button(href='#pane-tickets')
+                i.fa.fa-calendar
+            a.header-button(href='#pane-user') John Doe
+            ul.header-pane.ticket-pane#pane-tickets
+                li
+                    a.ticket-link(href='#')
+                        span.ticket-title Cortar a grama
+                        span.ticket-description
+                            | John Doe
+                            br
+                            | hoje
+                li
+                    a.ticket-link(href='#')
+                        span.ticket-title Limpar a cozinha
+                        span.ticket-description
+                            | John Doe
+                            br
+                            | hoje
+            a.header-pane-close(href='#')
+            .header-pane.user-pane#pane-user
+                a(href='#').header-button.user-close John Doe
+                .user-background
+                    i.fa.fa-user.user-icon
+                    | Usuário
+                .user-buttons
+                    a.user-btn(href='#') Editar
+                    a.user-btn(href='#') Sair
+            a.header-pane-close(href='#')
+        div.container
+            nav.menu#menu
+                a.menu-close.header-button(href='#')
+                    i.fa.fa-bars
+                form(action='#')
+                    div.search
+                        input.search-input(type='search' placeholder='Pesquisar...')
+                        button.search-submit(type='submit')
+                            i.fa.fa-search
+                a(href='#').menu-link
+                    i.fa.fa-fw.fa-user
+                    |  Usuários
+                a(href='#').menu-link
+                    i.fa.fa-fw.fa-user
+                    |  Formulários
+                a(href='#').menu-link
+                    i.fa.fa-fw.fa-user
+                    |  Alerta
+                a(href='#').menu-link
+                    i.fa.fa-fw.fa-user
+                    |  Modal
+            main.content
+                block content
