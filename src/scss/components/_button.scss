@@ -12,19 +12,19 @@
     text-decoration: none;
 }
 .btn-green {
-    background: rgb(0, 166, 90);
+    background: $green;
     &:hover {
         background: darken(rgb(0, 166, 90), 5);
     }
 }
 .btn-yellow {
-    background: rgb(243, 156, 18);
+    background: $yellow;
     &:hover {
         background: darken(rgb(243, 156, 18), 5);
     }
 }
 .btn-red {
-    background: rgb(221, 75, 57);
+    background: $red;
     &:hover {
         background: darken(rgb(221, 75, 57), 5);
     }
