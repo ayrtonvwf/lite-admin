@@ -1,14 +1,14 @@
 @charset "UTF-8";
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  font-family: sans-serif; }
 
 div, header, nav, main, footer, section, article, aside {
   position: relative; }
 
 body {
   margin: 0px;
-  font-family: sans-serif;
   font-size: 13px;
   background: #ecf0f5;
   overflow-x: hidden; }
@@ -988,7 +988,8 @@ body {
   cursor: pointer;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: 17px; }
 
 .btn-green {
   background: #00a65a; }
