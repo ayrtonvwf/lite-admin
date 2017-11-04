@@ -21,7 +21,7 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
     width: 100%;
     margin-bottom: 5px;
     background: white;
-    border: 1px solid gray;
+    border: 1px solid lightgray;
 }
 input[type='checkbox'] {
     display: inline-block;
@@ -76,4 +76,7 @@ input[type='radio'] {
             margin: 3px;
         }
     }
+}
+select:required:invalid {
+    color: gray;
 }
