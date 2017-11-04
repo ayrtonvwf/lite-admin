@@ -95,3 +95,15 @@ input[type='radio'] {
 select:required:invalid {
     color: lightgray;
 }
+.resize-h {
+    resize: horizontal;
+}
+.resize-v {
+    resize: vertical;
+}
+.no-resize {
+    resize: none;
+}
+.resize-both {
+    resize: both;
+}
