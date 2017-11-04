@@ -65,11 +65,15 @@
     list-style: none;
     padding: 0px;
     min-width: 250px;
+    max-width: 400px;
     margin-bottom: 0px;
     max-height: calc(100vh - 52px);
     overflow-y: auto;
     @media (max-width: $medium) {
         max-height: calc(100vh - 102px);
+    }
+    @media (max-width: $small) {
+        max-width: calc(100vw - 40px);
     }
 }
 .ticket-link {
