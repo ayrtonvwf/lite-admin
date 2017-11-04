@@ -1,13 +1,27 @@
-.label {
+.input {
+    display: flex;
+    flex-direction: column;
+    &>label {
+        order: -1;
+    }
+    &>input:required+label::after,
+    &>select:required+label::after,
+    &>textarea:required+label::after {
+        content: " (Obrigatório)";
+        color: gray;
+        font-size: .9em;
+    }
+}
+label {
     padding: 3px 0px;
     display: inline-block;
 }
-.input {
+input:not([type='checkbox']):not([type='radio']), select, textarea {
     padding: 5px;
     width: 100%;
     margin-bottom: 5px;
 }
-.checkbox {
+input[type='checkbox'] {
     display: inline-block;
     appearance: none;
     width: 20px;
@@ -27,14 +41,13 @@
     &:checked::before {
         color: blue;
     }
-    .label:hover>&::before, &:focus::before {
+    label:hover>&::before, &:focus::before {
         font-weight: bold;
         border: 1px solid blue;
         line-height: 16px;
     }
 }
-
-.radio {
+input[type='radio'] {
     display: inline-block;
     appearance: none;
     width: 20px;

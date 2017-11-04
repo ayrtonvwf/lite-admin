@@ -1063,16 +1063,35 @@ body {
 .text-center {
   text-align: center; }
 
-.label {
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .input > label {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
+  .input > input:required + label::after,
+  .input > select:required + label::after,
+  .input > textarea:required + label::after {
+    content: " (Obrigatório)";
+    color: gray;
+    font-size: .9em; }
+
+label {
   padding: 3px 0px;
   display: inline-block; }
 
-.input {
+input:not([type='checkbox']):not([type='radio']), select, textarea {
   padding: 5px;
   width: 100%;
   margin-bottom: 5px; }
 
-.checkbox {
+input[type='checkbox'] {
   display: inline-block;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1083,21 +1102,21 @@ body {
   border: 1px solid blue;
   outline: none;
   margin-right: 5px; }
-  .checkbox:before {
+  input[type='checkbox']:before {
     content: "✔";
     width: 18px;
     line-height: 18px;
     text-align: center;
     display: inline-block;
     color: white; }
-  .checkbox:checked::before {
+  input[type='checkbox']:checked::before {
     color: blue; }
-  .label:hover > .checkbox::before, .checkbox:focus::before {
+  label:hover > input[type='checkbox']::before, input[type='checkbox']:focus::before {
     font-weight: bold;
     border: 1px solid blue;
     line-height: 16px; }
 
-.radio {
+input[type='radio'] {
   display: inline-block;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1109,18 +1128,18 @@ body {
   border: 1px solid blue;
   outline: none;
   margin-right: 5px; }
-  .radio:before {
+  input[type='radio']:before {
     content: "";
     width: 10px;
     height: 10px;
     margin: 4px;
     border-radius: 5px;
     display: block; }
-  .radio:checked::before {
+  input[type='radio']:checked::before {
     background-color: blue; }
-  .radio:hover, .radio:focus {
+  input[type='radio']:hover, input[type='radio']:focus {
     border-width: 2px; }
-    .radio:hover:before, .radio:focus:before {
+    input[type='radio']:hover:before, input[type='radio']:focus:before {
       margin: 3px; }
 
 .pagination {
