@@ -1087,9 +1087,11 @@ label {
   display: inline-block; }
 
 input:not([type='checkbox']):not([type='radio']), select, textarea {
-  padding: 5px;
+  padding: 8px;
   width: 100%;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  background: white;
+  border: 1px solid gray; }
 
 input[type='checkbox'] {
   display: inline-block;
