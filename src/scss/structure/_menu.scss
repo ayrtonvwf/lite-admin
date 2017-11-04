@@ -30,11 +30,11 @@
     display: flex;
 }
 .search-input {
-    width: calc(100% - 37px);
+    width: calc(100% - 37px) !important;
     height: 37px;
-    padding: 0px 10px;
-    background: $darkgray;
-    border: none;
+    padding: 0px 10px !important;
+    background: $darkgray !important;
+    border: none !important;
     border-radius: 5px 0px 0px 5px;
     color: $gray;
     outline: none;
@@ -42,7 +42,7 @@
       color: $lightgray;
     }
     &:focus {
-        background: white;
+        background: white !important;
     }
 }
 .search-submit {

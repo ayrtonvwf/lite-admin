@@ -179,11 +179,11 @@ body {
   display: flex; }
 
 .search-input {
-  width: calc(100% - 37px);
+  width: calc(100% - 37px) !important;
   height: 37px;
-  padding: 0px 10px;
-  background: #374850;
-  border: none;
+  padding: 0px 10px !important;
+  background: #374850 !important;
+  border: none !important;
   border-radius: 5px 0px 0px 5px;
   color: #666666;
   outline: none; }
@@ -194,7 +194,7 @@ body {
   .search-input::placeholder {
     color: #999999; }
   .search-input:focus {
-    background: white; }
+    background: white !important; }
 
 .search-submit {
   width: 37px;
