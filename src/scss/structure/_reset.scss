@@ -1,6 +1,5 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 div, header, nav, main, footer, section, article, aside {
     position: relative;
@@ -10,4 +9,7 @@ body {
     font-size: 13px;
     background: $background;
     overflow-x: hidden;
+    &, button {
+        font-family: sans-serif;
+    }
 }

@@ -22,6 +22,18 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
     margin-bottom: 5px;
     background: white;
     border: 1px solid lightgray;
+    border-bottom-width: 2px;
+    transition: border-bottom-color .5s, color .5s;
+    outline: none;
+    &:focus {
+        border-bottom-color: $blue;
+        &:invalid {
+            border-bottom-color: $red;
+        }
+    }
+    &:invalid {
+        box-shadow: none; // remove firefox style
+    }
 }
 input[type='checkbox'] {
     display: inline-block;
@@ -78,5 +90,5 @@ input[type='radio'] {
     }
 }
 select:required:invalid {
-    color: gray;
+    color: lightgray;
 }
