@@ -13,7 +13,7 @@ const server = 'dist';
 gulp.task('watch', function() {
     watch(dev+'/pug/*.pug', function () {
         return gulp.src(dev+'/pug/*.pug')
-            .pipe(pug())
+            .pipe(pug({pretty: true}))
             .pipe(gulp.dest(server))
             .pipe(browserSync.stream());
     });
