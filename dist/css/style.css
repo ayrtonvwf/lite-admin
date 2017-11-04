@@ -1086,11 +1086,14 @@ body {
   .input > textarea:required + label::after {
     content: " (Obrigatório)";
     color: gray;
-    font-size: .9em; }
+    font-size: .9em;
+    font-weight: normal; }
 
 label {
   padding: 3px 0px;
-  display: inline-block; }
+  display: inline-block;
+  font-weight: bold;
+  color: #333333; }
 
 input:not([type='checkbox']):not([type='radio']), select, textarea {
   padding: 8px;

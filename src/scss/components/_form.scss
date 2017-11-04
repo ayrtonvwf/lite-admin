@@ -10,11 +10,14 @@
         content: " (Obrigatório)";
         color: gray;
         font-size: .9em;
+        font-weight: normal;
     }
 }
 label {
     padding: 3px 0px;
     display: inline-block;
+    font-weight: bold;
+    color: $black;
 }
 input:not([type='checkbox']):not([type='radio']), select, textarea {
     padding: 8px;
