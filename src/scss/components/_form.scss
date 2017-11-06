@@ -115,3 +115,29 @@ select {
 .resize-both {
     resize: both;
 }
+input:invalid, select:invalid, textarea:invalid {
+    counter-increment: invalid-fields;
+}
+.form-status {
+    &::before {
+        content: "Campos inválidos: "counter(invalid-fields);
+        line-height: 30px;
+        transition: color .4s;
+        color: $red;
+        font-weight: bold;
+        position: absolute;
+        form:valid & {
+            color: transparent;
+        }
+    }
+    &::after {
+        content: "Pronto para salvar!";
+        line-height: 30px;
+        transition: color .4s;
+        color: $green;
+        font-weight: bold;
+        form:invalid & {
+            color: transparent;
+        }
+    }
+}

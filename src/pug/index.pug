@@ -9,67 +9,70 @@ block content
         .col-md-6
             .box
                 .box-header Formulário
-                .row
-                    .col-xs-6.input
-                        input#input(placeholder='Teste de campo' required)
-                        label(for='input') Teste de campo
-                    .col-xs-6.input
-                        select#select(required)
-                            option(selected hidden disabled) Selecione...
-                            option Teste 1
-                            option Teste 2
-                            option Teste 3
-                        label(for='select') Teste de combo
-                .row
-                    .col-xs-6.input
-                        input#date(type='date' placeholder='Data' required)
-                        label(for='date') Data
-                    .col-xs-6.input
-                        input#number(type='number' placeholder='Número' required)
-                        label(for='number') Teste de número
-                .row
-                    .col-xs-12.input
-                        textarea#textarea(placeholder='Teste de textarea' required)
-                        label(for='textarea') Teste de Textarea
-                .row
-                    .col-xs-6
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='checkbox')
-                                    | Opção 1
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='checkbox')
-                                    | Opção 2
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='checkbox')
-                                    | Opção 3
-                    .col-xs-6
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='radio' name='radio')
-                                    | Opção 1
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='radio' name='radio')
-                                    | Opção 2
-                        .row
-                            .col-xs-12
-                                label
-                                    input(type='radio' name='radio')
-                                    | Opção 3
-                .row
-                    .col-xs-12
-                        a(href='#').btn-green Link
-                        button.btn-yellow Botão
-                        button.btn-red.tooltip(title='Tooltip') Tooltip
-                        button.btn-blue.btn-small Pequeno
+                form
+                    .row
+                        .col-xs-6.input
+                            input#input(placeholder='Teste de campo' required)
+                            label(for='input') Teste de campo
+                        .col-xs-6.input
+                            select#select(required)
+                                option(selected hidden disabled) Selecione...
+                                option Teste 1
+                                option Teste 2
+                                option Teste 3
+                            label(for='select') Teste de combo
+                    .row
+                        .col-xs-6.input
+                            input#date(type='date' placeholder='Data' required)
+                            label(for='date') Data
+                        .col-xs-6.input
+                            input#number(type='number' placeholder='Número' required)
+                            label(for='number') Teste de número
+                    .row
+                        .col-xs-12.input
+                            textarea#textarea(placeholder='Teste de textarea' required)
+                            label(for='textarea') Teste de Textarea
+                    .row
+                        .col-xs-6
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='checkbox')
+                                        | Opção 1
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='checkbox')
+                                        | Opção 2
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='checkbox')
+                                        | Opção 3
+                        .col-xs-6
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='radio' name='radio')
+                                        | Opção 1
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='radio' name='radio')
+                                        | Opção 2
+                            .row
+                                .col-xs-12
+                                    label
+                                        input(type='radio' name='radio')
+                                        | Opção 3
+                    .row
+                        .col-xs-12.form-status
+                    .row
+                        .col-xs-12
+                            a(href='#').btn-green Link
+                            button.btn-yellow Botão
+                            button.btn-red.tooltip(title='Tooltip') Tooltip
+                            button.btn-blue.btn-small Pequeno
             .box
                 .box-header Tabela
                 .row
