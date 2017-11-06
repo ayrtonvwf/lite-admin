@@ -1097,7 +1097,6 @@ label {
 
 input:not([type='checkbox']):not([type='radio']), select, textarea {
   width: 100%;
-  height: 36px;
   padding: 8px;
   line-height: 17px;
   margin-bottom: 5px;
@@ -1114,6 +1113,9 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
   input:not([type='checkbox']):not([type='radio']):invalid, select:invalid, textarea:invalid {
     -webkit-box-shadow: none;
             box-shadow: none; }
+
+input:not([type='checkbox']):not([type='radio']), select {
+  height: 36px; }
 
 input[type='checkbox'] {
   display: inline-block;

@@ -21,7 +21,6 @@ label {
 }
 input:not([type='checkbox']):not([type='radio']), select, textarea {
     width: 100%;
-    height: 36px;
     padding: 8px;
     line-height: 17px;
     margin-bottom: 5px;
@@ -39,6 +38,9 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
     &:invalid {
         box-shadow: none; // remove firefox style
     }
+}
+input:not([type='checkbox']):not([type='radio']), select {
+    height: 36px;
 }
 input[type='checkbox'] {
     display: inline-block;
