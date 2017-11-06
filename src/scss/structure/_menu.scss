@@ -30,8 +30,7 @@
     display: flex;
 }
 .search-input {
-    width: calc(100% - 37px) !important;
-    height: 37px;
+    width: calc(100% - 36px) !important;
     padding: 0px 10px !important;
     background: $darkgray !important;
     border: none !important;
@@ -46,8 +45,8 @@
     }
 }
 .search-submit {
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 36px;
     background: $darkgray;
     border: none;
     border-radius: 0px 5px 5px 0px;
