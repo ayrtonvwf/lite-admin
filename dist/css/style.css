@@ -1192,26 +1192,30 @@ select {
 input:invalid, select:invalid, textarea:invalid {
   counter-increment: invalid-fields; }
 
-.form-status::before {
-  content: "Campos inválidos: " counter(invalid-fields);
-  line-height: 30px;
-  -webkit-transition: color .4s;
-  transition: color .4s;
-  color: #dd4b39;
-  font-weight: bold;
-  position: absolute; }
-  form:valid .form-status::before {
-    color: transparent; }
-
-.form-status::after {
-  content: "Pronto para salvar!";
-  line-height: 30px;
-  -webkit-transition: color .4s;
-  transition: color .4s;
-  color: #00a65a;
-  font-weight: bold; }
-  form:invalid .form-status::after {
-    color: transparent; }
+.form-status {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+  .form-status::before {
+    content: "Campos inválidos: " counter(invalid-fields);
+    line-height: 30px;
+    -webkit-transition: color .4s;
+    transition: color .4s;
+    color: #dd4b39;
+    font-weight: bold;
+    position: absolute; }
+    form:valid .form-status::before {
+      color: transparent; }
+  .form-status::after {
+    content: "Pronto para salvar!";
+    line-height: 30px;
+    -webkit-transition: color .4s;
+    transition: color .4s;
+    color: #00a65a;
+    font-weight: bold; }
+    form:invalid .form-status::after {
+      color: transparent; }
+  form:not(:focus-within) .form-status {
+    opacity: 0; }
 
 .pagination {
   padding: 0px; }

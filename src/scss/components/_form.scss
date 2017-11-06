@@ -119,6 +119,7 @@ input:invalid, select:invalid, textarea:invalid {
     counter-increment: invalid-fields;
 }
 .form-status {
+    transition: opacity .5s;
     &::before {
         content: "Campos inválidos: "counter(invalid-fields);
         line-height: 30px;
@@ -139,5 +140,8 @@ input:invalid, select:invalid, textarea:invalid {
         form:invalid & {
             color: transparent;
         }
+    }
+    form:not(:focus-within) & {
+        opacity: 0;
     }
 }
