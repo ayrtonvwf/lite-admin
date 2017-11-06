@@ -20,14 +20,16 @@ label {
     color: $black;
 }
 input:not([type='checkbox']):not([type='radio']), select, textarea {
-    padding: 8px;
     width: 100%;
+    height: 36px;
+    padding: 8px;
+    line-height: 17px;
     margin-bottom: 5px;
-    background: white;
     border: 1px solid lightgray;
     border-bottom-width: 2px;
-    transition: border-bottom-color .5s, color .5s;
     outline: none;
+    background: white;
+    transition: border-bottom-color .5s, color .5s;
     &:focus {
         border-bottom-color: $blue;
         &:invalid {
@@ -94,6 +96,12 @@ input[type='radio'] {
 }
 select:required:invalid {
     color: lightgray;
+}
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='7' viewBox='0 0 10 7' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 H10 L5 7 Z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
 }
 .resize-h {
     resize: horizontal;
