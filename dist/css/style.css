@@ -1296,3 +1296,12 @@ input:invalid, select:invalid, textarea:invalid {
           appearance: button;
   width: 100px;
   height: 50px; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
