@@ -9,129 +9,133 @@ block content
         .col-md-6
             .box
                 .box-header Formulário
-                form
-                    .row
-                        .col-xs-6.input
-                            input#input(placeholder='Teste de campo' required)
-                            label(for='input') Teste de campo
-                        .col-xs-6.input
-                            select#select(required)
-                                option(selected hidden disabled) Selecione...
-                                option Teste 1
-                                option Teste 2
-                                option Teste 3
-                            label(for='select') Teste de combo
-                    .row
-                        .col-xs-6.input
-                            input#date(type='date' placeholder='Data' required)
-                            label(for='date') Data
-                        .col-xs-6.input
-                            input#number(type='number' placeholder='Número' required)
-                            label(for='number') Teste de número
-                    .row
-                        .col-xs-12.input
-                            textarea#textarea(placeholder='Teste de textarea' required)
-                            label(for='textarea') Teste de Textarea
-                    .row
-                        .col-xs-6
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='checkbox')
-                                        | Opção 1
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='checkbox')
-                                        | Opção 2
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='checkbox')
-                                        | Opção 3
-                        .col-xs-6
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='radio' name='radio')
-                                        | Opção 1
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='radio' name='radio')
-                                        | Opção 2
-                            .row
-                                .col-xs-12
-                                    label
-                                        input(type='radio' name='radio')
-                                        | Opção 3
-                    .row
-                        .col-xs-12.form-status
-                    .row
-                        .col-xs-12
-                            a(href='#').btn-green Link
-                            button.btn-yellow Botão
-                            button.btn-red.tooltip(title='Tooltip') Tooltip
-                            button.btn-blue.btn-small Pequeno
+                .box-body
+                    form
+                        .row
+                            .col-xs-6.input
+                                input#input(placeholder='Teste de campo' required)
+                                label(for='input') Teste de campo
+                            .col-xs-6.input
+                                select#select(required)
+                                    option(selected hidden disabled) Selecione...
+                                    option Teste 1
+                                    option Teste 2
+                                    option Teste 3
+                                label(for='select') Teste de combo
+                        .row
+                            .col-xs-6.input
+                                input#date(type='date' placeholder='Data' required)
+                                label(for='date') Data
+                            .col-xs-6.input
+                                input#number(type='number' placeholder='Número' required)
+                                label(for='number') Teste de número
+                        .row
+                            .col-xs-12.input
+                                textarea#textarea(placeholder='Teste de textarea' required)
+                                label(for='textarea') Teste de Textarea
+                        .row
+                            .col-xs-6
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 3
+                            .col-xs-6
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 3
+                        .row
+                            .col-xs-12.form-status
+                        .row
+                            .col-xs-12
+                                a(href='#').btn-green Link
+                                button.btn-yellow Botão
+                                button.btn-red.tooltip(title='Tooltip') Tooltip
+                                button.btn-blue.btn-small Pequeno
             .box
                 .box-header Tabela
-                .row
-                    .col-sm-12
-                        table.table
-                            thead
-                                tr
-                                    th Nome
-                                    th Telefone
-                                    th &nbsp;
-                            tbody
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td.text-right
-                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td Grace Jhonson
-                                    td (12) 3456-7890
-                                    td.text-right
-                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td Dam Brice
-                                    td (99) 9 9999-9999
-                                    td.text-right
-                                        a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                            tfoot
-                                tr
-                                    td(colspan='3') #[b Total:] 3
+                .box-body
+                    .row
+                        .col-sm-12
+                            table.table
+                                thead
+                                    tr
+                                        th Nome
+                                        th Telefone
+                                        th &nbsp;
+                                tbody
+                                    tr
+                                        td John Doe
+                                        td (12) 1234-1234
+                                        td.text-right
+                                            a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                i.fa.fa-fw.fa-trash
+                                    tr
+                                        td Grace Jhonson
+                                        td (12) 3456-7890
+                                        td.text-right
+                                            a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                i.fa.fa-fw.fa-trash
+                                    tr
+                                        td Dam Brice
+                                        td (99) 9 9999-9999
+                                        td.text-right
+                                            a.btn.btn-small.btn-red.tooltip(href='#' title='Excluir')
+                                                i.fa.fa-fw.fa-trash
+                                tfoot
+                                    tr
+                                        td(colspan='3') #[b Total:] 3
         .col-md-6
             .box
                 .box-header Mensagens
-                .alert.alert-red #[b Erro!] Algo de errado ocorreu. Tente novamente!
-                .alert.alert-yellow #[b Atenção!] Sua conta vai expirar em uma semana!
-                .alert.alert-blue #[b Hey!] A nova versão do sistema já está disponível!
-                .alert.alert-green #[b Sucesso!] O cadastro foi criado com sucesso!
+                .box-body
+                    .alert.alert-red #[b Erro!] Algo de errado ocorreu. Tente novamente!
+                    .alert.alert-yellow #[b Atenção!] Sua conta vai expirar em uma semana!
+                    .alert.alert-blue #[b Hey!] A nova versão do sistema já está disponível!
+                    .alert.alert-green #[b Sucesso!] O cadastro foi criado com sucesso!
             .box
                 .box-header Utilidades
-                .row
-                    .col-xs-12
-                        ul.pagination
-                            li.active
-                                a(href='#') 1
-                            li
-                                a(href='#') 2
-                            li
-                                a(href='#') 3
-                            li
-                                a(href='#') »
-                .row
-                    .col-xs-12
-                        a.btn-green(href='#modal') Abrir modal
-                        .modal#modal
-                            h2.modal-header Cabeçalho do modal
-                            .modal-body Conteúdo do modal
-                            .modal-footer.text-right
-                                a.btn-red(href='#') Fechar
-                                button.btn-green Enviar
-                        a.modal-close(href='#')
+                .box-body
+                    .row
+                        .col-xs-12
+                            ul.pagination
+                                li.active
+                                    a(href='#') 1
+                                li
+                                    a(href='#') 2
+                                li
+                                    a(href='#') 3
+                                li
+                                    a(href='#') »
+                    .row
+                        .col-xs-12
+                            a.btn-green(href='#modal') Abrir modal
+                            .modal#modal
+                                h2.modal-header Cabeçalho do modal
+                                .modal-body Conteúdo do modal
+                                .modal-footer.text-right
+                                    a.btn-red(href='#') Fechar
+                                    button.btn-green Enviar
+                            a.modal-close(href='#')
