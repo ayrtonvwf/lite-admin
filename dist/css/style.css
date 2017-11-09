@@ -140,42 +140,26 @@ body {
 
 .menu {
   background: #222d32;
-  width: 230px;
-  overflow: hidden;
-  z-index: 5; }
-
-@media (max-width: 900px) {
-  .menu {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    -webkit-transition: max-height 1s;
-    transition: max-height 1s;
-    width: 100%;
-    max-height: 0px;
-    position: absolute; }
-  .menu:target {
-    max-height: 100%;
-    -webkit-animation-name: show_close_menu;
-            animation-name: show_close_menu;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    overflow: visible; } }
-
-@-webkit-keyframes show_close_menu {
-  0% {
-    overflow: hidden; }
-  99% {
-    overflow: hidden; }
-  100% {
-    overflow: visible; } }
-
-@keyframes show_close_menu {
-  0% {
-    overflow: hidden; }
-  99% {
-    overflow: hidden; }
-  100% {
-    overflow: visible; } }
+  width: 230px; }
+  @media (max-width: 900px) {
+    .menu {
+      width: 50vw;
+      left: -50vw;
+      position: absolute;
+      -webkit-transition: -webkit-transform .5s;
+      transition: -webkit-transform .5s;
+      transition: transform .5s;
+      transition: transform .5s, -webkit-transform .5s; }
+      .menu:target {
+        -webkit-transform: translateX(50vw);
+                transform: translateX(50vw); } }
+  @media (max-width: 500px) {
+    .menu {
+      width: 100vw;
+      left: -100vw; }
+      .menu:target {
+        -webkit-transform: translateX(100vw);
+                transform: translateX(100vw); } }
 
 .search {
   width: 100%;
@@ -250,7 +234,19 @@ body {
   width: calc(100% - 230px); }
   @media (max-width: 900px) {
     .content {
-      width: 100%; } }
+      width: 100vw;
+      position: absolute;
+      -webkit-transition: -webkit-transform .5s;
+      transition: -webkit-transform .5s;
+      transition: transform .5s;
+      transition: transform .5s, -webkit-transform .5s; }
+      .menu:target ~ .content {
+        -webkit-transform: translateX(50vw);
+                transform: translateX(50vw); } }
+  @media (max-width: 500px) {
+    .menu:target ~ .content {
+      -webkit-transform: translateX(100vw);
+              transform: translateX(100vw); } }
 
 .content-title {
   margin: 7px 0px;

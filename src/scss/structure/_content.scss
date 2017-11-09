@@ -7,7 +7,17 @@
     padding: 5px 10px;
     width: calc(100% - 230px);
     @media (max-width: $medium) {
-        width: 100%;
+        width: 100vw;
+        position: absolute;
+        transition: transform .5s;
+        .menu:target ~ & {
+            transform: translateX(50vw);
+        }
+    }
+    @media (max-width: $small) {
+        .menu:target ~ & {
+            transform: translateX(100vw);
+        }
     }
 }
 .content-title {

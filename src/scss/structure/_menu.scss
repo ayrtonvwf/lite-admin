@@ -1,28 +1,22 @@
 .menu {
     background: $softblack;
     width: 230px;
-    overflow: hidden;
-    z-index: 5;
-}
-@media (max-width: $medium) {
-    .menu {
-        align-self: flex-start;
-        transition: max-height 1s;
-        width: 100%;
-        max-height: 0px;
+    @media (max-width: $medium) {
+        width: 50vw;
+        left: -50vw;
         position: absolute;
+        transition: transform .5s;
+        &:target {
+            transform: translateX(50vw);
+        }
     }
-    .menu:target {
-        max-height: 100%;
-        animation-name: show_close_menu;
-        animation-duration: 1s;
-        overflow: visible;
+    @media (max-width: $small) {
+        width: 100vw;
+        left: -100vw;
+        &:target {
+            transform: translateX(100vw);
+        }
     }
-}
-@keyframes show_close_menu {
-    0% {overflow: hidden}
-    99% {overflow: hidden}
-    100% {overflow: visible}
 }
 .search {
     width: 100%;
