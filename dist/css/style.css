@@ -219,6 +219,9 @@ body {
 .menu-close {
   position: absolute;
   margin-top: -50px; }
+  @media (min-width: 900px) {
+    .menu-close {
+      display: none; } }
 
 .container {
   display: -webkit-box;
