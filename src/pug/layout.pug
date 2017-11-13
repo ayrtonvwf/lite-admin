@@ -20,37 +20,39 @@ html
             a.header-button(href='#pane-tickets')
                 i.fa.fa-calendar
             a.header-button(href='#pane-user') John Doe
-            ul.header-pane.ticket-pane#pane-tickets
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Cortar a grama
-                        span.ticket-description
-                            | John Doe
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Limpar a cozinha
-                        span.ticket-description
-                            | John Doe
-                            br
-                            | hoje
-                li
-                    a.ticket-link(href='#')
-                        span.ticket-title Essa é uma tarefa com um texto mais longo, para testar o quanto a notificação aguenta
-                        span.ticket-description
-                            | Essa é uma descrição bem mais longa do que as outras, e é assim tão longa justamente para testar como se comportam notificações com texto longo.
-                            br
-                            | hoje
-            a.header-pane-close(href='#')
-            .header-pane.user-pane#pane-user
-                .user-background
-                    i.fa.fa-user.user-icon
-                    | Usuário
-                .user-buttons
-                    a.user-btn(href='#') Editar
-                    a.user-btn(href='#') Sair
-            a.header-pane-close(href='#')
+            .header-pane-holder#pane-tickets
+                a.header-pane-close(href='#')
+                ul.header-pane.ticket-pane
+                    li
+                        a.ticket-link(href='#')
+                            span.ticket-title Cortar a grama
+                            span.ticket-description
+                                | John Doe
+                                br
+                                | hoje
+                    li
+                        a.ticket-link(href='#')
+                            span.ticket-title Limpar a cozinha
+                            span.ticket-description
+                                | John Doe
+                                br
+                                | hoje
+                    li
+                        a.ticket-link(href='#')
+                            span.ticket-title Essa é uma tarefa com um texto mais longo, para testar o quanto a notificação aguenta
+                            span.ticket-description
+                                | Essa é uma descrição bem mais longa do que as outras, e é assim tão longa justamente para testar como se comportam notificações com texto longo.
+                                br
+                                | hoje
+            .header-pane-holder#pane-user
+                a.header-pane-close(href='#')
+                .header-pane.user-pane
+                    .user-background
+                        i.fa.fa-user.user-icon
+                        | Usuário
+                    .user-buttons
+                        a.user-btn(href='#') Editar
+                        a.user-btn(href='#') Sair
         div.container
             nav.menu#menu
                 a.menu-close.header-button(href='#')

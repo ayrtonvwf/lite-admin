@@ -50,17 +50,26 @@ body {
     .menu-toggle {
       display: none; } }
 
-.header-pane-close {
+.header-pane-holder {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   display: none;
+  z-index: 10; }
+  .header-pane-holder:target {
+    display: block; }
+
+.header-pane-close {
+  display: block;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 9; }
-  .header-pane:target + .header-pane-close {
-    display: block; }
+  z-index: 1; }
 
 .header-pane {
   position: absolute;
@@ -68,10 +77,7 @@ body {
   right: 20px;
   top: 52px;
   margin-top: 0px;
-  display: none;
-  z-index: 10; }
-  .header-pane:target {
-    display: block; }
+  z-index: 2; }
   @media (max-width: 900px) {
     .header-pane {
       top: 102px; } }
