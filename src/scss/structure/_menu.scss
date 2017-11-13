@@ -1,5 +1,5 @@
 .menu {
-    background: $softblack;
+    // background: $softblack;
     width: 230px;
     @media (max-width: $medium) {
         width: 50vw;
@@ -11,6 +11,8 @@
         }
     }
     @media (max-width: $small) {
+        margin-top: -100px;
+        padding-top: 100px;
         width: 100vw;
         left: -100vw;
         &:target {
@@ -19,6 +21,7 @@
     }
 }
 .search {
+    background-color: $softblack;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -52,6 +55,7 @@
     }
 }
 .menu-link {
+    background-color: $softblack;
     display: block;
     padding: 12px 15px;
     border-left: 3px solid transparent;

@@ -145,7 +145,6 @@ body {
   text-decoration: none; }
 
 .menu {
-  background: #222d32;
   width: 230px; }
   @media (max-width: 900px) {
     .menu {
@@ -161,6 +160,8 @@ body {
                 transform: translateX(50vw); } }
   @media (max-width: 500px) {
     .menu {
+      margin-top: -100px;
+      padding-top: 100px;
       width: 100vw;
       left: -100vw; }
       .menu:target {
@@ -168,6 +169,7 @@ body {
                 transform: translateX(100vw); } }
 
 .search {
+  background-color: #222d32;
   width: 100%;
   padding: 10px;
   display: -webkit-box;
@@ -204,6 +206,7 @@ body {
     color: #666666; }
 
 .menu-link {
+  background-color: #222d32;
   display: block;
   padding: 12px 15px;
   border-left: 3px solid transparent;
