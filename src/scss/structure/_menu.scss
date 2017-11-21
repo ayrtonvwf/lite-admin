@@ -1,7 +1,11 @@
 .menu {
-    // background: $softblack;
     width: 230px;
+    @media (min-width: $medium) {
+        background: $softblack;
+    }
     @media (max-width: $medium) {
+        margin-top: -100px;
+        padding-top: 100px;
         width: 50vw;
         left: -50vw;
         position: absolute;
@@ -11,8 +15,6 @@
         }
     }
     @media (max-width: $small) {
-        margin-top: -100px;
-        padding-top: 100px;
         width: 100vw;
         left: -100vw;
         &:target {

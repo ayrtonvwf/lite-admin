@@ -146,8 +146,13 @@ body {
 
 .menu {
   width: 230px; }
+  @media (min-width: 900px) {
+    .menu {
+      background: #222d32; } }
   @media (max-width: 900px) {
     .menu {
+      margin-top: -100px;
+      padding-top: 100px;
       width: 50vw;
       left: -50vw;
       position: absolute;
@@ -160,8 +165,6 @@ body {
                 transform: translateX(50vw); } }
   @media (max-width: 500px) {
     .menu {
-      margin-top: -100px;
-      padding-top: 100px;
       width: 100vw;
       left: -100vw; }
       .menu:target {
@@ -1176,7 +1179,7 @@ input[type='radio'] {
     input[type='radio']:hover:before, input[type='radio']:focus:before {
       margin: 3px; }
 
-select:required:invalid {
+select:required:invalid:not(:focus) {
   color: lightgray; }
 
 select {
