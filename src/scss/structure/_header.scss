@@ -9,6 +9,7 @@
     padding: #{(50 - 16)/2}px 15px;
     text-decoration: none;
     color: white;
+    position: relative;
 
     &:hover {
         background: $darkblue;
@@ -65,6 +66,25 @@
     @media (max-width: $medium) {
         top: 102px;
     }
+}
+.header-button-label-red, .header-button-label-green, .header-button-label-yellow {
+    position: absolute;
+    display: block;
+    left: calc(100% - 20px);
+    top: 7px;
+    font-size: 9px;
+    line-height: 9px;
+    padding: 2px;
+    border-radius: 3px;
+}
+.header-button-label-green {
+    background-color: $green;
+}
+.header-button-label-red {
+    background-color: $red;
+}
+.header-button-label-yellow {
+    background-color: $yellow;
 }
 .ticket-pane {
     list-style: none;

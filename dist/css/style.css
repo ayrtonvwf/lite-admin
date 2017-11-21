@@ -28,7 +28,8 @@ body {
   line-height: 16px;
   padding: 17px 15px;
   text-decoration: none;
-  color: white; }
+  color: white;
+  position: relative; }
   .header-button:hover {
     background: #367fa9; }
 
@@ -81,6 +82,25 @@ body {
   @media (max-width: 900px) {
     .header-pane {
       top: 102px; } }
+
+.header-button-label-red, .header-button-label-green, .header-button-label-yellow {
+  position: absolute;
+  display: block;
+  left: calc(100% - 20px);
+  top: 7px;
+  font-size: 9px;
+  line-height: 9px;
+  padding: 2px;
+  border-radius: 3px; }
+
+.header-button-label-green {
+  background-color: #00a65a; }
+
+.header-button-label-red {
+  background-color: #dd4b39; }
+
+.header-button-label-yellow {
+  background-color: #f39c12; }
 
 .ticket-pane {
   list-style: none;
