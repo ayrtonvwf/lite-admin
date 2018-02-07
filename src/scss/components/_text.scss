@@ -1,3 +1,27 @@
+%title {
+    margin: 5px 0px;
+    font-weight: normal;
+}
+.title-1 {
+    @extend %title;
+    font-size: 24px;
+}
+.title-2 {
+    @extend %title;
+    font-size: 22px;
+}
+.title-3 {
+    @extend %title;
+    font-size: 20px;
+}
+.title-4 {
+    @extend %title;
+    font-size: 18px;
+}
+p {
+    @extend %title;
+    margin: 5px 0px;
+}
 .lowercase {
     text-transform: lowercase;
 }
