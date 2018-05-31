@@ -23,7 +23,7 @@ const build_css = function() {
 }
 
 gulp.task('watch', function() {
-    watch(dev+'/pug/*.pug', build_html);
+    // watch(dev+'/pug/*.pug', build_html);
     watch(dev+'/scss/**/*.scss', build_css);
 });
 
