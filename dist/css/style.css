@@ -1256,20 +1256,27 @@ input:invalid, select:invalid, textarea:invalid {
     opacity: 0; }
 
 .pagination {
-  padding: 0px; }
-  .pagination > li {
-    display: inline-block;
-    margin: 1px; }
-    .pagination > li > a {
-      display: block;
-      background-color: lightgray;
-      padding: 0px 12px;
-      line-height: 30px;
-      text-align: center;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px; }
+  display: -ms-flexbox;
+  display: flex; }
+  .pagination > a {
+    display: block;
+    background-color: #cdd2dc;
+    padding: 2px 15px 0px 15px;
+    line-height: 30px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    border-right: solid 1px gray;
+    transition: background-color .1s; }
+    .pagination > a:first-child {
+      border-radius: 7px 0px 0px 7px; }
+    .pagination > a:last-child {
+      border-radius: 0px 7px 7px 0px;
+      border-right: none; }
+    .pagination > a:hover, .pagination > a:focus, .pagination > a.active {
+      transition: background-color .2s;
+      background-color: #bababa; }
 
 .alert {
   padding: 15px;
