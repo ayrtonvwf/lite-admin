@@ -12,7 +12,7 @@ body {
   font-size: 13px;
   background: #ecf0f5;
   overflow-x: hidden;
-  counter-reset: invalid-fields; }
+  counter-reset: invalid-fields table-rows; }
   body, body button {
     font-family: sans-serif; }
 
@@ -1096,17 +1096,24 @@ body {
   bottom: auto;
   margin-right: 2px; }
 
-.table {
+table.table, .table > table {
   width: 100%;
   border-collapse: collapse; }
-  .table th {
+  table.table th, .table > table th {
     text-align: left;
     padding: 5px 10px; }
-  .table tbody > tr:hover {
+  table.table tbody > tr, .table > table tbody > tr {
+    counter-increment: table-rows; }
+  table.table tbody > tr:hover, .table > table tbody > tr:hover {
     background: #f0f0f0; }
-  .table td {
+  table.table td, .table > table td {
     border-top: 1px solid lightgray;
     padding: 5px 10px; }
+  table.table .row-count::after, .table > table .row-count::after {
+    content: counter(table-rows); }
+
+div.table {
+  overflow-x: auto; }
 
 .text-right {
   text-align: right; }

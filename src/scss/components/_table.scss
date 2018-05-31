@@ -1,10 +1,13 @@
-.table {
+table.table, .table>table {
     width: 100%;
     border-collapse: collapse;
 
     th {
         text-align: left;
         padding: 5px 10px;
+    }
+    tbody>tr {
+        counter-increment: table-rows;
     }
     tbody>tr:hover {
         background: rgb(240, 240, 240);
@@ -13,4 +16,10 @@
         border-top: 1px solid lightgray;
         padding: 5px 10px;
     }
+    .row-count::after {
+        content: counter(table-rows);
+    }
+}
+div.table {
+    overflow-x: auto;
 }
