@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="theme-color" content="#3c8dbc">
+    <meta name="msapplication-TileColor" content="#3c8dbc">
+    <meta name="msapplication-navbutton-color" content="#3c8dbc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>LiteAdmin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle" href="#menu"><i class="fa fa-bars"></i></a><a class="header-button" href="#pane-tickets"><i class="fa fa-calendar"></i><span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
+      <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
+        <ul class="header-pane ticket-pane">
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Cortar a grama</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Limpar a cozinha</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Essa é uma tarefa com um texto mais longo, para testar o quanto a notificação aguenta</span><span class="ticket-description">Essa é uma descrição bem mais longa do que as outras, e é assim tão longa justamente para testar como se comportam notificações com texto longo.<br>hoje</span></a></li>
+        </ul>
+      </div>
+      <div class="header-pane-holder" id="pane-user"><a class="header-pane-close" href="#"></a>
+        <div class="header-pane user-pane">
+          <div class="user-background"><i class="fa fa-user user-icon"></i>Usuário</div>
+          <div class="user-buttons"><a class="user-btn" href="#">Editar</a><a class="user-btn" href="#">Sair</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="menu" id="menu"><a class="menu-close header-button" href="#"><i class="fa fa-bars"></i></a>
+        <form action="#">
+          <div class="search">
+            <input class="search-input" type="search" placeholder="Pesquisar...">
+            <button class="search-submit" type="submit"><i class="fa fa-search"></i></button>
+          </div>
+        </form><a class="menu-link" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a><a class="menu-link" href="button.html"><i class="fa fa-fw fa-user"></i> Button</a><a class="menu-link" href="text.html"><i class="fa fa-fw fa-font"></i> Text</a><a class="menu-link" href="alert.html"><i class="fa fa-fw fa-user"></i> Alert</a><a class="menu-link" href="modal.html"><i class="fa fa-fw fa-user"></i> Modal</a>
+      </nav>
+      <main class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="content-title"><i class="fa fa-users">Modal</i></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box">
+              <div class="box-header">Formulário</div>
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-xs-12"><a class="btn btn-success" href="#modal">Abrir modal</a>
+                    <div class="modal" id="modal">
+                      <h2 class="modal-header">Cabeçalho do modal</h2>
+                      <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.</p>
+                        <p>Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.</p>
+                        <p>Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.</p>
+                        <p>Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.</p>
+                        <p>Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.</p>
+                        <p>Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.</p>
+                        <p>Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.</p>
+                        <p>Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.</p>
+                        <p>Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.</p>
+                        <p>Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.</p>
+                        <p>Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.</p>
+                        <p>Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.</p>
+                        <p>Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.</p>
+                      </div>
+                      <div class="modal-footer text-right"><a class="btn btn-danger" href="#">Close</a>
+                        <button class="btn btn-success">Send</button>
+                      </div>
+                    </div><a class="modal-close" href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1299,6 +1299,8 @@ input:invalid, select:invalid, textarea:invalid {
   background-color: white;
   z-index: 10;
   width: 800px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
   left: calc(50% - 400px); }
   @media (max-width: 800px) {
     .modal {
@@ -1313,14 +1315,23 @@ input:invalid, select:invalid, textarea:invalid {
   font-size: 20px;
   font-weight: normal;
   color: #374850;
-  border-bottom: 1px solid lightgray; }
+  border-bottom: 1px solid lightgray;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 10; }
 
 .modal-body {
   padding: 10px; }
 
 .modal-footer {
   border-top: 1px solid lightgray;
-  padding: 2px; }
+  padding: 2px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  background-color: white; }
 
 .modal-close {
   display: none;
@@ -1333,13 +1344,6 @@ input:invalid, select:invalid, textarea:invalid {
   z-index: 9; }
   .modal:target + .modal-close {
     display: block; }
-
-.abc {
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
-  width: 100px;
-  height: 50px; }
 
 .title-1, .title-2, .title-3, .title-4, p {
   margin: 5px 0px;
