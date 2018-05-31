@@ -2,16 +2,20 @@
     padding: 15px;
     border-radius: 10px;
     margin: 5px 0px;
+    background-color: $alert-default-color;
 }
-.alert-red {
-    background-color: lighten($red, 10);
+.alert-success {
+    background-color: $alert-success-color;
 }
-.alert-blue {
-    background-color: lighten($blue, 10);
+.alert-primary {
+    background-color: $alert-primary-color;
 }
-.alert-yellow {
-    background-color: lighten($yellow, 10);
+.alert-info {
+    background-color: $alert-info-color;
 }
-.alert-green {
-    background-color: lighten($green, 10);
+.alert-warning {
+    background-color: $alert-warning-color;
+}
+.alert-danger {
+    background-color: $alert-danger-color;
 }

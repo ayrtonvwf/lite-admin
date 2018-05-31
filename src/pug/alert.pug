@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+    .row
+        .col-xs-12
+            h1.content-title
+                i.fa.fa-users Alerts
+    .row
+        .col-md-6
+            .box
+                .box-body
+                    .alert #[b Default!] That's a boring default alert!
+                    .alert.alert-success #[b Success!] The file was uploaded successfully!
+                    .alert.alert-info #[b Info!] We need to verify your e-mail address!
+                    .alert.alert-primary #[b Primary!] A new version of the system is available!
+                    .alert.alert-warning #[b Warning!] Your account is gonna expire in one week!
+                    .alert.alert-danger #[b Danger!] An error happened while proccessing your request!

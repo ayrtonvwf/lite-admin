@@ -16,6 +16,7 @@ $green: rgb(0, 166, 90);
 $yellow: rgb(243, 156, 18);
 $red: rgb(221, 75, 57);
 
+/* buttons */
 $btn-default-color: rgb(150, 150, 150);
 $btn-success-color: rgb(0, 166, 90);
 $btn-info-color: rgb(100, 170, 195);
@@ -24,3 +25,11 @@ $btn-warning-color: rgb(243, 156, 18);
 $btn-danger-color: rgb(221, 75, 57);
 $btn-hover-darken: 7;
 $btn-disabled-lighten: 7;
+
+/* alerts */
+$alert-default-color: rgb(200, 210, 210);
+$alert-success-color: rgb(50, 220, 130);
+$alert-info-color: rgb(100, 195, 250);
+$alert-primary-color: rgb(50, 155, 215);
+$alert-warning-color: rgb(250, 190, 30);
+$alert-danger-color: rgb(255, 80, 85);

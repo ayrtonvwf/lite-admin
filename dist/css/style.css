@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* buttons */
+/* alerts */
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -1272,19 +1274,23 @@ input:invalid, select:invalid, textarea:invalid {
 .alert {
   padding: 15px;
   border-radius: 10px;
-  margin: 5px 0px; }
+  margin: 5px 0px;
+  background-color: #c8d2d2; }
 
-.alert-red {
-  background-color: #e47365; }
+.alert-success {
+  background-color: #32dc82; }
 
-.alert-blue {
-  background-color: #5fa4cc; }
+.alert-primary {
+  background-color: #329bd7; }
 
-.alert-yellow {
-  background-color: #f5b043; }
+.alert-info {
+  background-color: #64c3fa; }
 
-.alert-green {
-  background-color: #00d976; }
+.alert-warning {
+  background-color: #fabe1e; }
+
+.alert-danger {
+  background-color: #ff5055; }
 
 .modal {
   display: none;
