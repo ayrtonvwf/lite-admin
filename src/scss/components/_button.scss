@@ -1,6 +1,6 @@
-.btn-green, .btn-yellow, .btn-red, .btn-blue {
+.btn {
     display: inline-block !important;
-    padding: 10px 15px;
+    padding: 10px 15px 8px 15px;
     border: none;
     margin: 2px;
     color: white;
@@ -11,32 +11,71 @@
     transition: background-color .2s;
     text-decoration: none;
     line-height: 17px;
-}
-.btn-green {
-    background: $green;
-    &:hover {
-        background: darken(rgb(0, 166, 90), 5);
+    background-color: $btn-default-color;
+    &:hover, &:focus {
+        background-color: darken($btn-default-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-default-color, $btn-disabled-lighten);
+        cursor: not-allowed;
     }
 }
-.btn-yellow {
-    background: $yellow;
-    &:hover {
-        background: darken(rgb(243, 156, 18), 5);
+
+.btn-success {
+    background: $btn-success-color;
+    &:hover, &:focus {
+        background: darken($btn-success-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-success-color, $btn-disabled-lighten);
     }
 }
-.btn-red {
-    background: $red;
-    &:hover {
-        background: darken(rgb(221, 75, 57), 5);
+.btn-info {
+    background: $btn-info-color;
+    &:hover, &:focus {
+        background: darken($btn-info-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-info-color, $btn-disabled-lighten);
     }
 }
-.btn-blue {
-    background: $blue;
-    &:hover {
-        background: darken($blue, 5);
+.btn-primary {
+    background: $btn-primary-color;
+    &:hover, &:focus {
+        background: darken($btn-primary-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-primary-color, $btn-disabled-lighten);
     }
 }
-.btn-small {
+.btn-warning {
+    background: $btn-warning-color;
+    &:hover, &:focus {
+        background: darken($btn-warning-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-warning-color, $btn-disabled-lighten);
+    }
+}
+.btn-danger {
+    background: $btn-danger-color;
+    &:hover, &:focus {
+        background: darken($btn-danger-color, $btn-hover-darken);
+    }
+    &[disabled] {
+        background-color: lighten($btn-danger-color, $btn-disabled-lighten);
+    }
+}
+
+.btn-xs {
     font-size: 13px;
-    padding: 7px;
+    padding: 3px 5px 1px 5px;
+}
+.btn-sm {
+    font-size: 13px;
+    padding: 7px 10px 5px 10px;
+}
+.btn-lg {
+    font-size: 20px;
+    padding: 15px 20px 13px 20px;
 }
