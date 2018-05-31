@@ -1,5 +1,6 @@
 .tooltip {
     position: relative;
+    outline: none;
     &::before {
         content:attr(title);
         display: block;
