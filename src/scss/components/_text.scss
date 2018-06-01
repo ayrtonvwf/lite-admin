@@ -31,3 +31,28 @@ p {
 .capitalize {
     text-transform: capitalize;
 }
+
+.text-success {
+    color: $text-success-color;
+}
+.text-info {
+    color: $text-success-color;
+}
+.text-primary {
+    color: $text-primary-color;
+}
+.text-warning {
+    color: $text-warning-color;
+}
+.text-danger {
+    color: $text-danger-color;
+}
+.text-muted {
+    color: $text-muted-color;
+}
+.text-black {
+    color: black;
+}
+.text-white {
+    color: white;
+}
