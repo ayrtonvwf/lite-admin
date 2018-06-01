@@ -41,18 +41,18 @@
       <main class="content">
         <div class="row">
           <div class="col-xs-12">
-            <h1 class="content-title"><i class="fa fa-users">Página inicial</i></h1>
+            <h1 class="content-title"><i class="fa fa-users">Forms</i></h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="box">
-              <div class="box-header">Formulário</div>
+              <div class="box-header">Forms</div>
               <div class="box-body">
-                <form>
+                <form class="mark-required">
                   <div class="row">
                     <div class="col-xs-6 input">
-                      <input id="input" placeholder="Teste de campo" required>
+                      <input id="input" placeholder="Test field" required>
                       <label for="input">Teste de campo</label>
                     </div>
                     <div class="col-xs-6 input">
@@ -130,7 +130,13 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-12 form-status"></div>
+                    <div class="col-xs-12"><b class="hide-on-valid-form text-danger">
+                        <div class="counter-invalid-fields">Invalid fields:</div></b><b class="hide-on-invalid-form text-success">Ready to submit</b></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <button class="btn btn-success" type="submit">Submit</button>
+                    </div>
                   </div>
                 </form>
               </div>

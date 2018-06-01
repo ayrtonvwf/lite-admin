@@ -1,0 +1,76 @@
+extends layout.pug
+
+block content
+    .row
+        .col-xs-12
+            h1.content-title
+                i.fa.fa-users Forms
+    .row
+        .col-md-6
+            .box
+                .box-header Forms
+                .box-body
+                    form.mark-required
+                        .row
+                            .col-xs-6.input
+                                input#input(placeholder='Test field' required)
+                                label(for='input') Teste de campo
+                            .col-xs-6.input
+                                select#select(required)
+                                    option(selected hidden disabled) Selecione...
+                                    option Teste 1
+                                    option Teste 2
+                                    option Teste 3
+                                label(for='select') Teste de combo
+                        .row
+                            .col-xs-6.input
+                                input#date(type='date' placeholder='Data' required)
+                                label(for='date') Data
+                            .col-xs-6.input
+                                input#number(type='number' placeholder='Número' required)
+                                label(for='number') Teste de número
+                        .row
+                            .col-xs-12.input
+                                textarea#textarea(placeholder='Teste de textarea' required)
+                                label(for='textarea') Teste de Textarea
+                        .row
+                            .col-xs-6
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Opção 3
+                            .col-xs-6
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Opção 3
+                        .row
+                            .col-xs-12
+                                b.hide-on-valid-form.text-danger
+                                    .counter-invalid-fields Invalid fields:
+                                b.hide-on-invalid-form.text-success Ready to submit
+                        .row
+                            .col-xs-12
+                                button.btn.btn-success(type='submit') Submit

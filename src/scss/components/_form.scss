@@ -1,27 +1,30 @@
 form {
-    counter-reset: invalid-fields;
+    counter-reset: invalid-fields valid-fields;
 }
+
 .input {
     display: flex;
     flex-direction: column;
     &>label {
         order: -1;
     }
-    &>input:required+label::after,
-    &>select:required+label::after,
-    &>textarea:required+label::after {
-        content: " (Obrigatório)";
-        color: gray;
-        font-size: .9em;
-        font-weight: normal;
+    &>input, &>select, &>textarea {
+        form.mark-required &:required+label::after {
+            content: " *";
+            color: red;
+            font-size: .9em;
+            font-weight: bold;
+        }
     }
 }
+
 label {
     padding: 3px 0px;
     display: inline-block;
     font-weight: bold;
     color: $black;
 }
+
 input:not([type='checkbox']):not([type='radio']), select, textarea {
     width: 100%;
     padding: 8px;
@@ -42,9 +45,11 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
         box-shadow: none; // remove firefox style
     }
 }
+
 input:not([type='checkbox']):not([type='radio']), select {
     height: 36px;
 }
+
 input[type='checkbox'] {
     display: inline-block;
     appearance: none;
@@ -71,6 +76,7 @@ input[type='checkbox'] {
         line-height: 16px;
     }
 }
+
 input[type='radio'] {
     display: inline-block;
     appearance: none;
@@ -99,6 +105,7 @@ input[type='radio'] {
         }
     }
 }
+
 select:required:invalid:not(:focus) {
     color: lightgray;
 }
@@ -108,6 +115,7 @@ select {
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
 }
+
 .resize-h {
     resize: horizontal;
 }
@@ -120,33 +128,24 @@ select {
 .resize-both {
     resize: both;
 }
+
+form:valid .hide-on-valid-form {
+    display: none;
+}
+form:invalid .hide-on-invalid-form {
+    display: none;
+}
+
 input:invalid, select:invalid, textarea:invalid {
     counter-increment: invalid-fields;
 }
-.form-status {
-    transition: opacity .5s;
-    &::before {
-        content: "Campos inválidos: "counter(invalid-fields);
-        line-height: 30px;
-        transition: color .4s;
-        color: $red;
-        font-weight: bold;
-        position: absolute;
-        form:valid & {
-            color: transparent;
-        }
-    }
-    &::after {
-        content: "Pronto para salvar!";
-        line-height: 30px;
-        transition: color .4s;
-        color: $green;
-        font-weight: bold;
-        form:invalid & {
-            color: transparent;
-        }
-    }
-    form:not(:focus-within) & {
-        opacity: 0;
-    }
+input:valid, select:valid, textarea:valid {
+    counter-increment: valid-fields;
+}
+
+.counter-invalid-fields::after {
+    content: counter(invalid-fields);
+}
+.counter-valid-fields::after {
+    content: counter(valid-fields);
 }
