@@ -12,7 +12,7 @@ body {
   font-size: 13px;
   background: #ecf0f5;
   overflow-x: hidden;
-  counter-reset: invalid-fields table-rows; }
+  counter-reset: table-rows; }
   body, body button {
     font-family: sans-serif; }
 
@@ -1120,6 +1120,9 @@ div.table {
 
 .text-center {
   text-align: center; }
+
+form {
+  counter-reset: invalid-fields; }
 
 .input {
   display: -ms-flexbox;

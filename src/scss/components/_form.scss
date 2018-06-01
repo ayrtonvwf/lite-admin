@@ -1,3 +1,6 @@
+form {
+    counter-reset: invalid-fields;
+}
 .input {
     display: flex;
     flex-direction: column;
