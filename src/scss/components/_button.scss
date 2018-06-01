@@ -15,7 +15,7 @@
     &:hover, &:focus {
         background-color: darken($btn-default-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-default-color, $btn-disabled-lighten);
         cursor: not-allowed;
     }
@@ -26,7 +26,7 @@
     &:hover, &:focus {
         background: darken($btn-success-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-success-color, $btn-disabled-lighten);
     }
 }
@@ -35,7 +35,7 @@
     &:hover, &:focus {
         background: darken($btn-info-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-info-color, $btn-disabled-lighten);
     }
 }
@@ -44,7 +44,7 @@
     &:hover, &:focus {
         background: darken($btn-primary-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-primary-color, $btn-disabled-lighten);
     }
 }
@@ -53,7 +53,7 @@
     &:hover, &:focus {
         background: darken($btn-warning-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-warning-color, $btn-disabled-lighten);
     }
 }
@@ -62,7 +62,7 @@
     &:hover, &:focus {
         background: darken($btn-danger-color, $btn-hover-darken);
     }
-    &[disabled] {
+    &[disabled], &.disabled {
         background-color: lighten($btn-danger-color, $btn-disabled-lighten);
     }
 }
