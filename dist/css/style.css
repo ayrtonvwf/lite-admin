@@ -11,8 +11,7 @@ body {
   margin: 0px;
   font-size: 13px;
   background: #ecf0f5;
-  overflow-x: hidden;
-  counter-reset: table-rows; }
+  overflow-x: hidden; }
   body, body button {
     font-family: sans-serif; }
 
@@ -1097,6 +1096,7 @@ body {
   margin-right: 2px; }
 
 table.table, .table > table {
+  counter-reset: table-rows;
   width: 100%;
   border-collapse: collapse; }
   table.table th, .table > table th {
@@ -1122,7 +1122,7 @@ div.table {
   text-align: center; }
 
 form {
-  counter-reset: invalid-fields; }
+  counter-reset: invalid-fields valid-fields; }
 
 .input {
   display: -ms-flexbox;

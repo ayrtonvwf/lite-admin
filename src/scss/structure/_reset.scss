@@ -9,7 +9,6 @@ body {
     font-size: 13px;
     background: $background;
     overflow-x: hidden;
-    counter-reset: table-rows;
     &, button {
         font-family: sans-serif;
     }

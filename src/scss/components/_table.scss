@@ -1,4 +1,5 @@
 table.table, .table>table {
+    counter-reset: table-rows;
     width: 100%;
     border-collapse: collapse;
 
