@@ -1251,6 +1251,13 @@ input:valid, select:valid, textarea:valid {
 .counter-valid-fields::after {
   content: counter(valid-fields); }
 
+fieldset {
+  border: 1px solid gray; }
+  fieldset > legend {
+    padding: 5px;
+    font-size: 16px;
+    color: #323232; }
+
 .pagination {
   display: -ms-flexbox;
   display: flex; }
