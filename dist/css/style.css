@@ -1173,7 +1173,8 @@ input[type='checkbox'] {
   input[type='checkbox']:before {
     content: "✔";
     width: 18px;
-    line-height: 18px;
+    padding-top: 2px;
+    line-height: 16px;
     text-align: center;
     display: inline-block;
     color: white; }
@@ -1182,7 +1183,7 @@ input[type='checkbox'] {
   label:hover > input[type='checkbox']::before, input[type='checkbox']:focus::before {
     font-weight: bold;
     border: 1px solid blue;
-    line-height: 16px; }
+    line-height: 14px; }
 
 input[type='radio'] {
   display: inline-block;
