@@ -45,172 +45,202 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-xs-12">
             <div class="box">
-              <div class="box-header">Inputs</div>
               <div class="box-body">
+                <h2 class="title-2">Validation indicators</h2>
+                <p>
+                  Just include a
+                  <code>&lt;span class=&quot;counter-invalid-fields&quot;&gt;&lt;/span&gt;</code>
+                  inside a form and you have the number of invalid fields.
+                  The same goes with
+                  <code>&lt;span class=&quot;counter-valid-fields&quot;&gt;&lt;/span&gt;</code>.
+                </p>
+                <p>
+                  You can also add the class
+                  <code>hide-on-valid-form</code>
+                  to any element inside a form and it'll be hidden when all the fields are valid. If you add the class
+                  <code>hide-on-invalid-form</code>
+                  the element will be hidden when any field is invalid.
+                </p>
+                <p>Try it yourself:</p><br>
                 <form>
                   <div class="row">
-                    <div class="col-xs-6 input">
-                      <input id="input" placeholder="Regular text field" required>
-                      <label for="input">Normal text field</label>
-                    </div>
-                    <div class="col-xs-6 input">
-                      <select id="select" required>
-                        <option selected hidden disabled>Select...</option>
-                        <option>Teste 1</option>
-                        <option>Teste 2</option>
-                        <option>Teste 3</option>
-                      </select>
-                      <label for="select">A nice select</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-6 input">
-                      <input id="date" type="date" placeholder="Date" required>
-                      <label for="date">A date input</label>
-                    </div>
-                    <div class="col-xs-6 input">
-                      <input id="number" type="number" placeholder="Only numbers please" required>
-                      <label for="number">Numeric input</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 input">
-                      <textarea id="textarea" placeholder="Textarea for bigger texts" required></textarea>
-                      <label for="textarea">A cool textarea</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <fieldset>
-                        <legend>Checkbox</legend>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="checkbox">Option 1
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="checkbox">Option 2
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="checkbox">Option 3
-                            </label>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <div class="col-sm-6">
-                      <fieldset>
-                        <legend>Radio</legend>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="radio" name="radio">Option 1
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="radio" name="radio">Option 2
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <label>
-                              <input type="radio" name="radio">Option 3
-                            </label>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="box">
-              <div class="box-header">Validation indicators</div>
-              <div class="box-body">
-                <form class="mark-required">
-                  <div class="row">
-                    <div class="col-xs-6 input">
-                      <input id="required-input" placeholder="Automaticaly marked with *" required>
+                    <div class="col-xs-6 col-sm-4 col-sm-offset-2">
                       <label for="required-input">Required field</label>
+                      <input id="required-input" placeholder="Type anything here" required>
                     </div>
-                    <div class="col-xs-6 input">
+                    <div class="col-xs-6 col-sm-4">
+                      <label for="select">Required select</label>
                       <select id="required-select" required>
                         <option value="" selected hidden disabled>Select...</option>
                         <option value="1">Teste 1</option>
                         <option value="2">Teste 2</option>
                         <option value="3">Teste 3</option>
                       </select>
-                      <label for="select">Required</label>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-6 input">
-                      <input id="required-number" type="number" placeholder="Between 5 and 9" required min="5" max="9">
-                      <label for="number">Numeric input</label>
+                    <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                      <label for="required-number">Number between 5 and 9</label>
+                      <input id="required-number" type="number" placeholder="Numeric input" required min="5" max="9">
                     </div>
-                    <div class="col-xs-6 text-center"><br>
-                      <button class="btn btn-lg btn-success hide-on-invalid-form" type="submit"><i class="fa fa-fw fa-check"></i>  Submit</button>
-                      <button class="btn btn-lg btn-default disabled hide-on-valid-form" type="submit"><i class="fa fa-fw fa-exclamation-triangle"></i>  Submit</button>
+                    <div class="col-xs-6 col-sm-4 text-center">
+                      <button class="btn btn-lg btn-success hide-on-invalid-form" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
+                      <button class="btn btn-lg btn-default hide-on-valid-form" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
                     </div>
                   </div><br>
                   <div class="row">
-                    <div class="col-xs-4 text-bold text-danger counter-invalid-fields">Invalid fields:</div>
-                    <div class="col-xs-4 text-center text-bold text-success counter-valid-fields">Valid fields:</div>
-                    <div class="col-xs-4 text-right text-bold text-danger hide-on-valid-form">Has validation errors!</div>
-                    <div class="col-xs-4 text-right text-bold text-success hide-on-invalid-form">Ready to submit!</div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="box">
-              <div class="box-header">Textarea resize</div>
-              <div class="box-body">
-                <form>
-                  <div class="row">
-                    <div class="col-xs-12 input">
-                      <textarea class="resize-v" id="textarea-resize-v" placeholder="Resize height only"></textarea>
-                      <label for="textarea">Resizable height</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 input">
-                      <textarea class="resize-h" id="textarea-resize-h" placeholder="Resize width only"></textarea>
-                      <label for="textarea">Resizable width</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 input">
-                      <textarea class="resize-both" id="textarea-resize-both" placeholder="Resize width and height"></textarea>
-                      <label for="textarea">Fully resizable</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 input">
-                      <textarea class="no-resize" id="textarea-no-resize" placeholder="No resize at all"></textarea>
-                      <label for="textarea">Resizing blocked</label>
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <div class="row">
+                        <div class="col-xs-4 text-bold text-danger counter-invalid-fields">Invalid fields:  </div>
+                        <div class="col-xs-4 text-center text-bold text-success counter-valid-fields">Valid fields:  </div>
+                        <div class="col-xs-4 text-right text-bold text-danger hide-on-valid-form">Has validation errors!</div>
+                        <div class="col-xs-4 text-right text-bold text-success hide-on-invalid-form">Ready to submit!</div>
+                      </div>
                     </div>
                   </div>
                 </form>
+                <hr>
+                <h2 class="title-2">Auto required hints</h2>
+                <p>We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:</p>
+                <ol>
+                  <li>add a <code>mark-required</code> class to your form;</li>
+                  <li>add a <code>&lt;div class=&quot;input&quot;&gt;</code> wrapping your label and your input</li>
+                  <li>put the <code>input</code> before the <code>label</code></li>
+                </ol>
+                <pre><code>&lt;form class=&quot;mark-required&quot;&gt;<br>
+&nbsp;&nbsp;&lt;div class=&quot;input&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input required&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;My required label&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/form&gt;</code></pre>
+                <p><b>Why would you do this?</b></p>
+                <ul>
+                  <li>Once you get used to it, it becomes less weird;</li>
+                  <li>You won't need to put that * on every label. No more "little mistakes";</li>
+                  <li>If you use JS to toggle the input's required on or off, you don't need to worry about this label. It auto adjusts!</li>
+                </ul>
+                <p>Finally, here's the demo:</p>
+                <form class="mark-required">
+                  <div class="row">
+                    <div class="input col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+                      <input id="mark-required-input" required placeholder="A required label">
+                      <label for="mark-required-input">My required label</label>
+                    </div>
+                  </div>
+                </form>
+                <hr>
+                <h2 class="title-2">Checkbox and Radio</h2>
+                <p>Do you know somebody who uses JS to build nice <code>checkbox</code>es and <code>radio</code>s? <br>
+                  You don't need any extra markup or class, just use them!
+                </p>
+                <div class="row">
+                  <div class="col-sm-4 col-sm-offset-2">
+                    <fieldset>
+                      <legend>Checkbox</legend>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="checkbox">Option 1
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="checkbox">Option 2
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="checkbox">Option 3
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-sm-4">
+                    <fieldset>
+                      <legend>Radio</legend>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="radio" name="radio">Option 1
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="radio" name="radio">Option 2
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <label>
+                            <input type="radio" name="radio">Option 3
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <p>By the way, this is how our <code>fieldset</code> looks :)</p>
+                <hr>
+                <h2 class="title-2">Textarea resize</h2>
+                <p>You have four classes to control the resizing of <code>textarea</code>s:</p>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                    <label for="textarea-no-resize">No resize</label>
+                    <textarea class="no-resize" id="textarea-no-resize" placeholder="&lt;textarea class=&quot;no-resize&quot;&gt;&lt;/textarea&gt;"></textarea>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <label for="textarea-resize-both">Resize both</label>
+                    <textarea class="resize-both" id="textarea-resize-both" placeholder="&lt;textarea class=&quot;resize-both&quot;&gt;&lt;/textarea&gt;"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                    <label for="textarea-resize-v">Resize vertically</label>
+                    <textarea class="resize-v" id="textarea-resize-v" placeholder="&lt;textarea class=&quot;resize-v&quot;&gt;&lt;/textarea&gt;"></textarea>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <label for="textarea-resize-h">Resize horizontally</label>
+                    <textarea class="resize-h" id="textarea-resize-h" placeholder="&lt;textarea class=&quot;resize-h&quot;&gt;&lt;/textarea&gt;"></textarea>
+                  </div>
+                </div>
+                <hr>
+                <h2 class="title-2">Regular inputs</h2>
+                <p>As expected, you can simply use your <code>input</code>s, <code>select</code>s and <code>textarea</code>s and they will look fine. No extra classes needed:</p><br>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4 col-sm-offset-2 input">
+                    <label for="input">A regular text field</label>
+                    <input id="input" placeholder="with a regular placeholder">
+                  </div>
+                  <div class="col-xs-6 col-sm-4 input">
+                    <label for="select">A nice select</label>
+                    <select id="select">
+                      <option selected hidden disabled>Select...</option>
+                      <option>Teste 1</option>
+                      <option>Teste 2</option>
+                      <option>Teste 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4 col-sm-offset-2 input">
+                    <label for="date">A date field</label>
+                    <input id="date" placeholder="Date">
+                  </div>
+                  <div class="col-xs-6 col-sm-4 input">
+                    <label for="range">A range field</label>
+                    <input id="range" type="range">
+                  </div>
+                </div>
               </div>
             </div>
           </div>

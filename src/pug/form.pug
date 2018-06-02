@@ -7,123 +7,168 @@ block content
                 i.fa.fa-fw.fa-keyboard-o
                 | Forms
     .row
-        .col-md-6
+        .col-xs-12
             .box
-                .box-header Inputs
                 .box-body
+                    h2.title-2 Validation indicators
+                    p
+                        | Just include a
+                        |
+                        code #{'<span class="counter-invalid-fields"></span>'}
+                        |
+                        | inside a form and you have the number of invalid fields.
+                        | The same goes with
+                        |
+                        code #{'<span class="counter-valid-fields"></span>'}
+                        | .
+                    p
+                        | You can also add the class
+                        |
+                        code hide-on-valid-form
+                        |
+                        | to any element inside a form and it'll be hidden when all the fields are valid. If you add the class
+                        |
+                        code hide-on-invalid-form
+                        |
+                        | the element will be hidden when any field is invalid.
+                    p Try it yourself:
+                    br
                     form
                         .row
-                            .col-xs-6.input
-                                input#input(placeholder='Regular text field' required)
-                                label(for='input') Normal text field
-                            .col-xs-6.input
-                                select#select(required)
-                                    option(selected hidden disabled) Select...
-                                    option Teste 1
-                                    option Teste 2
-                                    option Teste 3
-                                label(for='select') A nice select
-                        .row
-                            .col-xs-6.input
-                                input#date(type='date' placeholder='Date' required)
-                                label(for='date') A date input
-                            .col-xs-6.input
-                                input#number(type='number' placeholder='Only numbers please' required)
-                                label(for='number') Numeric input
-                        .row
-                            .col-xs-12.input
-                                textarea#textarea(placeholder='Textarea for bigger texts' required)
-                                label(for='textarea') A cool textarea
-                        .row
-                            .col-sm-6
-                                fieldset
-                                    legend Checkbox
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Option 1
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Option 2
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Option 3
-                            .col-sm-6
-                                fieldset
-                                    legend Radio
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Option 1
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Option 2
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Option 3
-        .col-md-6
-            .box
-                .box-header Validation indicators
-                .box-body
-                    form.mark-required
-                        .row
-                            .col-xs-6.input
-                                input#required-input(placeholder='Automaticaly marked with *' required)
+                            .col-xs-6.col-sm-4.col-sm-offset-2
                                 label(for='required-input') Required field
-                            .col-xs-6.input
+                                input#required-input(placeholder='Type anything here' required)
+                            .col-xs-6.col-sm-4
+                                label(for='select') Required select
                                 select#required-select(required)
                                     option(value='' selected hidden disabled) Select...
                                     option(value='1') Teste 1
                                     option(value='2') Teste 2
                                     option(value='3') Teste 3
-                                label(for='select') Required
                         .row
-                            .col-xs-6.input
-                                input#required-number(type='number' placeholder='Between 5 and 9' required min='5' max='9')
-                                label(for='number') Numeric input
-                            .col-xs-6.text-center
-                                br
-                                button(type='submit').btn.btn-lg.btn-success.hide-on-invalid-form
+                            .col-xs-6.col-sm-4.col-sm-offset-2
+                                label(for='required-number') Number between 5 and 9
+                                input#required-number(type='number' placeholder='Numeric input' required min='5' max='9')
+                            .col-xs-6.col-sm-4.text-center
+                                button.btn.btn-lg.btn-success.hide-on-invalid-form(type='submit')
                                     i.fa.fa-fw.fa-check
-                                    |   Submit
-                                button(type='submit').btn.btn-lg.btn-default.disabled.hide-on-valid-form
-                                    i.fa.fa-fw.fa-exclamation-triangle
-                                    |   Submit
+                                    | Submit
+                                button.btn.btn-lg.btn-default.hide-on-valid-form(type='submit')
+                                    i.fa.fa-fw.fa-times
+                                    | Submit
                         br
                         .row
-                            .col-xs-4.text-bold.text-danger.counter-invalid-fields Invalid fields:
-                            .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields:
-                            .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
-                            .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
-    .row
-        .col-md-6
-            .box
-                .box-header Textarea resize
-                .box-body
-                    form
+                            .col-sm-8.col-sm-offset-2
+                                .row
+                                    .col-xs-4.text-bold.text-danger.counter-invalid-fields Invalid fields: #{' '}
+                                    .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields: #{' '}
+                                    .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
+                                    .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
+                    hr
+                    h2.title-2 Auto required hints
+                    p We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:
+                    ol
+                        li add a #[code mark-required] class to your form;
+                        li add a #[code #{'<div class="input">'}] wrapping your label and your input
+                        li put the #[code input] before the #[code label]
+                    pre
+                        code.
+                            #{'<form class="mark-required">'}#[br]
+                            &nbsp;&nbsp;#{'<div class="input">'}#[br]
+                            &nbsp;&nbsp;&nbsp;&nbsp;#{'<input required>'}#[br]
+                            &nbsp;&nbsp;&nbsp;&nbsp;#{'<label>My required label</label>'}#[br]
+                            &nbsp;&nbsp;#{'</div>'}#[br]
+                            #{'</form>'}
+                    p #[b Why would you do this?]
+                    ul
+                        li Once you get used to it, it becomes less weird;
+                        li You won't need to put that * on every label. No more "little mistakes";
+                        li If you use JS to toggle the input's required on or off, you don't need to worry about this label. It auto adjusts!
+                    p Finally, here's the demo:
+                    form.mark-required
                         .row
-                            .col-xs-12.input
-                                textarea#textarea-resize-v.resize-v(placeholder='Resize height only')
-                                label(for='textarea') Resizable height
-                        .row
-                            .col-xs-12.input
-                                textarea#textarea-resize-h.resize-h(placeholder='Resize width only')
-                                label(for='textarea') Resizable width
-                        .row
-                            .col-xs-12.input
-                                textarea#textarea-resize-both.resize-both(placeholder='Resize width and height')
-                                label(for='textarea') Fully resizable
-                        .row
-                            .col-xs-12.input
-                                textarea#textarea-no-resize.no-resize(placeholder='No resize at all')
-                                label(for='textarea') Resizing blocked
+                            .input.col-xs-6.col-xs-offset-3.col-sm-4.col-sm-offset-4
+                                input#mark-required-input(required placeholder='A required label')
+                                label(for='mark-required-input') My required label
+                    hr
+                    h2.title-2 Checkbox and Radio
+                    p.
+                        Do you know somebody who uses JS to build nice #[code checkbox]es and #[code radio]s? #[br]
+                        You don't need any extra markup or class, just use them!
+                    .row
+                        .col-sm-4.col-sm-offset-2
+                            fieldset
+                                legend Checkbox
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Option 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Option 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='checkbox')
+                                            | Option 3
+                        .col-sm-4
+                            fieldset
+                                legend Radio
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Option 1
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Option 2
+                                .row
+                                    .col-xs-12
+                                        label
+                                            input(type='radio' name='radio')
+                                            | Option 3
+                    p By the way, this is how our #[code fieldset] looks :)
+                    hr
+                    h2.title-2 Textarea resize
+                    p You have four classes to control the resizing of #[code textarea]s:
+                    .row
+                        .col-xs-12.col-sm-4.col-sm-offset-2
+                            label(for='textarea-no-resize') No resize
+                            textarea#textarea-no-resize.no-resize(placeholder='<textarea class="no-resize"></textarea>')
+                        .col-xs-12.col-sm-4
+                            label(for='textarea-resize-both') Resize both
+                            textarea#textarea-resize-both.resize-both(placeholder='<textarea class="resize-both"></textarea>')
+                    .row
+                        .col-xs-12.col-sm-4.col-sm-offset-2
+                            label(for='textarea-resize-v') Resize vertically
+                            textarea#textarea-resize-v.resize-v(placeholder='<textarea class="resize-v"></textarea>')
+                        .col-xs-12.col-sm-4
+                            label(for='textarea-resize-h') Resize horizontally
+                            textarea#textarea-resize-h.resize-h(placeholder='<textarea class="resize-h"></textarea>')
+                    hr
+                    h2.title-2 Regular inputs
+                    p As expected, you can simply use your #[code input]s, #[code select]s and #[code textarea]s and they will look fine. No extra classes needed:
+                    br
+                    .row
+                        .col-xs-6.col-sm-4.col-sm-offset-2.input
+                            label(for='input') A regular text field
+                            input#input(placeholder='with a regular placeholder')
+                        .col-xs-6.col-sm-4.input
+                            label(for='select') A nice select
+                            select#select
+                                option(selected hidden disabled) Select...
+                                option Teste 1
+                                option Teste 2
+                                option Teste 3
+                    .row
+                        .col-xs-6.col-sm-4.col-sm-offset-2.input
+                            label(for='date') A date field
+                            input#date(placeholder='Date')
+                        .col-xs-6.col-sm-4.input
+                            label(for='range') A range field
+                            input#range(type='range')
