@@ -1,5 +1,5 @@
 %title {
-    margin: 5px 0px;
+    margin: 15px 0px 5px 0px;
     font-weight: normal;
 }
 .title-1 {
@@ -20,8 +20,15 @@
 }
 
 p {
-    @extend %title;
     margin: 5px 0px;
+    font-size: 15px;
+    line-height: 20px;
+}
+ul {
+    margin: 5px 0px 15px 0px;
+    font-size: 14px;
+    padding-left: 25px;
+    line-height: 17px;
 }
 
 .text-muted {
