@@ -4,75 +4,126 @@ block content
     .row
         .col-xs-12
             h1.content-title
-                i.fa.fa-users Forms
+                i.fa.fa-fw.fa-keyboard-o
+                | Forms
     .row
         .col-md-6
             .box
-                .box-header Forms
+                .box-header Inputs
+                .box-body
+                    form
+                        .row
+                            .col-xs-6.input
+                                input#input(placeholder='Regular text field' required)
+                                label(for='input') Normal text field
+                            .col-xs-6.input
+                                select#select(required)
+                                    option(selected hidden disabled) Select...
+                                    option Teste 1
+                                    option Teste 2
+                                    option Teste 3
+                                label(for='select') A nice select
+                        .row
+                            .col-xs-6.input
+                                input#date(type='date' placeholder='Date' required)
+                                label(for='date') A date input
+                            .col-xs-6.input
+                                input#number(type='number' placeholder='Only numbers please' required)
+                                label(for='number') Numeric input
+                        .row
+                            .col-xs-12.input
+                                textarea#textarea(placeholder='Textarea for bigger texts' required)
+                                label(for='textarea') A cool textarea
+                        .row
+                            .col-sm-6
+                                fieldset
+                                    legend Checkbox
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='checkbox')
+                                                | Option 1
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='checkbox')
+                                                | Option 2
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='checkbox')
+                                                | Option 3
+                            .col-sm-6
+                                fieldset
+                                    legend Radio
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='radio' name='radio')
+                                                | Option 1
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='radio' name='radio')
+                                                | Option 2
+                                    .row
+                                        .col-xs-12
+                                            label
+                                                input(type='radio' name='radio')
+                                                | Option 3
+        .col-md-6
+            .box
+                .box-header Validation indicators
                 .box-body
                     form.mark-required
                         .row
                             .col-xs-6.input
-                                input#input(placeholder='Test field' required)
-                                label(for='input') Teste de campo
+                                input#required-input(placeholder='Automaticaly marked with *' required)
+                                label(for='required-input') Required field
                             .col-xs-6.input
-                                select#select(required)
-                                    option(selected hidden disabled) Selecione...
-                                    option Teste 1
-                                    option Teste 2
-                                    option Teste 3
-                                label(for='select') Teste de combo
+                                select#required-select(required)
+                                    option(value='' selected hidden disabled) Select...
+                                    option(value='1') Teste 1
+                                    option(value='2') Teste 2
+                                    option(value='3') Teste 3
+                                label(for='select') Required
                         .row
                             .col-xs-6.input
-                                input#date(type='date' placeholder='Data' required)
-                                label(for='date') Data
-                            .col-xs-6.input
-                                input#number(type='number' placeholder='Número' required)
-                                label(for='number') Teste de número
+                                input#required-number(type='number' placeholder='Between 5 and 9' required min='5' max='9')
+                                label(for='number') Numeric input
+                            .col-xs-6.text-center
+                                br
+                                button(type='submit').btn.btn-lg.btn-success.hide-on-invalid-form
+                                    i.fa.fa-fw.fa-check
+                                    |   Submit
+                                button(type='submit').btn.btn-lg.btn-default.disabled.hide-on-valid-form
+                                    i.fa.fa-fw.fa-exclamation-triangle
+                                    |   Submit
+                        br
+                        .row
+                            .col-xs-4.text-bold.text-danger.counter-invalid-fields Invalid fields:
+                            .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields:
+                            .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
+                            .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
+    .row
+        .col-md-6
+            .box
+                .box-header Textarea resize
+                .box-body
+                    form
                         .row
                             .col-xs-12.input
-                                textarea#textarea(placeholder='Teste de textarea' required)
-                                label(for='textarea') Teste de Textarea
-                        fieldset
-                            legend Checkbox and Radio
-                            .row
-                                .col-xs-6
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Opção 1
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Opção 2
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='checkbox')
-                                                | Opção 3
-                                .col-xs-6
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Opção 1
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Opção 2
-                                    .row
-                                        .col-xs-12
-                                            label
-                                                input(type='radio' name='radio')
-                                                | Opção 3
+                                textarea#textarea-resize-v.resize-v(placeholder='Resize height only')
+                                label(for='textarea') Resizable height
                         .row
-                            .col-xs-12
-                                b.hide-on-valid-form.text-danger
-                                    .counter-invalid-fields Invalid fields:
-                                b.hide-on-invalid-form.text-success Ready to submit
+                            .col-xs-12.input
+                                textarea#textarea-resize-h.resize-h(placeholder='Resize width only')
+                                label(for='textarea') Resizable width
                         .row
-                            .col-xs-12
-                                button.btn.btn-success(type='submit') Submit
+                            .col-xs-12.input
+                                textarea#textarea-resize-both.resize-both(placeholder='Resize width and height')
+                                label(for='textarea') Fully resizable
+                        .row
+                            .col-xs-12.input
+                                textarea#textarea-no-resize.no-resize(placeholder='No resize at all')
+                                label(for='textarea') Resizing blocked

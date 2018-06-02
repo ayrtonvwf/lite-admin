@@ -129,10 +129,10 @@ select {
 }
 
 form:valid .hide-on-valid-form {
-    display: none;
+    display: none !important;
 }
 form:invalid .hide-on-invalid-form {
-    display: none;
+    display: none !important;
 }
 
 input:invalid, select:invalid, textarea:invalid {

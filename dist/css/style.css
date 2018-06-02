@@ -272,7 +272,8 @@ body {
 
 .content-title {
   margin: 7px 0px;
-  font-size: 25px; }
+  font-size: 25px;
+  font-weight: normal; }
 
 .row {
   margin-left: -15px;
@@ -1242,10 +1243,10 @@ select {
   resize: both; }
 
 form:valid .hide-on-valid-form {
-  display: none; }
+  display: none !important; }
 
 form:invalid .hide-on-invalid-form {
-  display: none; }
+  display: none !important; }
 
 input:invalid, select:invalid, textarea:invalid {
   counter-increment: invalid-fields; }
