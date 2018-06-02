@@ -7,11 +7,12 @@ table.table, .table>table {
         text-align: left;
         padding: 5px 10px;
     }
-    tbody>tr {
-        counter-increment: table-rows;
+    tbody>tr { ment: table-rows;
     }
-    tbody>tr:hover {
-        background: rgb(240, 240, 240);
+    @media (pointer: fine) {
+        tbody > tr:hover {
+            background: rgb(240, 240, 240);
+        }
     }
     td {
         border-top: 1px solid lightgray;
