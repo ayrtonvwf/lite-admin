@@ -1210,9 +1210,6 @@ input[type='radio'] {
     label:hover > input[type='radio']::before, label:focus > input[type='radio']::before, input[type='radio']:hover::before, input[type='radio']:focus::before {
       margin: 3px; }
 
-select:required:invalid:not(:focus) {
-  color: lightgray; }
-
 select {
   -webkit-appearance: none;
      -moz-appearance: none;
