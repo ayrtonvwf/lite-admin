@@ -25,6 +25,7 @@ const build_css = function() {
         .pipe(prefix())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist))
+        .pipe(gulp.dest(docs))
 }
 
 gulp.task('watch', function() {
