@@ -1116,12 +1116,6 @@ table.table, .table > table {
 div.table {
   overflow-x: auto; }
 
-.text-right {
-  text-align: right; }
-
-.text-center {
-  text-align: center; }
-
 form {
   counter-reset: invalid-fields valid-fields; }
 
@@ -1373,23 +1367,17 @@ input:valid, select:valid, textarea:valid {
 p {
   margin: 5px 0px; }
 
-.lowercase {
-  text-transform: lowercase; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.capitalize {
-  text-transform: capitalize; }
+.text-muted {
+  color: #969696; }
 
 .text-success {
   color: #00a65a; }
 
 .text-info {
-  color: #00a65a; }
+  color: #3c8dbc; }
 
 .text-primary {
-  color: #3c8dbc; }
+  color: #286e96; }
 
 .text-warning {
   color: #f39c12; }
@@ -1397,11 +1385,71 @@ p {
 .text-danger {
   color: #dd4b39; }
 
-.text-muted {
-  color: #969696; }
-
 .text-black {
   color: black; }
 
 .text-white {
   color: white; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-last-left {
+  text-align-last: left; }
+
+.text-last-center {
+  text-align-last: center; }
+
+.text-last-right {
+  text-align-last: right; }
+
+.text-last-justify {
+  text-align-last: justify; }
+
+.text-underlined {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline; }
+
+.text-striked {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through; }
+
+.text-overlined {
+  -webkit-text-decoration-line: overline;
+          text-decoration-line: overline; }
+
+.text-bold {
+  font-weight: bold; }
+
+.text-italic {
+  font-style: italic; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.text-sup {
+  font-variant-position: super;
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal; }
+
+.text-sub {
+  font-variant-position: sub;
+  vertical-align: sub;
+  font-size: smaller;
+  line-height: normal; }

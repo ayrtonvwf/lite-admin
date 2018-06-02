@@ -18,25 +18,20 @@
     @extend %title;
     font-size: 18px;
 }
+
 p {
     @extend %title;
     margin: 5px 0px;
 }
-.lowercase {
-    text-transform: lowercase;
-}
-.uppercase {
-    text-transform: uppercase;
-}
-.capitalize {
-    text-transform: capitalize;
-}
 
+.text-muted {
+    color: $text-muted-color;
+}
 .text-success {
     color: $text-success-color;
 }
 .text-info {
-    color: $text-success-color;
+    color: $text-info-color;
 }
 .text-primary {
     color: $text-primary-color;
@@ -47,12 +42,76 @@ p {
 .text-danger {
     color: $text-danger-color;
 }
-.text-muted {
-    color: $text-muted-color;
-}
 .text-black {
     color: black;
 }
 .text-white {
     color: white;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+
+.text-last-left {
+    text-align-last: left;
+}
+.text-last-center {
+    text-align-last: center;
+}
+.text-last-right {
+    text-align-last: right;
+}
+.text-last-justify {
+    text-align-last: justify;
+}
+
+.text-underlined {
+    text-decoration-line: underline;
+}
+.text-striked {
+    text-decoration-line: line-through;
+}
+.text-overlined {
+    text-decoration-line: overline;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+.text-italic {
+    font-style: italic;
+}
+
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-sup {
+    font-variant-position: super;
+    vertical-align: super;
+    font-size: smaller;
+    line-height: normal;
+}
+.text-sub {
+    font-variant-position: sub;
+    vertical-align: sub;
+    font-size: smaller;
+    line-height: normal;
 }

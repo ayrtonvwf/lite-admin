@@ -4,31 +4,85 @@ block content
     .row
         .col-xs-12
             h1.content-title
-                i.fa.fa-font Página inicial
+                i.fa.fa-font Texts
     .row
         .col-md-6
             .box
-                .box-header Títulos
+                .box-header Titles
                 .box-body
-                    h1.title-1 1. Título
-                    h1.title-2 1.1. Título
-                    h1.title-3 1.1.1. Título
-                    h1.title-4 1.1.1.1. Título
+                    h1.title-1 1. Title
+                    h2.title-2 1.1. Title
+                    h3.title-3 1.1.1. Title
+                    h4.title-4 1.1.1.1. Title
         .col-md-6
             .box
-                .box-header Blocos de texto
+                .box-header Text blocks
                 .box-body
                     .row
                         .col-sm-6
-                            p.title-2 Nome
+                            p.title-2 Name
                             p John Mac Doe
                         .col-sm-6
-                            p.title-2 Endereço
-                            p Brasil, São Paulo - SP, Rua das Flores, 1234
+                            p.title-2 Address
+                            p Street of Test, number 1234, City of Test - Test, USA
                     .row
                         .col-sm-6
-                            p.title-2 Nascimento
-                            p 15/06/1968
+                            p.title-2 Birth
+                            p 1968-06-12
                         .col-sm-6
-                            p.title-2 Cadastro
-                            p Outubro de 2015
+                            p.title-2 Registered at
+                            p October 2015
+    .row
+        .col-md-6
+            .box
+                .box-header Alining
+                .box-body
+                    .row
+                        .col-xs-4.text-left .text-left
+                        .col-xs-4.text-center .text-center
+                        .col-xs-4.text-right .text-right
+                    hr
+                    .row
+                        .col-xs-12.text-justify .text-justify this is a justified text so it's gonna be shrink to fit the parent. This test text needs to be this long cause the last line is not justified by default.
+                    hr
+                    .row
+                        .col-xs-6.text-center.text-last-left .text-center .text-last-left the last line of each paragraph is set to left
+                        .col-xs-6.text-justify.text-last-center .text-justify .text-last-center the last line of each paragraph is set to center
+                    hr
+                    .row
+                        .col-xs-6.text-center.text-last-right .text-center .text-last-right the last line of each paragraph is set to right
+                        .col-xs-6.text-justify.text-last-justify .text-justify .text-last-justify the last line of each paragraph is set to justify
+        .col-md-6
+            .box
+                .box-header Colors
+                .box-body
+                    .row
+                        .col-xs-3.text-muted .text-muted
+                        .col-xs-3.text-success .text-success
+                        .col-xs-3.text-info .text-info
+                        .col-xs-3.text-primary .text-primary
+                        .col-xs-3.text-warning .text-warning
+                        .col-xs-3.text-danger .text-danger
+                        .col-xs-3.text-black .text-black
+                        .col-xs-3.text-white(style='background-color: gray') .text-white
+    .row
+        .col-md-6
+            .box
+                .box-header Styles
+                .box-body
+                    .row
+                        .col-xs-4.text-underlined .text-underlined
+                        .col-xs-4.text-striked .text-striked
+                        .col-xs-4.text-overlined .text-overlined
+
+                        .col-xs-4.text-bold .text-bold
+                        .col-xs-4.text-italic .text-italic
+
+                        .col-xs-4.text-uppercase .text-uppercase
+                        .col-xs-4.text-lowercase .text-lowercase
+                        .col-xs-4.text-capitalize .text-capitalize
+
+                        .col-xs-4
+                            span.text-sub .text-sub
+                            span normal
+                            span.text-sup .text-sup
