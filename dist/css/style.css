@@ -1159,7 +1159,8 @@ input:not([type='checkbox']):not([type='radio']), select, textarea {
 input:not([type='checkbox']):not([type='radio']), select {
   height: 36px; }
 
-input[type='checkbox'] {
+input[type='checkbox'], input[type='radio'] {
+  position: relative;
   display: inline-block;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1169,46 +1170,44 @@ input[type='checkbox'] {
   background-color: white;
   border: 1px solid blue;
   outline: none;
-  margin-right: 5px; }
-  input[type='checkbox']:before {
-    content: "✔";
-    width: 18px;
-    padding-top: 2px;
-    line-height: 16px;
-    text-align: center;
-    display: inline-block;
-    color: white; }
-  input[type='checkbox']:checked::before {
-    color: blue; }
-  label:hover > input[type='checkbox']::before, input[type='checkbox']:focus::before {
-    font-weight: bold;
-    border: 1px solid blue;
-    line-height: 14px; }
+  margin: 5px 5px -5px 0px; }
+
+input[type='checkbox']::before {
+  width: 18px;
+  text-align: center;
+  display: block;
+  color: white;
+  font-weight: bold;
+  content: "✔";
+  padding-top: 2px;
+  line-height: 16px; }
+
+input[type='checkbox']:checked::before {
+  color: blue; }
+
+label:hover > input[type='checkbox'], label:focus > input[type='checkbox'], input[type='checkbox']:hover, input[type='checkbox']:focus {
+  border-width: 2px; }
+  label:hover > input[type='checkbox']::before, label:focus > input[type='checkbox']::before, input[type='checkbox']:hover::before, input[type='checkbox']:focus::before {
+    line-height: 14px;
+    width: 16px; }
 
 input[type='radio'] {
-  display: inline-block;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid blue;
-  outline: none;
-  margin-right: 5px; }
-  input[type='radio']:before {
+  border-radius: 10px; }
+  input[type='radio']::before {
     content: "";
-    width: 10px;
+    display: block;
+    position: absolute;
     height: 10px;
-    margin: 4px;
+    width: 10px;
     border-radius: 5px;
-    display: block; }
+    margin: 4px;
+    background-color: blue;
+    opacity: 0; }
   input[type='radio']:checked::before {
-    background-color: blue; }
-  input[type='radio']:hover, input[type='radio']:focus {
+    opacity: 1; }
+  label:hover > input[type='radio'], label:focus > input[type='radio'], input[type='radio']:hover, input[type='radio']:focus {
     border-width: 2px; }
-    input[type='radio']:hover:before, input[type='radio']:focus:before {
+    label:hover > input[type='radio']::before, label:focus > input[type='radio']::before, input[type='radio']:hover::before, input[type='radio']:focus::before {
       margin: 3px; }
 
 select:required:invalid:not(:focus) {
