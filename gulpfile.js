@@ -5,10 +5,11 @@ const watch = require('gulp-watch')
 const pug = require('gulp-pug')
 const scss = require('gulp-sass')
 const prefix = require('gulp-autoprefixer')
+const sourcemaps = require('gulp-sourcemaps')
 
-const dev = 'src'
-const dist = 'dist'
-const docs = 'docs'
+const dev = './src'
+const dist = './dist'
+const docs = './docs'
 
 const build_html = function() {
     return gulp.src(dev + '/pug/*.pug')
@@ -19,8 +20,10 @@ const build_html = function() {
 
 const build_css = function() {
     return gulp.src(dev+'/scss/*.scss')
-        .pipe(scss())
+        .pipe(sourcemaps.init())
+        .pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
         .pipe(prefix())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist))
 }
 
