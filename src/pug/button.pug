@@ -76,7 +76,8 @@ block content
                     fieldset
                         legend Misc
                         a(href='#').btn.btn-primary Link as button
-                        button(disabled).btn.btn-danger Disabled
+                        button(disabled onclick='alert("I am disabled")').btn.btn-danger Disabled
+                        button(onclick='alert("I am disabled")').btn.btn-danger.disabled Fake Disabled
                     fieldset
                         legend Pagination
                         .pagination
