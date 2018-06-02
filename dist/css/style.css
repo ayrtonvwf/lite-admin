@@ -1004,7 +1004,7 @@ body {
   font-size: 15px;
   border-radius: 3px;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color .25s;
   text-decoration: none;
   line-height: 17px;
   background-color: #969696; }
@@ -1060,6 +1060,16 @@ body {
 .btn-lg {
   font-size: 20px;
   padding: 15px 20px 13px 20px; }
+
+@media (hover: hover) {
+  .btn-color-trigger:not(:hover):not(:focus):not(focus-within) .btn:not(:hover):not(:focus) {
+    background-color: transparent;
+    border-color: lightgray;
+    color: #646464;
+    text-shadow: none; }
+  .btn-color-trigger .btn {
+    font-weight: bold;
+    border: 1px solid transparent; } }
 
 .tooltip {
   position: relative;
