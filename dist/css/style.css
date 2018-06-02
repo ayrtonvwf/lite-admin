@@ -1007,7 +1007,8 @@ body {
   transition: background-color .25s;
   text-decoration: none;
   line-height: 17px;
-  background-color: #969696; }
+  background-color: #969696;
+  outline: none; }
   .btn:hover, .btn:focus {
     background-color: #848484; }
   .btn[disabled], .btn.disabled {

@@ -12,6 +12,7 @@
     text-decoration: none;
     line-height: 17px;
     background-color: $btn-default-color;
+    outline: none;
     &:hover, &:focus {
         background-color: darken($btn-default-color, $btn-hover-darken);
     }
