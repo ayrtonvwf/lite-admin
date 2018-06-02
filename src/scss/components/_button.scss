@@ -81,7 +81,7 @@
     padding: 15px 20px 13px 20px;
 }
 
-@media (hover:hover) {
+@media (pointer: fine) {
     .btn-color-trigger {
         &:not(:hover):not(:focus):not(focus-within) .btn:not(:hover):not(:focus) {
             background-color: transparent;
