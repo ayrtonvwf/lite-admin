@@ -2,21 +2,21 @@
     margin: 15px 0px 5px 0px;
     font-weight: normal;
 }
-.title-1 {
+h1, .h1 {
+    @extend %title;
+    font-size: 32px;
+}
+h2, .h2 {
+    @extend %title;
+    font-size: 28px;
+}
+h3, .h3 {
     @extend %title;
     font-size: 24px;
 }
-.title-2 {
-    @extend %title;
-    font-size: 22px;
-}
-.title-3 {
+h4, .h4 {
     @extend %title;
     font-size: 20px;
-}
-.title-4 {
-    @extend %title;
-    font-size: 18px;
 }
 
 p {
