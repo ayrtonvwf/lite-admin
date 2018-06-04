@@ -9,81 +9,101 @@ block content
     .row
         .col-md-12
             .box
-                .box-header Buttons
                 .box-body
-                    fieldset
-                        legend Sizes
-                        button.btn.btn-xs Extra small
-                        button.btn.btn-sm Small
-                        button.btn Normal
-                        button.btn.btn-lg Large
-                    fieldset
-                        legend Colors
+                    h2.title-2 Sizes
+                    p Buttons have plenty of options here, as in any decent template. Just add a #[code btn] class to you button/link and it'll look nice.#[br]
+                    | You can then set a size if you want: just add the class #[code btn-xs], #[code btn-sm] or #[code btn-lg] to your button.
+                    br
+                    br
+                    .text-center
+                        button.btn.btn-xs .btn-xs
+                        button.btn.btn-sm .btn-sm
                         button.btn Default
-                        button.btn.btn-success Success
-                        button.btn.btn-info Info
-                        button.btn.btn-primary Primary
-                        button.btn.btn-warning Warning
-                        button.btn.btn-danger Danger
-                    fieldset
-                        legend Color Trigger
-                        .table
-                            table
-                                thead
-                                    tr
-                                        th User
-                                        th Email
-                                        th.text-center Actions
-                                tbody
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe#[wbr]@email.com
-                                        td.text-right.no-wrap
-                                            button.btn.btn-sm.btn-primary
-                                                i.fa.fa-fw.fa-search
-                                                | Profile
-                                            button.btn.btn-sm.btn-warning
-                                                i.fa.fa-fw.fa-edit
-                                                | Edit
-                                            button.btn.btn-sm.btn-danger
-                                                i.fa.fa-fw.fa-trash
-                                                | Delete
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe#[wbr]@email.com
-                                        td.text-right.no-wrap
-                                            button.btn.btn-sm.btn-primary
-                                                i.fa.fa-fw.fa-search
-                                                | Profile
-                                            button.btn.btn-sm.btn-warning
-                                                i.fa.fa-fw.fa-edit
-                                                | Edit
-                                            button.btn.btn-sm.btn-danger
-                                                i.fa.fa-fw.fa-trash
-                                                | Delete
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe#[wbr]@email.com
-                                        td.text-right.no-wrap
-                                            button.btn.btn-sm.btn-primary
-                                                i.fa.fa-fw.fa-search
-                                                | Profile
-                                            button.btn.btn-sm.btn-warning
-                                                i.fa.fa-fw.fa-edit
-                                                | Edit
-                                            button.btn.btn-sm.btn-danger
-                                                i.fa.fa-fw.fa-trash
-                                                | Delete
-                    fieldset
-                        legend Misc
-                        a(href='#').btn.btn-primary Link as button
-                        button(disabled onclick='alert("I am disabled")').btn.btn-danger Disabled
-                        button(onclick='alert("I am disabled")').btn.btn-danger.disabled Fake Disabled
-                    fieldset
-                        legend Pagination
-                        .pagination
-                            a(href='#') First
-                            a(href='#') 1
-                            a.active(href='#') 2
-                            a(href='#') 3
-                            a(href='#') »
+                        button.btn.btn-lg .btn-lg
+                    hr
+                    h2.title-2 Colors
+                    p To set the color of the button, just choose a class: #[code btn-success], #[code btn-info], #[code btn-primary], #[code btn-warning], #[code btn-danger].
+                    br
+                    .text-center
+                        button.btn Default
+                        button.btn.btn-success .btn-success
+                        button.btn.btn-info .btn-info
+                        button.btn.btn-primary .btn-primary
+                        button.btn.btn-warning .btn-warning
+                        button.btn.btn-danger .btn-danger
+                    hr
+                    h2.title-2 Color Trigger
+                    p LiteAdmin also provides discrete buttons, that are highlighted when the user needs them.
+                    p Using it is easy: add the class #[code color-trigger] to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.
+                    p In the example below, the class was added in the table's rows:
+                    br
+                    .table
+                        table
+                            thead
+                                tr
+                                    th User
+                                    th Email
+                                    th.text-center Actions
+                            tbody
+                                tr.btn-color-trigger
+                                    td John Doe
+                                    td john.doe@email.com
+                                    td.text-right
+                                        button.btn.btn-sm.btn-primary
+                                            i.fa.fa-fw.fa-search
+                                            | Profile
+                                        button.btn.btn-sm.btn-warning
+                                            i.fa.fa-fw.fa-edit
+                                            | Edit
+                                        button.btn.btn-sm.btn-danger
+                                            i.fa.fa-fw.fa-trash
+                                            | Delete
+                                tr.btn-color-trigger
+                                    td John Doe
+                                    td john.doe#[wbr]@email.com
+                                    td.text-right
+                                        button.btn.btn-sm.btn-primary
+                                            i.fa.fa-fw.fa-search
+                                            | Profile
+                                        button.btn.btn-sm.btn-warning
+                                            i.fa.fa-fw.fa-edit
+                                            | Edit
+                                        button.btn.btn-sm.btn-danger
+                                            i.fa.fa-fw.fa-trash
+                                            | Delete
+                                tr.btn-color-trigger
+                                    td John Doe
+                                    td john.doe#[wbr]@email.com
+                                    td.text-right
+                                        button.btn.btn-sm.btn-primary
+                                            i.fa.fa-fw.fa-search
+                                            | Profile
+                                        button.btn.btn-sm.btn-warning
+                                            i.fa.fa-fw.fa-edit
+                                            | Edit
+                                        button.btn.btn-sm.btn-danger
+                                            i.fa.fa-fw.fa-trash
+                                            | Delete
+                    p In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.
+                    hr
+                    h2.title-2 Disabled
+                    p You have two options to disable a button:
+                    ul
+                        li Use the #[b attribute] #[code disabled] and really disable it;
+                        li Use the #[b class] #[code disabled] and only make it look disabled.
+                    p When you only use the class, actions continue to be triggered when you click the button.
+                    p In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:
+                    br
+                    .text-center
+                        button(disabled onclick='alert("I am disabled")').btn.btn-danger Disabled with attribute
+                        button(onclick='alert("I am disabled")').btn.btn-danger.disabled Disabled with class
+                    hr
+                    h2.title-2 Pagination
+                    p If you need pagination, we've got you covered. Just create a #[code #{'<div class="pagination">'}] with links inside, and you're good to go.
+                    br
+                    .pagination.text-center
+                        a(href='#') First
+                        a(href='#') 1
+                        a.active(href='#') 2
+                        a(href='#') 3
+                        a(href='#') »

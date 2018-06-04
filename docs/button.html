@@ -47,82 +47,93 @@
         <div class="row">
           <div class="col-md-12">
             <div class="box">
-              <div class="box-header">Buttons</div>
               <div class="box-body">
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <button class="btn btn-xs">Extra small</button>
-                  <button class="btn btn-sm">Small</button>
-                  <button class="btn">Normal</button>
-                  <button class="btn btn-lg">Large</button>
-                </fieldset>
-                <fieldset>
-                  <legend>Colors</legend>
+                <h2 class="title-2">Sizes</h2>
+                <p>Buttons have plenty of options here, as in any decent template. Just add a <code>btn</code> class to you button/link and it'll look nice.<br></p>You can then set a size if you want: just add the class <code>btn-xs</code>, <code>btn-sm</code> or <code>btn-lg</code> to your button.<br><br>
+                <div class="text-center">
+                  <button class="btn btn-xs">.btn-xs</button>
+                  <button class="btn btn-sm">.btn-sm</button>
                   <button class="btn">Default</button>
-                  <button class="btn btn-success">Success</button>
-                  <button class="btn btn-info">Info</button>
-                  <button class="btn btn-primary">Primary</button>
-                  <button class="btn btn-warning">Warning</button>
-                  <button class="btn btn-danger">Danger</button>
-                </fieldset>
-                <fieldset>
-                  <legend>Color Trigger</legend>
-                  <div class="table">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>User</th>
-                          <th>Email</th>
-                          <th class="text-center">Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="btn-color-trigger">
-                          <td>John Doe</td>
-                          <td>john.doe
-                            <wbr>@email.com
-                          </td>
-                          <td class="text-right no-wrap">
-                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                          </td>
-                        </tr>
-                        <tr class="btn-color-trigger">
-                          <td>John Doe</td>
-                          <td>john.doe
-                            <wbr>@email.com
-                          </td>
-                          <td class="text-right no-wrap">
-                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                          </td>
-                        </tr>
-                        <tr class="btn-color-trigger">
-                          <td>John Doe</td>
-                          <td>john.doe
-                            <wbr>@email.com
-                          </td>
-                          <td class="text-right no-wrap">
-                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Misc</legend><a class="btn btn-primary" href="#">Link as button</a>
-                  <button class="btn btn-danger" disabled onclick="alert(&quot;I am disabled&quot;)">Disabled</button>
-                  <button class="btn btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Fake Disabled</button>
-                </fieldset>
-                <fieldset>
-                  <legend>Pagination</legend>
-                  <div class="pagination"><a href="#">First</a><a href="#">1</a><a class="active" href="#">2</a><a href="#">3</a><a href="#">»</a></div>
-                </fieldset>
+                  <button class="btn btn-lg">.btn-lg</button>
+                </div>
+                <hr>
+                <h2 class="title-2">Colors</h2>
+                <p>To set the color of the button, just choose a class: <code>btn-success</code>, <code>btn-info</code>, <code>btn-primary</code>, <code>btn-warning</code>, <code>btn-danger</code>.</p><br>
+                <div class="text-center">
+                  <button class="btn">Default</button>
+                  <button class="btn btn-success">.btn-success</button>
+                  <button class="btn btn-info">.btn-info</button>
+                  <button class="btn btn-primary">.btn-primary</button>
+                  <button class="btn btn-warning">.btn-warning</button>
+                  <button class="btn btn-danger">.btn-danger</button>
+                </div>
+                <hr>
+                <h2 class="title-2">Color Trigger</h2>
+                <p>LiteAdmin also provides discrete buttons, that are highlighted when the user needs them.</p>
+                <p>Using it is easy: add the class <code>color-trigger</code> to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.</p>
+                <p>In the example below, the class was added in the table's rows:</p><br>
+                <div class="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th class="text-center">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="btn-color-trigger">
+                        <td>John Doe</td>
+                        <td>john.doe@email.com</td>
+                        <td class="text-right">
+                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                        </td>
+                      </tr>
+                      <tr class="btn-color-trigger">
+                        <td>John Doe</td>
+                        <td>john.doe
+                          <wbr>@email.com
+                        </td>
+                        <td class="text-right">
+                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                        </td>
+                      </tr>
+                      <tr class="btn-color-trigger">
+                        <td>John Doe</td>
+                        <td>john.doe
+                          <wbr>@email.com
+                        </td>
+                        <td class="text-right">
+                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.</p>
+                <hr>
+                <h2 class="title-2">Disabled</h2>
+                <p>You have two options to disable a button:</p>
+                <ul>
+                  <li>Use the <b>attribute</b> <code>disabled</code> and really disable it;</li>
+                  <li>Use the <b>class</b> <code>disabled</code> and only make it look disabled.</li>
+                </ul>
+                <p>When you only use the class, actions continue to be triggered when you click the button.</p>
+                <p>In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:</p><br>
+                <div class="text-center">
+                  <button class="btn btn-danger" disabled onclick="alert(&quot;I am disabled&quot;)">Disabled with attribute</button>
+                  <button class="btn btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Disabled with class</button>
+                </div>
+                <hr>
+                <h2 class="title-2">Pagination</h2>
+                <p>If you need pagination, we've got you covered. Just create a <code>&lt;div class=&quot;pagination&quot;&gt;</code> with links inside, and you're good to go.</p><br>
+                <div class="pagination text-center"><a href="#">First</a><a href="#">1</a><a class="active" href="#">2</a><a href="#">3</a><a href="#">»</a></div>
               </div>
             </div>
           </div>
