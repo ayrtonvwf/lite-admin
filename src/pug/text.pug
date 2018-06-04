@@ -7,83 +7,79 @@ block content
                 i.fa.fa-fw.fa-font
                 | Texts
     .row
-        .col-md-6
+        .col-xs-12
             .box
-                .box-header Titles
                 .box-body
-                    h1.title-1 1. Title
-                    h2.title-2 1.1. Title
-                    h3.title-3 1.1.1. Title
-                    h4.title-4 1.1.1.1. Title
-        .col-md-6
-            .box
-                .box-header Text blocks
-                .box-body
+                    h2.title-2 Titles
+                    p The tags #[code h1], #[code h2]... hold a important meaning in your page. Don't mess up with them!
+                    p You can use the classes #[code title-1], #[code title-2], #[code title-3] and #[code title-4] to visually make titles and sub-titles:
                     .row
-                        .col-sm-6
-                            p.title-2 Name
-                            p John Mac Doe
-                        .col-sm-6
-                            p.title-2 Address
-                            p Street of Test, number 1234, City of Test - Test, USA
-                    .row
-                        .col-sm-6
-                            p.title-2 Birth
-                            p 1968-06-12
-                        .col-sm-6
-                            p.title-2 Registered at
-                            p October 2015
-    .row
-        .col-md-6
-            .box
-                .box-header Alining
-                .box-body
-                    .row
-                        .col-xs-4.text-left .text-left
-                        .col-xs-4.text-center .text-center
-                        .col-xs-4.text-right .text-right
+                        .col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3
+                            .row.text-center
+                                .col-xs-3.title-1 .title-1
+                                .col-xs-3.title-2 .title-2
+                                .col-xs-3.title-3 .title-3
+                                .col-xs-3.title-4 .title-4
                     hr
+                    h2.title-2 Alignment
+                    p You can easily control the alignment of text with the classes #[code text-left], #[code text-center], #[code text-right] and #[code text-justify]:
+                    br
                     .row
-                        .col-xs-12.text-justify .text-justify this is a justified text so it's gonna be shrink to fit the parent. This test text needs to be this long cause the last line is not justified by default.
+                        .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                            .row
+                                .col-xs-4
+                                    .alert.alert-primary.text-left .text-left
+                                .col-xs-4
+                                    .alert.alert-primary.text-center .text-center
+                                .col-xs-4
+                                    .alert.alert-primary.text-right .text-right
+                            .row
+                                .col-xs-12
+                                    .alert.alert-primary.text-justify This is a #[b.text-underlined justified] text so it's gonna be shrink to fit the parent. This test text needs to be this long cause the last line is not justified by default.
                     hr
+                    h2.title-2 Last line alignment
+                    p You can control separately the alignment of the last line, with the classes #[code text-last-left], #[code text-last-center], #[code text-last-right] and #[code text-last-justify]:
                     .row
-                        .col-xs-6.text-center.text-last-left .text-center .text-last-left the last line of each paragraph is set to left
-                        .col-xs-6.text-justify.text-last-center .text-justify .text-last-center the last line of each paragraph is set to center
+                        .col-xs-6
+                            .alert.alert-primary.text-right.text-last-left This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left.
+                        .col-xs-6
+                            .alert.alert-primary.text-last-right This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right.
+                        .col-xs-6
+                            .alert.alert-primary.text-right.text-last-center This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered.
+                        .col-xs-6
+                            .alert.alert-primary.text-right.text-last-justify This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified.
                     hr
+                    h2.title-2 Colors
+                    p You have these classes to change the text color:
                     .row
-                        .col-xs-6.text-center.text-last-right .text-center .text-last-right the last line of each paragraph is set to right
-                        .col-xs-6.text-justify.text-last-justify .text-justify .text-last-justify the last line of each paragraph is set to justify
-        .col-md-6
-            .box
-                .box-header Colors
-                .box-body
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            .row.text-center
+                                .col-xs-3.text-muted .text-muted
+                                .col-xs-3.text-success .text-success
+                                .col-xs-3.text-info .text-info
+                                .col-xs-3.text-primary .text-primary
+                                .col-xs-3.text-warning .text-warning
+                                .col-xs-3.text-danger .text-danger
+                                .col-xs-3.text-black .text-black
+                                .col-xs-3.text-white(style='background-color: gray') .text-white
+                    hr
+                    h2.title-2 Styling
+                    p You also have plenty of classes to style your text. Some give you unique features like controlling the text case, other's are useful in occasions when you don't wanna use the html tags for some reason (not messing up with semantics, easy style toggling with JS, etc).
                     .row
-                        .col-xs-3.text-muted .text-muted
-                        .col-xs-3.text-success .text-success
-                        .col-xs-3.text-info .text-info
-                        .col-xs-3.text-primary .text-primary
-                        .col-xs-3.text-warning .text-warning
-                        .col-xs-3.text-danger .text-danger
-                        .col-xs-3.text-black .text-black
-                        .col-xs-3.text-white(style='background-color: gray') .text-white
-    .row
-        .col-md-6
-            .box
-                .box-header Styles
-                .box-body
-                    .row
-                        .col-xs-4.text-underlined .text-underlined
-                        .col-xs-4.text-striked .text-striked
-                        .col-xs-4.text-overlined .text-overlined
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            .row
+                                .col-xs-4.text-underlined .text-underlined
+                                .col-xs-4.text-striked .text-striked
+                                .col-xs-4.text-overlined .text-overlined
 
-                        .col-xs-4.text-bold .text-bold
-                        .col-xs-4.text-italic .text-italic
+                                .col-xs-4.text-bold .text-bold
+                                .col-xs-4.text-italic .text-italic
 
-                        .col-xs-4.text-uppercase .text-uppercase
-                        .col-xs-4.text-lowercase .text-lowercase
-                        .col-xs-4.text-capitalize .text-capitalize
+                                .col-xs-4.text-uppercase .text-uppercase
+                                .col-xs-4.text-lowercase .text-lowercase
+                                .col-xs-4.text-capitalize .text-capitalize
 
-                        .col-xs-4
-                            span.text-sub .text-sub
-                            span normal
-                            span.text-sup .text-sup
+                                .col-xs-4
+                                    span.text-sub .text-sub
+                                    span normal
+                                    span.text-sup .text-sup
