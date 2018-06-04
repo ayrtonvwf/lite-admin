@@ -1,76 +1,97 @@
-button, .btn {
+.btn-default, .btn-success, .btn-info, .btn-primary, .btn-warning, .btn-danger {
     display: inline-block !important;
     padding: 10px 15px 8px 15px;
-    border: none;
     margin: 2px;
     color: white;
     text-shadow: 0px 0px 10px rgba(0,0,0,.3);
     font-size: 15px;
     border-radius: 3px;
     cursor: pointer;
-    transition: background-color .25s;
+    transition-property: background-color, padding, box-shadow;
+    transition-duration: .1s;
     text-decoration: none;
     line-height: 17px;
-    background-color: $btn-default-color;
     outline: none;
+    border: none;
+    box-shadow: -1px -1px 0px rgba(0, 0, 0, .2) inset, 1px 1px 1px rgba(0, 0, 0, .2);
+    vertical-align: top;
     &:hover, &:focus {
-        background-color: darken($btn-default-color, $btn-hover-darken);
+        transition-duration: .2s;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, .2) inset;
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-default-color, $btn-disabled-lighten);
         cursor: not-allowed;
+        box-shadow: none;
+        padding: 10px 15px 8px 15px;
     }
 }
 
-.btn-success {
-    background: $btn-success-color;
+.btn-default {
+    color: rgb(100, 100, 100);
+    text-shadow: none;
+    background-color: white;
+    border: 1px solid lightgray;
+    margin: 1px;
     &:hover, &:focus {
-        background: darken($btn-success-color, $btn-hover-darken);
+        background-color: darken(white, $btn-hover-darken);
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-success-color, $btn-disabled-lighten);
+        background-color: mix(white, $btn-disabled-mix);
+    }
+}
+.btn-success {
+    background-color: $btn-success-color;
+    &:hover, &:focus {
+        background-color: darken($btn-success-color, $btn-hover-darken);
+    }
+    &[disabled], &.disabled {
+        background-color: mix($btn-success-color, $btn-disabled-mix);
     }
 }
 .btn-info {
-    background: $btn-info-color;
+    background-color: $btn-info-color;
     &:hover, &:focus {
-        background: darken($btn-info-color, $btn-hover-darken);
+        background-color: darken($btn-info-color, $btn-hover-darken);
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-info-color, $btn-disabled-lighten);
+        background-color: mix($btn-info-color, $btn-disabled-mix);
     }
 }
 .btn-primary {
-    background: $btn-primary-color;
+    background-color: $btn-primary-color;
     &:hover, &:focus {
-        background: darken($btn-primary-color, $btn-hover-darken);
+        background-color: darken($btn-primary-color, $btn-hover-darken);
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-primary-color, $btn-disabled-lighten);
+        background-color: mix($btn-primary-color, $btn-disabled-mix);
     }
 }
 .btn-warning {
-    background: $btn-warning-color;
+    background-color: $btn-warning-color;
     &:hover, &:focus {
-        background: darken($btn-warning-color, $btn-hover-darken);
+        background-color: darken($btn-warning-color, $btn-hover-darken);
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-warning-color, $btn-disabled-lighten);
+        background-color: mix($btn-warning-color, $btn-disabled-mix);
     }
 }
 .btn-danger {
-    background: $btn-danger-color;
+    background-color: $btn-danger-color;
     &:hover, &:focus {
-        background: darken($btn-danger-color, $btn-hover-darken);
+        background-color: darken($btn-danger-color, $btn-hover-darken);
     }
     &[disabled], &.disabled {
-        background-color: lighten($btn-danger-color, $btn-disabled-lighten);
+        background-color: mix($btn-danger-color, $btn-disabled-mix);
     }
 }
 
 .btn-xs {
     font-size: 13px;
     padding: 3px 5px 1px 5px;
+    box-shadow: -1px -1px 0px rgba(0, 0, 0, .2) inset;
+    &:hover, &:focus {
+        box-shadow: 1px 1px 0px rgba(0, 0, 0, .2) inset;
+    }
 }
 .btn-sm {
     font-size: 13px;
@@ -84,7 +105,7 @@ button, .btn {
 @media (pointer: fine) {
     .btn-color-trigger {
         &:not(:hover):not(:focus):not(focus-within) {
-            button, .btn {
+            .btn-default, .btn-success, .btn-info, .btn-primary, .btn-warning, .btn-danger {
                 &:not(:hover):not(:focus) {
                     background-color: transparent;
                     border-color: lightgray;
@@ -93,7 +114,7 @@ button, .btn {
                 }
             }
         }
-        button, .btn {
+        .btn-default, .btn-success, .btn-info, .btn-primary, .btn-warning, .btn-danger {
             font-weight: bold;
             border: 1px solid transparent;
         }

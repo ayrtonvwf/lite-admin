@@ -48,25 +48,41 @@
           <div class="col-md-12">
             <div class="box">
               <div class="box-body">
-                <p>The <code>button</code> element is nicely styled by default, so you don't need to add any extra class to it. However, if you wan't to make a link look like a button, you can add the class <code>btn</code> to it.</p>
-                <h2>Sizes</h2>
-                <p>Buttons have plenty of options here, as in any decent template. Just add a <code>btn</code> class to you button/link and it'll look nice.<br></p>You can then set a size if you want: just add the class <code>btn-xs</code>, <code>btn-sm</code> or <code>btn-lg</code> to your button.<br><br>
-                <div class="text-center">
-                  <button class="btn-xs">.btn-xs</button>
-                  <button class="btn-sm">.btn-sm</button>
-                  <button>Default</button>
-                  <button class="btn-lg">.btn-lg</button>
-                </div>
-                <hr>
                 <h2>Colors</h2>
-                <p>To set the color of the button, just choose a class: <code>btn-success</code>, <code>btn-info</code>, <code>btn-primary</code>, <code>btn-warning</code>, <code>btn-danger</code>.</p><br>
+                <p>To create a nice button, just choose a class: <code>btn-primary</code>, <code>btn-success</code>, <code>btn-info</code>, <code>btn-primary</code>, <code>btn-warning</code>, <code>btn-danger</code>.</p><br>
                 <div class="text-center">
-                  <button>Default</button>
+                  <button class="btn-default">.btn-default</button>
                   <button class="btn-success">.btn-success</button>
                   <button class="btn-info">.btn-info</button>
                   <button class="btn-primary">.btn-primary</button>
                   <button class="btn-warning">.btn-warning</button>
                   <button class="btn-danger">.btn-danger</button>
+                </div>
+                <hr>
+                <h2>Disabled</h2>
+                <p>You have two options to disable a button:</p>
+                <ul>
+                  <li>Use the <b>attribute</b> <code>disabled</code> and really disable it;</li>
+                  <li>Use the <b>class</b> <code>disabled</code> and only make it look disabled.</li>
+                </ul>
+                <p>When you only use the class, actions continue to be triggered when you click the button.</p>
+                <p>In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:</p><br>
+                <div class="text-center">
+                  <button class="btn-default disabled">Disabled with class</button>
+                  <button class="btn-success" disabled onclick="alert(&quot;I am disabled&quot;)">Disabled with attribute</button>
+                  <button class="btn-info disabled">Disabled with class</button>
+                  <button class="btn-primary disabled">Disabled with class</button>
+                  <button class="btn-warning disabled">Disabled with class</button>
+                  <button class="btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Disabled with class</button>
+                </div>
+                <hr>
+                <h2>Sizes</h2>
+                <p>To set a different size, just add the class <code>btn-xs</code>, <code>btn-sm</code> or <code>btn-lg</code> to your button.</p><br><br>
+                <div class="text-center">
+                  <button class="btn-default btn-xs">.btn-xs</button>
+                  <button class="btn-default btn-sm">.btn-sm</button>
+                  <button class="btn-default">Default</button>
+                  <button class="btn-default btn-lg">.btn-lg</button>
                 </div>
                 <hr>
                 <h2>Color Trigger</h2>
@@ -120,19 +136,6 @@
                   </div>
                 </div>
                 <p>In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.</p>
-                <hr>
-                <h2>Disabled</h2>
-                <p>You have two options to disable a button:</p>
-                <ul>
-                  <li>Use the <b>attribute</b> <code>disabled</code> and really disable it;</li>
-                  <li>Use the <b>class</b> <code>disabled</code> and only make it look disabled.</li>
-                </ul>
-                <p>When you only use the class, actions continue to be triggered when you click the button.</p>
-                <p>In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:</p><br>
-                <div class="text-center">
-                  <button class="btn btn-danger" disabled onclick="alert(&quot;I am disabled&quot;)">Disabled with attribute</button>
-                  <button class="btn btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Disabled with class</button>
-                </div>
                 <hr>
                 <h2>Pagination</h2>
                 <p>If you need pagination, we've got you covered. Just create a <code>&lt;div class=&quot;pagination&quot;&gt;</code> with links inside, and you're good to go.</p><br>
