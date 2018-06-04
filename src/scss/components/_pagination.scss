@@ -1,7 +1,6 @@
 .pagination {
-    display: flex;
     &>a {
-        display: block;
+        display: inline-block;
         background-color: rgb(205, 210, 220);
         padding: 2px 15px 0px 15px;
         line-height: 30px;
