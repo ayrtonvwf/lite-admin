@@ -1,21 +1,22 @@
 .pagination {
     &>a {
         display: inline-block;
-        background-color: rgb(205, 210, 220);
+        background-color: rgb(225, 230, 240);
         padding: 2px 15px 0px 15px;
         line-height: 30px;
         text-align: center;
         color: black;
         text-decoration: none;
         font-size: 14px;
-        border-right: solid 1px gray;
+        border: solid 1px gray;
+        border-right-width: 0px;
         transition: background-color .1s;
         &:first-child {
-            border-radius: 7px 0px 0px 7px;
+            border-radius: 5px 0px 0px 5px;
         }
         &:last-child {
-            border-radius: 0px 7px 7px 0px;
-            border-right: none;
+            border-radius: 0px 5px 5px 0px;
+            border-right-width: 1px;
         }
         &:hover, &:focus, &.active {
             transition: background-color .2s;
