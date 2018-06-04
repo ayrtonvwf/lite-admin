@@ -1,4 +1,4 @@
-.btn {
+button, .btn {
     display: inline-block !important;
     padding: 10px 15px 8px 15px;
     border: none;
@@ -83,13 +83,17 @@
 
 @media (pointer: fine) {
     .btn-color-trigger {
-        &:not(:hover):not(:focus):not(focus-within) .btn:not(:hover):not(:focus) {
-            background-color: transparent;
-            border-color: lightgray;
-            color: rgb(100, 100, 100);
-            text-shadow: none;
+        &:not(:hover):not(:focus):not(focus-within) {
+            button, .btn {
+                &:not(:hover):not(:focus) {
+                    background-color: transparent;
+                    border-color: lightgray;
+                    color: rgb(100, 100, 100);
+                    text-shadow: none;
+                }
+            }
         }
-        .btn {
+        button, .btn {
             font-weight: bold;
             border: 1px solid transparent;
         }
