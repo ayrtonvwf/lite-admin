@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "> 1% in BR",
+    "> 0.1%",
     "ie >= 7"
   ],
   "devDependencies": {
