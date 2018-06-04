@@ -72,49 +72,51 @@
                 <p>LiteAdmin also provides discrete buttons, that are highlighted when the user needs them.</p>
                 <p>Using it is easy: add the class <code>color-trigger</code> to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.</p>
                 <p>In the example below, the class was added in the table's rows:</p><br>
-                <div class="table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>User</th>
-                        <th>Email</th>
-                        <th class="text-center">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="btn-color-trigger">
-                        <td>John Doe</td>
-                        <td>john.doe@email.com</td>
-                        <td class="text-right">
-                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                        </td>
-                      </tr>
-                      <tr class="btn-color-trigger">
-                        <td>John Doe</td>
-                        <td>john.doe
-                          <wbr>@email.com
-                        </td>
-                        <td class="text-right">
-                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                        </td>
-                      </tr>
-                      <tr class="btn-color-trigger">
-                        <td>John Doe</td>
-                        <td>john.doe
-                          <wbr>@email.com
-                        </td>
-                        <td class="text-right">
-                          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
-                          <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
-                          <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="row">
+                  <div class="table col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>User</th>
+                          <th>Email</th>
+                          <th class="text-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="btn-color-trigger">
+                          <td>John Doe</td>
+                          <td>john.doe@email.com</td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                          </td>
+                        </tr>
+                        <tr class="btn-color-trigger">
+                          <td>John Doe</td>
+                          <td>john.doe
+                            <wbr>@email.com
+                          </td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                          </td>
+                        </tr>
+                        <tr class="btn-color-trigger">
+                          <td>John Doe</td>
+                          <td>john.doe
+                            <wbr>@email.com
+                          </td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-search"></i>Profile</button>
+                            <button class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit</button>
+                            <button class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i>Delete</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <p>In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.</p>
                 <hr>

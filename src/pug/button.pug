@@ -37,53 +37,54 @@ block content
                     p Using it is easy: add the class #[code color-trigger] to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.
                     p In the example below, the class was added in the table's rows:
                     br
-                    .table
-                        table
-                            thead
-                                tr
-                                    th User
-                                    th Email
-                                    th.text-center Actions
-                            tbody
-                                tr.btn-color-trigger
-                                    td John Doe
-                                    td john.doe@email.com
-                                    td.text-right
-                                        button.btn.btn-sm.btn-primary
-                                            i.fa.fa-fw.fa-search
-                                            | Profile
-                                        button.btn.btn-sm.btn-warning
-                                            i.fa.fa-fw.fa-edit
-                                            | Edit
-                                        button.btn.btn-sm.btn-danger
-                                            i.fa.fa-fw.fa-trash
-                                            | Delete
-                                tr.btn-color-trigger
-                                    td John Doe
-                                    td john.doe#[wbr]@email.com
-                                    td.text-right
-                                        button.btn.btn-sm.btn-primary
-                                            i.fa.fa-fw.fa-search
-                                            | Profile
-                                        button.btn.btn-sm.btn-warning
-                                            i.fa.fa-fw.fa-edit
-                                            | Edit
-                                        button.btn.btn-sm.btn-danger
-                                            i.fa.fa-fw.fa-trash
-                                            | Delete
-                                tr.btn-color-trigger
-                                    td John Doe
-                                    td john.doe#[wbr]@email.com
-                                    td.text-right
-                                        button.btn.btn-sm.btn-primary
-                                            i.fa.fa-fw.fa-search
-                                            | Profile
-                                        button.btn.btn-sm.btn-warning
-                                            i.fa.fa-fw.fa-edit
-                                            | Edit
-                                        button.btn.btn-sm.btn-danger
-                                            i.fa.fa-fw.fa-trash
-                                            | Delete
+                    .row
+                        .table.col-sm-10.col-sm-offset-1.col-lg-8.col-lg-offset-2
+                            table
+                                thead
+                                    tr
+                                        th User
+                                        th Email
+                                        th.text-center Actions
+                                tbody
+                                    tr.btn-color-trigger
+                                        td John Doe
+                                        td john.doe@email.com
+                                        td.text-right
+                                            button.btn.btn-sm.btn-primary
+                                                i.fa.fa-fw.fa-search
+                                                | Profile
+                                            button.btn.btn-sm.btn-warning
+                                                i.fa.fa-fw.fa-edit
+                                                | Edit
+                                            button.btn.btn-sm.btn-danger
+                                                i.fa.fa-fw.fa-trash
+                                                | Delete
+                                    tr.btn-color-trigger
+                                        td John Doe
+                                        td john.doe#[wbr]@email.com
+                                        td.text-right
+                                            button.btn.btn-sm.btn-primary
+                                                i.fa.fa-fw.fa-search
+                                                | Profile
+                                            button.btn.btn-sm.btn-warning
+                                                i.fa.fa-fw.fa-edit
+                                                | Edit
+                                            button.btn.btn-sm.btn-danger
+                                                i.fa.fa-fw.fa-trash
+                                                | Delete
+                                    tr.btn-color-trigger
+                                        td John Doe
+                                        td john.doe#[wbr]@email.com
+                                        td.text-right
+                                            button.btn.btn-sm.btn-primary
+                                                i.fa.fa-fw.fa-search
+                                                | Profile
+                                            button.btn.btn-sm.btn-warning
+                                                i.fa.fa-fw.fa-edit
+                                                | Edit
+                                            button.btn.btn-sm.btn-danger
+                                                i.fa.fa-fw.fa-trash
+                                                | Delete
                     p In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.
                     hr
                     h2.title-2 Disabled
