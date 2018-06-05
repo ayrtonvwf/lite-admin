@@ -47,77 +47,88 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="box">
-              <div class="box-header">Table</div>
               <div class="box-body">
-                <div class="table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>User</th>
-                        <th>Address</th>
-                        <th>&nbsp;</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>(12) 1234-1234</td>
-                        <td>john.doe@email.com</td>
-                        <td>johndoe</td>
-                        <td>Street Test, City Testland, TS, US</td>
-                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td colspan="6"><span class="row-count"><b>Total:</b></span></td>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
+                <h2>Responsive tables</h2>
+                <p>To make a table look nice, add the class <code>table</code> to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a <code>&lt;div class=&quot;table&quot;&gt;</code> wrapping the table instead.</p>
+                <p>The example bellow is a responsive table. Resize your browser to and see it scrolling!</p><br>
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <div class="table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>User</th>
+                            <th>Address</th>
+                            <th>&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>John Doe</td>
+                            <td>(12) 1234-1234</td>
+                            <td>john.doe@email.com</td>
+                            <td>johndoe</td>
+                            <td>Street Test, City Testland, TS, US</td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>John Doe</td>
+                            <td>(12) 1234-1234</td>
+                            <td>john.doe@email.com</td>
+                            <td>johndoe</td>
+                            <td>Street Test, City Testland, TS, US</td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>John Doe</td>
+                            <td>(12) 1234-1234</td>
+                            <td>john.doe@email.com</td>
+                            <td>johndoe</td>
+                            <td>Street Test, City Testland, TS, US</td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div><br>
+                <hr>
+                <h2>Row counter</h2>
+                <p>You can easily append the number of rows in the <code>tbody</code> by using the <code>row-counter</code> class inside the table:</p><br>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>This row isn't included in the counter because it's in the <code>thead</code></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2">Total rows in the <code>tbody</code>: <span class="row-counter"></span></td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
             </div>
           </div>

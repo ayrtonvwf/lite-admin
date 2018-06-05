@@ -9,75 +9,74 @@ block content
     .row
         .col-xs-12
             .box
-                .box-header Table
                 .box-body
-                    .table
-                        table
-                            thead
-                                tr
-                                    th Name
-                                    th Phone
-                                    th Email
-                                    th User
-                                    th Address
-                                    th &nbsp;
-                            tbody
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                                tr
-                                    td John Doe
-                                    td (12) 1234-1234
-                                    td john.doe@email.com
-                                    td johndoe
-                                    td Street Test, City Testland, TS, US
-                                    td.text-right
-                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                            i.fa.fa-fw.fa-trash
-                            tfoot
-                                tr
-                                    td(colspan='6')
-                                        span.row-count
-                                            b Total:
+                    h2 Responsive tables
+                    p To make a table look nice, add the class #[code table] to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a #[code #{'<div class="table">'}] wrapping the table instead.
+                    p The example bellow is a responsive table. Resize your browser to and see it scrolling!
+                    br
+                    .row
+                        .col-md-10.col-md-offset-1
+                            .table
+                                table
+                                    thead
+                                        tr
+                                            th Name
+                                            th Phone
+                                            th Email
+                                            th User
+                                            th Address
+                                            th &nbsp;
+                                    tbody
+                                        tr
+                                            td John Doe
+                                            td (12) 1234-1234
+                                            td john.doe@email.com
+                                            td johndoe
+                                            td Street Test, City Testland, TS, US
+                                            td.text-right
+                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                                    i.fa.fa-fw.fa-trash
+                                        tr
+                                            td John Doe
+                                            td (12) 1234-1234
+                                            td john.doe@email.com
+                                            td johndoe
+                                            td Street Test, City Testland, TS, US
+                                            td.text-right
+                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                                    i.fa.fa-fw.fa-trash
+                                        tr
+                                            td John Doe
+                                            td (12) 1234-1234
+                                            td john.doe@email.com
+                                            td johndoe
+                                            td Street Test, City Testland, TS, US
+                                            td.text-right
+                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                                    i.fa.fa-fw.fa-trash
+                    br
+                    hr
+                    h2 Row counter
+                    p You can easily append the number of rows in the #[code tbody] by using the #[code row-counter] class inside the table:
+                    br
+                    table.table
+                        thead
+                            tr
+                                th #
+                                th This row isn't included in the counter because it's in the #[code thead]
+                        tbody
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                        tfoot
+                            tr
+                                td(colspan='2') Total rows in the #[code tbody]: #[span.row-counter]
