@@ -7,7 +7,8 @@ table.table, .table>table {
         text-align: left;
         padding: 5px 10px;
     }
-    tbody>tr { ment: table-rows;
+    tbody>tr {
+        counter-increment: table-rows;
     }
     @media (pointer: fine) {
         tbody > tr:hover {
@@ -18,7 +19,7 @@ table.table, .table>table {
         border-top: 1px solid lightgray;
         padding: 5px 10px;
     }
-    .row-count::after {
+    .row-counter::after {
         content: counter(table-rows);
     }
 }
