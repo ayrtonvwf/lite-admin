@@ -45,15 +45,35 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-xs-12">
             <div class="box">
               <div class="box-body">
-                <div class="alert"><b>Default!</b> That's a boring default alert!</div>
-                <div class="alert alert-success"><b>Success!</b> The file was uploaded successfully!</div>
-                <div class="alert alert-info"><b>Info!</b> We need to verify your e-mail address!</div>
-                <div class="alert alert-primary"><b>Primary!</b> A new version of the system is available!</div>
-                <div class="alert alert-warning"><b>Warning!</b> Your account is gonna expire in one week!</div>
-                <div class="alert alert-danger"><b>Danger!</b> An error happened while proccessing your request!</div>
+                <h2>Simple alerts</h2>
+                <p>Create alerts by simply using a div with the class <code>alert-success</code>, <code>alert-info</code>, <code>alert-primary</code>, <code>alert-warning</code> or <code>alert-danger</code>.</p><br>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="alert-success"><b>Success!</b> The file was uploaded successfully!</div>
+                    <div class="alert-info"><b>Info!</b> We need to verify your e-mail address!</div>
+                    <div class="alert-primary"><b>Primary!</b> A new version of the system is available!</div>
+                    <div class="alert-warning"><b>Warning!</b> Your account is gonna expire in one week!</div>
+                    <div class="alert-danger"><b>Danger!</b> An error happened while proccessing your request!</div>
+                  </div>
+                </div>
+                <hr>
+                <h2>Dismissible alerts</h2>
+                <p>To create a dismissible alert, add a <code>checkbox</code> right before the alert, with the class <code>alert-dismiss</code>. This checkbox will be hidden, and when it is checked, the alert will be hidden too.</p>
+                <p>The alert bellow uses a <code>label</code> styled as a button to check the <code>input</code> and hide the alert. Try it:</p><br>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <input class="alert-dismiss" id="dismiss" type="checkbox">
+                    <div class="alert-primary"><b>Primary!</b> A new version of the system is available!
+                      <div><br>
+                        <label class="btn-success btn-sm" for="dismiss">Download now</label>
+                        <label class="btn-danger btn-sm" for="dismiss">Dismiss</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

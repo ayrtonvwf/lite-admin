@@ -7,12 +7,29 @@ block content
                 i.fa.fa-fw.fa-exclamation
                 | Alerts
     .row
-        .col-md-6
+        .col-xs-12
             .box
                 .box-body
-                    .alert #[b Default!] That's a boring default alert!
-                    .alert.alert-success #[b Success!] The file was uploaded successfully!
-                    .alert.alert-info #[b Info!] We need to verify your e-mail address!
-                    .alert.alert-primary #[b Primary!] A new version of the system is available!
-                    .alert.alert-warning #[b Warning!] Your account is gonna expire in one week!
-                    .alert.alert-danger #[b Danger!] An error happened while proccessing your request!
+                    h2 Simple alerts
+                    p Create alerts by simply using a div with the class #[code alert-success], #[code alert-info], #[code alert-primary], #[code alert-warning] or #[code alert-danger].
+                    br
+                    .row
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            .alert-success #[b Success!] The file was uploaded successfully!
+                            .alert-info #[b Info!] We need to verify your e-mail address!
+                            .alert-primary #[b Primary!] A new version of the system is available!
+                            .alert-warning #[b Warning!] Your account is gonna expire in one week!
+                            .alert-danger #[b Danger!] An error happened while proccessing your request!
+                    hr
+                    h2 Dismissible alerts
+                    p To create a dismissible alert, add a #[code checkbox] right before the alert, with the class #[code alert-dismiss]. This checkbox will be hidden, and when it is checked, the alert will be hidden too.
+                    p The alert bellow uses a #[code label] styled as a button to check the #[code input] and hide the alert. Try it:
+                    br
+                    .row
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            input#dismiss.alert-dismiss(type='checkbox')
+                            .alert-primary #[b Primary!] A new version of the system is available!
+                                div
+                                    br
+                                    label.btn-success.btn-sm(for='dismiss') Download now
+                                    label.btn-danger.btn-sm(for='dismiss') Dismiss

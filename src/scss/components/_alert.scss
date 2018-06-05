@@ -1,23 +1,28 @@
-.alert {
+.alert-success, .alert-info, .alert-primary, .alert-warning, .alert-danger {
     padding: 15px;
     border-radius: 10px;
     margin: 5px 0px;
-    background-color: $alert-default-color;
     color: white;
     text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    .alert-dismiss:checked+& {
+        display: none;
+    }
 }
 .alert-success {
     background-color: $alert-success-color;
 }
-.alert-primary {
-    background-color: $alert-primary-color;
-}
 .alert-info {
     background-color: $alert-info-color;
+}
+.alert-primary {
+    background-color: $alert-primary-color;
 }
 .alert-warning {
     background-color: $alert-warning-color;
 }
 .alert-danger {
     background-color: $alert-danger-color;
+}
+.alert-dismiss {
+    display: none !important;
 }
