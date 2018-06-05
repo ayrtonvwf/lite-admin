@@ -229,6 +229,25 @@
                   </div>
                 </div>
                 <hr>
+                <h2>File input</h2>
+                <p>You can have nice file inputs too. Just create a <code>label</code> with a button class, and put the <code>input</code> inside it.</p>
+                <p>In Chrome the default file input button is hidden, but in other browsers there's still no way to do this. However, you can add the class <code>hidden</code> to you input, so only the external button will be visible, but the file name will be hidden too as it is part of the <code>input</code> itself.</p>
+                <p>Be sure to check the example bellow in Chrome and other browsers to be sure which one you wanna choose.</p><br>
+                <div class="row">
+                  <div class="col-xs-6 input">
+                    <label for="shown-file">Visible input</label>
+                    <label class="btn-primary"><i class="fa fa-fw fa-file"></i>Selecione um arquivo
+                      <input id="shown-file" type="file">
+                    </label>
+                  </div>
+                  <div class="col-xs-6 input">
+                    <label for="hidden-file">Hidden input</label>
+                    <label class="btn-primary"><i class="fa fa-fw fa-file"></i>Selecione um arquivo
+                      <input class="hidden" id="hidden-file" type="file">
+                    </label>
+                  </div>
+                </div><br>
+                <hr>
                 <h2>Regular inputs</h2>
                 <p>As expected, you can simply use your <code>input</code>s, <code>select</code>s and <code>textarea</code>s and they will look fine. No extra classes needed:</p><br>
                 <div class="row">
@@ -248,11 +267,11 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-6 col-sm-4 col-sm-offset-2 input">
-                    <label for="date">A date field</label>
-                    <input id="date" placeholder="Date">
+                    <label for="date">A date input</label>
+                    <input id="date" type="date" placeholder="Choose a date">
                   </div>
                   <div class="col-xs-6 col-sm-4 input">
-                    <label for="range">A range field</label>
+                    <label for="range">A range input</label>
                     <input id="range" type="range">
                   </div>
                 </div>

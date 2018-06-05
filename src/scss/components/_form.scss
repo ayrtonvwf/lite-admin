@@ -109,6 +109,25 @@ input[type='radio'] {
     }
 }
 
+.btn-success, .btn-info, .btn-primary, .btn-warning, .btn-danger {
+    &>input[type='file'] {
+        padding: 0px;
+        height: auto;
+        border: 0px;
+        margin: 2px 0px 0px -3px;
+        background-color: transparent;
+        pointer-events: none;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        &::-webkit-file-upload-button {
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+            border: none;
+        }
+    }
+}
+
 select {
     appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='7' viewBox='0 0 10 7' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 H10 L5 7 Z'/></svg>");

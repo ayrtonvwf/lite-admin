@@ -164,8 +164,29 @@ block content
                             label(for='textarea-resize-h') Resize horizontally
                             textarea#textarea-resize-h.resize-h(placeholder='<textarea class="resize-h"></textarea>')
                     hr
+                    h2 File input
+                    p You can have nice file inputs too. Just create a #[code label] with a button class, and put the #[code input] inside it.
+                    p In Chrome the default file input button is hidden, but in other browsers there's still no way to do this. However, you can add the class #[code hidden] to you input, so only the external button will be visible, but the file name will be hidden too as it is part of the #[code input] itself.
+                    p Be sure to check the example bellow in Chrome and other browsers to be sure which one you wanna choose.
+                    br
+                    .row
+                        .col-xs-6.input
+                            label(for='shown-file') Visible input
+                            label.btn-primary
+                                i.fa.fa-fw.fa-file
+                                | Selecione um arquivo
+                                input#shown-file(type='file')
+                        .col-xs-6.input
+                            label(for='hidden-file') Hidden input
+                            label.btn-primary
+                                i.fa.fa-fw.fa-file
+                                | Selecione um arquivo
+                                input.hidden#hidden-file(type='file')
+                    br
+                    hr
                     h2 Regular inputs
                     p As expected, you can simply use your #[code input]s, #[code select]s and #[code textarea]s and they will look fine. No extra classes needed:
+
                     br
                     .row
                         .col-xs-6.col-sm-4.col-sm-offset-2.input
@@ -180,8 +201,8 @@ block content
                                 option Teste 3
                     .row
                         .col-xs-6.col-sm-4.col-sm-offset-2.input
-                            label(for='date') A date field
-                            input#date(placeholder='Date')
+                            label(for='date') A date input
+                            input#date(type='date' placeholder='Choose a date')
                         .col-xs-6.col-sm-4.input
-                            label(for='range') A range field
+                            label(for='range') A range input
                             input#range(type='range')
