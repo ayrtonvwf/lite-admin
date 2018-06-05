@@ -71,6 +71,7 @@ input[type='checkbox'] {
         content: "✔";
         padding-top: 2px;
         line-height: 16px;
+        font-size: 15px;
     }
     &:checked::before {
         color: blue;

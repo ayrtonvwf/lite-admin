@@ -4,12 +4,20 @@
 div, header, nav, main, footer, section, article, aside {
     position: relative;
 }
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"), sans-serif;
+}
+
 body {
     margin: 0px;
     font-size: 13px;
     background: $background;
     overflow-x: hidden;
     &, button {
-        font-family: sans-serif;
+        font-family: "system", sans-serif;
     }
 }
