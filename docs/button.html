@@ -65,16 +65,18 @@
                   <li>Use the <b>attribute</b> <code>disabled</code> and really disable it;</li>
                   <li>Use the <b>class</b> <code>disabled</code> and only make it look disabled.</li>
                 </ul>
-                <p>When you only use the class, actions continue to be triggered when you click the button.</p>
-                <p>In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:</p><br>
+                <p>When you use only the class, actions continue to be triggered when you click the button.</p>
+                <p>In the example bellow, all buttons would trigger an alert, but the first three are disabled with the attribute, so it won't work. Try clicking on them:</p><br>
                 <div class="text-center">
-                  <button class="btn-default disabled">Disabled with class</button>
-                  <button class="btn-success" disabled onclick="alert(&quot;I am disabled&quot;)">Disabled with attribute</button>
-                  <button class="btn-info disabled">Disabled with class</button>
-                  <button class="btn-primary disabled">Disabled with class</button>
-                  <button class="btn-warning disabled">Disabled with class</button>
-                  <button class="btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Disabled with class</button>
-                </div>
+                  <button class="btn-default" onclick="alert(&quot;I am disabled&quot;)" disabled>Attribute</button>
+                  <button class="btn-success" onclick="alert(&quot;I am disabled&quot;)" disabled>Attribute</button>
+                  <button class="btn-info" onclick="alert(&quot;I am disabled&quot;)" disabled>Attribute</button>
+                  <button class="btn-primary disabled" onclick="alert(&quot;I am disabled&quot;)">Class</button>
+                  <button class="btn-warning disabled" onclick="alert(&quot;I am disabled&quot;)">Class</button>
+                  <button class="btn-danger disabled" onclick="alert(&quot;I am disabled&quot;)">Class</button>
+                </div><br>
+                <p>Note that links don't support the <code>disabled</code> attribute, so they will behave as if using the class instead of the attribute.</p>
+                <p>To get a behavior close to the disabled button, you can use the class <code>disable-pointer</code> so the element wont respond to mouse events (click and hover), and use the a negative <code>tabindex</code> to prevent the focus on keyboard navigation.</p>
                 <hr>
                 <h2>Sizes</h2>
                 <p>To set a different size, just add the class <code>btn-xs</code>, <code>btn-sm</code> or <code>btn-lg</code> to your button.</p><br><br>

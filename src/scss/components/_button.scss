@@ -1,5 +1,6 @@
 .btn-default, .btn-success, .btn-info, .btn-primary, .btn-warning, .btn-danger {
-    display: inline-block !important;
+    position: relative;
+    display: inline-block;
     padding: 10px 15px 8px 15px;
     margin: 2px;
     color: white;
@@ -7,7 +8,7 @@
     font-size: 15px;
     border-radius: 3px;
     cursor: pointer;
-    transition-property: background-color, padding, box-shadow;
+    transition-property: background-color, box-shadow;
     transition-duration: .1s;
     text-decoration: none;
     line-height: 17px;
@@ -15,8 +16,9 @@
     border: none;
     box-shadow: -1px -1px 0px rgba(0, 0, 0, .2) inset, 1px 1px 1px rgba(0, 0, 0, .2);
     vertical-align: top;
+    user-select: none;
     &:hover, &:focus {
-        transition-duration: .2s;
+        transition-duration: .4s;
         box-shadow: 2px 2px 1px rgba(0, 0, 0, .2) inset;
     }
     &[disabled], &.disabled {
@@ -119,4 +121,8 @@
             border: 1px solid transparent;
         }
     }
+}
+
+.disable-pointer {
+    pointer-events: none;
 }

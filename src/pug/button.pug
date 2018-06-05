@@ -26,16 +26,19 @@ block content
                     ul
                         li Use the #[b attribute] #[code disabled] and really disable it;
                         li Use the #[b class] #[code disabled] and only make it look disabled.
-                    p When you only use the class, actions continue to be triggered when you click the button.
-                    p In the example bellow, both buttons would trigger an alert, but the left is disabled with the attribute, so it won't work. Try it:
+                    p When you use only the class, actions continue to be triggered when you click the button.
+                    p In the example bellow, all buttons would trigger an alert, but the first three are disabled with the attribute, so it won't work. Try clicking on them:
                     br
                     .text-center
-                        button.btn-default.disabled Disabled with class
-                        button(disabled onclick='alert("I am disabled")').btn-success Disabled with attribute
-                        button.btn-info.disabled Disabled with class
-                        button.btn-primary.disabled Disabled with class
-                        button.btn-warning.disabled Disabled with class
-                        button(onclick='alert("I am disabled")').btn-danger.disabled Disabled with class
+                        button(onclick='alert("I am disabled")' disabled).btn-default Attribute
+                        button(onclick='alert("I am disabled")' disabled).btn-success Attribute
+                        button(onclick='alert("I am disabled")' disabled).btn-info Attribute
+                        button(onclick='alert("I am disabled")').btn-primary.disabled Class
+                        button(onclick='alert("I am disabled")').btn-warning.disabled Class
+                        button(onclick='alert("I am disabled")').btn-danger.disabled Class
+                    br
+                    p Note that links don't support the #[code disabled] attribute, so they will behave as if using the class instead of the attribute.
+                    p To get a behavior close to the disabled button, you can use the class #[code disable-pointer] so the element wont respond to mouse events (click and hover), and use the a negative #[code tabindex] to prevent the focus on keyboard navigation.
                     hr
                     h2 Sizes
                     p To set a different size, just add the class #[code btn-xs], #[code btn-sm] or #[code btn-lg] to your button.
