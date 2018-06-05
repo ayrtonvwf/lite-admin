@@ -45,6 +45,67 @@ pre {
 hr {
     margin: 30px 0px 15px 0px;
 }
+blockquote {
+    position: relative;
+    background-color: lightgray;
+    margin: 15px;
+    padding: 10px 20px;
+    border-left: 3px solid rgba(0,0,0,.3);
+    font-size: 15px;
+    &>p {
+        text-indent: 2em;
+        &:first-of-type::before {
+            content: "“";
+            display: block;
+            position: absolute;
+            margin-left: -10px;
+            font-size: 20px;
+        }
+        &:last-of-type::after {
+            content: " ”";
+            font-size: 20px;
+        }
+    }
+    &>cite {
+        font-size: 13px;
+        position: relative;
+        width: calc(100% + 40px);
+        margin: 10px -20px -10px;
+        padding: 10px 15px 10px 18px;
+        font-style: italic;
+        display: block;
+        background-color: rgba(0,0,0,.3);
+        color: white;
+        &::before {
+            content: "― ";
+        }
+    }
+}
+.quote-success {
+    background-color: $quote-success-color;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+.quote-info {
+    background-color: $quote-info-color;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+.quote-primary {
+    background-color: $quote-primary-color;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+.quote-warning {
+    background-color: $quote-warning-color;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+.quote-danger {
+    background-color: $quote-danger-color;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
 
 .text-muted {
     color: $text-muted-color;
