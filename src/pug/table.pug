@@ -59,24 +59,26 @@ block content
                     h2 Row counter
                     p You can easily append the number of rows in the #[code tbody] by using the #[code row-counter] class inside the table:
                     br
-                    table.table
-                        thead
-                            tr
-                                th #
-                                th This row isn't included in the counter because it's in the #[code thead]
-                        tbody
-                            tr
-                                td.row-counter
-                                td A tbody row
-                            tr
-                                td.row-counter
-                                td A tbody row
-                            tr
-                                td.row-counter
-                                td A tbody row
-                            tr
-                                td.row-counter
-                                td A tbody row
-                        tfoot
-                            tr
-                                td(colspan='2') Total rows in the #[code tbody]: #[span.row-counter]
+                    .row
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            table.table
+                                thead
+                                    tr
+                                        th #
+                                        th This row isn't included in the counter because it's in the #[code thead]
+                                tbody
+                                    tr
+                                        td.row-counter
+                                        td A tbody row
+                                    tr
+                                        td.row-counter
+                                        td A tbody row
+                                    tr
+                                        td.row-counter
+                                        td A tbody row
+                                    tr
+                                        td.row-counter
+                                        td A tbody row
+                                tfoot
+                                    tr
+                                        td(colspan='2') Total rows in the #[code tbody]: #[span.row-counter]

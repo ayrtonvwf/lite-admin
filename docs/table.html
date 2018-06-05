@@ -98,37 +98,41 @@
                 <hr>
                 <h2>Row counter</h2>
                 <p>You can easily append the number of rows in the <code>tbody</code> by using the <code>row-counter</code> class inside the table:</p><br>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>This row isn't included in the counter because it's in the <code>thead</code></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="row-counter"></td>
-                      <td>A tbody row</td>
-                    </tr>
-                    <tr>
-                      <td class="row-counter"></td>
-                      <td>A tbody row</td>
-                    </tr>
-                    <tr>
-                      <td class="row-counter"></td>
-                      <td>A tbody row</td>
-                    </tr>
-                    <tr>
-                      <td class="row-counter"></td>
-                      <td>A tbody row</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="2">Total rows in the <code>tbody</code>: <span class="row-counter"></span></td>
-                    </tr>
-                  </tfoot>
-                </table>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>This row isn't included in the counter because it's in the <code>thead</code></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="row-counter"></td>
+                          <td>A tbody row</td>
+                        </tr>
+                        <tr>
+                          <td class="row-counter"></td>
+                          <td>A tbody row</td>
+                        </tr>
+                        <tr>
+                          <td class="row-counter"></td>
+                          <td>A tbody row</td>
+                        </tr>
+                        <tr>
+                          <td class="row-counter"></td>
+                          <td>A tbody row</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="2">Total rows in the <code>tbody</code>: <span class="row-counter"></span></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
