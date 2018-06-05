@@ -50,20 +50,26 @@ block content
                                 label(for='required-number') Number between 5 and 9
                                 input#required-number(type='number' placeholder='Numeric input' required min='5' max='9')
                             .col-xs-6.col-sm-4.text-center
-                                button.btn-lg.btn-success.hide-on-invalid-form(type='submit')
-                                    i.fa.fa-fw.fa-check
-                                    | Submit
-                                button.btn-lg.btn-default.hide-on-valid-form(type='submit')
-                                    i.fa.fa-fw.fa-times
-                                    | Submit
+                                .show-on-form-valid-support
+                                    button.btn-lg.btn-success.hide-on-invalid-form(type='submit')
+                                        i.fa.fa-fw.fa-check
+                                        | Submit
+                                    button.btn-lg.btn-success.disabled.hide-on-valid-form(type='submit')
+                                        i.fa.fa-fw.fa-times
+                                        | Submit
+                                .hide-on-form-valid-support
+                                    button.btn-lg.btn-success(type='submit')
+                                        i.fa.fa-fw.fa-check
+                                        | Submit
                         br
                         .row
                             .col-sm-8.col-sm-offset-2
                                 .row
                                     .col-xs-4.text-bold.text-danger.counter-invalid-fields Invalid fields: #{' '}
                                     .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields: #{' '}
-                                    .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
-                                    .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
+                                    .show-on-form-valid-support
+                                        .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
+                                        .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
                     br
                     h3 Browser support
                     p At the moment of writing, Internet Explorer and Edge doesn't support the #[code :valid] pseudoclass on the #[code form] tag. You can use the classes #[code hide-on-form-valid-support] and #[code show-on-form-valid-support] to show or hide an element based on browser support of this feature.

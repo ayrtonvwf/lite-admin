@@ -86,8 +86,13 @@
                       <input id="required-number" type="number" placeholder="Numeric input" required min="5" max="9">
                     </div>
                     <div class="col-xs-6 col-sm-4 text-center">
-                      <button class="btn-lg btn-success hide-on-invalid-form" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
-                      <button class="btn-lg btn-default hide-on-valid-form" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
+                      <div class="show-on-form-valid-support">
+                        <button class="btn-lg btn-success hide-on-invalid-form" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
+                        <button class="btn-lg btn-success disabled hide-on-valid-form" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
+                      </div>
+                      <div class="hide-on-form-valid-support">
+                        <button class="btn-lg btn-success" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
+                      </div>
                     </div>
                   </div><br>
                   <div class="row">
@@ -95,8 +100,10 @@
                       <div class="row">
                         <div class="col-xs-4 text-bold text-danger counter-invalid-fields">Invalid fields:  </div>
                         <div class="col-xs-4 text-center text-bold text-success counter-valid-fields">Valid fields:  </div>
-                        <div class="col-xs-4 text-right text-bold text-danger hide-on-valid-form">Has validation errors!</div>
-                        <div class="col-xs-4 text-right text-bold text-success hide-on-invalid-form">Ready to submit!</div>
+                        <div class="show-on-form-valid-support">
+                          <div class="col-xs-4 text-right text-bold text-danger hide-on-valid-form">Has validation errors!</div>
+                          <div class="col-xs-4 text-right text-bold text-success hide-on-invalid-form">Ready to submit!</div>
+                        </div>
                       </div>
                     </div>
                   </div>
