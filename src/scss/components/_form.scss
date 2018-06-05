@@ -136,6 +136,20 @@ form:invalid .hide-on-invalid-form {
     display: none !important;
 }
 
+
+form:invalid:valid, .show-on-form-valid-support {
+    // if the browser doesn't recognize :valid/:invalid on form tag, this styling will be ignored
+    display: block !important;
+}
+form:invalid:valid, .hide-on-form-valid-support {
+    // if the browser doesn't recognize :valid on form tag, this styling will be ignored
+    display: none !important;
+}
+
+.show-on-form-valid-support {
+    display: none; // will be overridden if browser supports
+}
+
 input:invalid, select:invalid, textarea:invalid {
     counter-increment: invalid-fields;
 }

@@ -64,6 +64,13 @@ block content
                                     .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields: #{' '}
                                     .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
                                     .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
+                    br
+                    h3 Browser support
+                    p At the moment of writing, Internet Explorer and Edge doesn't support the #[code :valid] pseudoclass on the #[code form] tag. You can use the classes #[code hide-on-form-valid-support] and #[code show-on-form-valid-support] to show or hide an element based on browser support of this feature.
+                    .row
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                            .alert-danger.hide-on-form-valid-support.text-center Your browser doesn't support the #[code :valid] pseudoclass on the #[code form] tag.
+                            .alert-success.show-on-form-valid-support.text-center Your browser supports the #[code :valid] pseudoclass on the #[code form] tag!
                     hr
                     h2 Auto required hints
                     p We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:

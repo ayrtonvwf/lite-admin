@@ -100,7 +100,15 @@
                       </div>
                     </div>
                   </div>
-                </form>
+                </form><br>
+                <h3>Browser support</h3>
+                <p>At the moment of writing, Internet Explorer and Edge doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag. You can use the classes <code>hide-on-form-valid-support</code> and <code>show-on-form-valid-support</code> to show or hide an element based on browser support of this feature.</p>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="alert-danger hide-on-form-valid-support text-center">Your browser doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag.</div>
+                    <div class="alert-success show-on-form-valid-support text-center">Your browser supports the <code>:valid</code> pseudoclass on the <code>form</code> tag!</div>
+                  </div>
+                </div>
                 <hr>
                 <h2>Auto required hints</h2>
                 <p>We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:</p>
