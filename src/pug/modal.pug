@@ -7,21 +7,28 @@ block content
                 i.fa.fa-fw.fa-window-restore
                 | Modal
     .row
-        .col-md-6
+        .col-xs-12
             .box
                 .box-body
                     p Modals are basically pop-ups. They can have lots of scrollable content or even a single sentence. They can hold images, they can be large or tiny, can have header and/or footer or none. They can be plain modals or represent a success message, a danger alert, a warning, anything. See some examples bellow:
-                    a.btn-default(href='#modal-scroll') Scrollable modal
-                    a.btn-default(href='#modal-header') With header/footer modal
-                    a.btn-default(href='#modal-lg') Large modal
-                    a.btn-default(href='#modal-md') Medium modal
-                    a.btn-default(href='#modal-sm') Small modal
-                    a.btn-default(href='#modal-xs') Extra Small modal
-                    a.btn-success(href='#modal-success') Sucess modal
-                    a.btn-info(href='#modal-info') Info modal
-                    a.btn-primary(href='#modal-primary') Primary modal
-                    a.btn-warning(href='#modal-warning') Warning modal
-                    a.btn-danger(href='#modal-danger') Danger modal
+                    .text-center
+                        br
+                        p
+                            a.btn-default(href='#modal-scroll') Scrollable
+                            a.btn-default(href='#modal-header') With header/footer
+                        br
+                        p
+                            a.btn-default.btn-lg(href='#modal-lg') Large
+                            a.btn-default(href='#modal-md') Medium
+                            a.btn-default.btn-sm(href='#modal-sm') Small
+                            a.btn-default.btn-xs(href='#modal-xs') Extra Small
+                        br
+                        p
+                            a.btn-success(href='#modal-success') Sucess
+                            a.btn-info(href='#modal-info') Info
+                            a.btn-primary(href='#modal-primary') Primary
+                            a.btn-warning(href='#modal-warning') Warning
+                            a.btn-danger(href='#modal-danger') Danger
 
     .modal#modal-scroll
         .modal-body
