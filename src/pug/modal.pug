@@ -10,7 +10,7 @@ block content
         .col-xs-12
             .box
                 .box-body
-                    p Modals are basically pop-ups. They can have lots of scrollable content or even a single sentence. They can hold images, they can be large or tiny, can have header and/or footer or none. They can be plain modals or represent a success message, a danger alert, a warning, anything. See some examples bellow:
+                    p Modals are basically pop-ups. They can have lots of scrollable content or even a single sentence. They can hold images, they can be large or tiny, can have header and/or footer or none. They can be plain modals or represent a success message, a danger alert, a warning, anything. Play with some examples bellow:
                     .text-center
                         br
                         p
@@ -29,6 +29,17 @@ block content
                             a.btn-primary(href='#modal-primary') Primary
                             a.btn-warning(href='#modal-warning') Warning
                             a.btn-danger(href='#modal-danger') Danger
+                    br
+                    p Take the example code:
+                    pre
+                        code.
+                            #{'<a href="#modal" class="btn-info">Open Modal</a>'}#[br]
+                            #{'<div class="modal modal-info" id="modal">'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-header">My nice modal</div>'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-body">Incredible modal content.</div>'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-footer">That was the modal</div>'}#[br]
+                            #{'</div>'}
+
 
     .modal#modal-scroll
         .modal-body
