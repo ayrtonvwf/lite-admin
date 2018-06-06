@@ -21,16 +21,7 @@ block content
                         |
                         code #{'<span class="counter-valid-fields"></span>'}
                         | .
-                    p
-                        | You can also add the class
-                        |
-                        code hide-on-valid-form
-                        |
-                        | to any element inside a form and it'll be hidden when all the fields are valid. If you add the class
-                        |
-                        code hide-on-invalid-form
-                        |
-                        | the element will be hidden when any field is invalid.
+                    p You can also add the class #[code form-valid] and #[code form-invalid] to any element inside a #[code form] and it will be shown only when the form is valid or invalid.
                     p Try it yourself:
                     br
                     form
@@ -50,33 +41,41 @@ block content
                                 label(for='required-number') Number between 5 and 9
                                 input#required-number(type='number' placeholder='Numeric input' required min='5' max='9')
                             .col-xs-6.col-sm-4.text-center
-                                .show-on-form-valid-support
-                                    button.btn-lg.btn-success.hide-on-invalid-form(type='submit')
+                                .form-valid-supported
+                                    button.btn-lg.btn-success.form-valid(type='submit')
                                         i.fa.fa-fw.fa-check
                                         | Submit
-                                    button.btn-lg.btn-success.disabled.hide-on-valid-form(type='submit')
+                                    button.btn-lg.btn-success.disabled.form-invalid(type='submit')
                                         i.fa.fa-fw.fa-times
                                         | Submit
-                                .hide-on-form-valid-support
-                                    button.btn-lg.btn-success(type='submit')
-                                        i.fa.fa-fw.fa-check
-                                        | Submit
+                            .form-valid-unsupported
+                                button.btn-lg.btn-success(type='submit')
+                                    i.fa.fa-fw.fa-check
+                                    | Submit
+
                         br
                         .row
                             .col-sm-8.col-sm-offset-2
-                                .row
-                                    .col-xs-4.text-bold.text-danger.counter-invalid-fields Invalid fields: #{' '}
-                                    .col-xs-4.text-center.text-bold.text-success.counter-valid-fields Valid fields: #{' '}
+                                .text-bold.text-center
+                                    .row
+                                        .col-xs-6
+                                            .alert-info.counter-invalid-fields Invalid fields: #{' '}
+                                        .col-xs-6
+                                            .alert-info.counter-valid-fields Valid fields: #{' '}
                                     .show-on-form-valid-support
-                                        .col-xs-4.text-right.text-bold.text-danger.hide-on-valid-form Has validation errors!
-                                        .col-xs-4.text-right.text-bold.text-success.hide-on-invalid-form Ready to submit!
+                                        .form-valid
+                                            .alert-success Ready to submit!
+                                        .form-invalid
+                                            .alert-danger Has validation errors!
                     br
                     h3 Browser support
-                    p At the moment of writing, Internet Explorer and Edge doesn't support the #[code :valid] pseudoclass on the #[code form] tag. You can use the classes #[code hide-on-form-valid-support] and #[code show-on-form-valid-support] to show or hide an element based on browser support of this feature.
+                    p At the moment of writing, Internet Explorer and Edge doesn't support the #[code :valid] pseudoclass on the #[code form] tag. You can use the classes #[code form-valid-supported] and #[code form-valid-unsupported] to show or hide an element based on browser support of this feature.
                     .row
-                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-                            .alert-danger.hide-on-form-valid-support.text-center Your browser doesn't support the #[code :valid] pseudoclass on the #[code form] tag.
-                            .alert-success.show-on-form-valid-support.text-center Your browser supports the #[code :valid] pseudoclass on the #[code form] tag!
+                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3.text-center
+                            .form-valid-supported
+                                .alert-success Your browser supports the #[code :valid] pseudoclass on the #[code form] tag!
+                            .form-valid-unsupported
+                                .alert-danger Your browser doesn't support the #[code :valid] pseudoclass on the #[code form] tag.
                     hr
                     h2 Auto required hints
                     p We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:

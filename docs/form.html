@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <form id="form-valid-support-helper">
+      <input required>
+    </form>
     <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle" href="#menu"><i class="fa fa-bars"></i></a><a class="header-button" href="#pane-tickets"><i class="fa fa-calendar"></i><span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
       <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
         <ul class="header-pane ticket-pane">
@@ -56,13 +59,7 @@
                   The same goes with
                   <code>&lt;span class=&quot;counter-valid-fields&quot;&gt;&lt;/span&gt;</code>.
                 </p>
-                <p>
-                  You can also add the class
-                  <code>hide-on-valid-form</code>
-                  to any element inside a form and it'll be hidden when all the fields are valid. If you add the class
-                  <code>hide-on-invalid-form</code>
-                  the element will be hidden when any field is invalid.
-                </p>
+                <p>You can also add the class <code>form-valid</code> and <code>form-invalid</code> to any element inside a <code>form</code> and it will be shown only when the form is valid or invalid.</p>
                 <p>Try it yourself:</p><br>
                 <form>
                   <div class="row">
@@ -86,34 +83,48 @@
                       <input id="required-number" type="number" placeholder="Numeric input" required min="5" max="9">
                     </div>
                     <div class="col-xs-6 col-sm-4 text-center">
-                      <div class="show-on-form-valid-support">
-                        <button class="btn-lg btn-success hide-on-invalid-form" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
-                        <button class="btn-lg btn-success disabled hide-on-valid-form" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
+                      <div class="form-valid-supported">
+                        <button class="btn-lg btn-success form-valid" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
+                        <button class="btn-lg btn-success disabled form-invalid" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
                       </div>
-                      <div class="hide-on-form-valid-support">
-                        <button class="btn-lg btn-success" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
-                      </div>
+                    </div>
+                    <div class="form-valid-unsupported">
+                      <button class="btn-lg btn-success" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
                     </div>
                   </div><br>
                   <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                      <div class="row">
-                        <div class="col-xs-4 text-bold text-danger counter-invalid-fields">Invalid fields:  </div>
-                        <div class="col-xs-4 text-center text-bold text-success counter-valid-fields">Valid fields:  </div>
+                      <div class="text-bold text-center">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="alert-info counter-invalid-fields">Invalid fields:  </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="alert-info counter-valid-fields">Valid fields:  </div>
+                          </div>
+                        </div>
                         <div class="show-on-form-valid-support">
-                          <div class="col-xs-4 text-right text-bold text-danger hide-on-valid-form">Has validation errors!</div>
-                          <div class="col-xs-4 text-right text-bold text-success hide-on-invalid-form">Ready to submit!</div>
+                          <div class="form-valid">
+                            <div class="alert-success">Ready to submit!</div>
+                          </div>
+                          <div class="form-invalid">
+                            <div class="alert-danger">Has validation errors!</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </form><br>
                 <h3>Browser support</h3>
-                <p>At the moment of writing, Internet Explorer and Edge doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag. You can use the classes <code>hide-on-form-valid-support</code> and <code>show-on-form-valid-support</code> to show or hide an element based on browser support of this feature.</p>
+                <p>At the moment of writing, Internet Explorer and Edge doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag. You can use the classes <code>form-valid-supported</code> and <code>form-valid-unsupported</code> to show or hide an element based on browser support of this feature.</p>
                 <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                    <div class="alert-danger hide-on-form-valid-support text-center">Your browser doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag.</div>
-                    <div class="alert-success show-on-form-valid-support text-center">Your browser supports the <code>:valid</code> pseudoclass on the <code>form</code> tag!</div>
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <div class="form-valid-supported">
+                      <div class="alert-success">Your browser supports the <code>:valid</code> pseudoclass on the <code>form</code> tag!</div>
+                    </div>
+                    <div class="form-valid-unsupported">
+                      <div class="alert-danger">Your browser doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag.</div>
+                    </div>
                   </div>
                 </div>
                 <hr>
