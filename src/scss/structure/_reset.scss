@@ -21,3 +21,12 @@ body {
         font-family: "system", sans-serif;
     }
 }
+
+input:not([type='range']), select {
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
+}
