@@ -15,6 +15,30 @@
     &:target {
         display: block;
     }
+    &.modal-lg {
+        width: 1100px;
+        left: calc(50% - 550px);
+        @media (max-width: 1100px) {
+            width: 90%;
+            left: 5%;
+        }
+    }
+    &.modal-sm {
+        width: 600px;
+        left: calc(50% - 300px);
+        @media (max-width: 600px) {
+            width: 90%;
+            left: 5%;
+        }
+    }
+    &.modal-xs {
+        width: 400px;
+        left: calc(50% - 200px);
+        @media (max-width: 200px) {
+            width: 90%;
+            left: 5%;
+        }
+    }
 }
 .modal-header {
     padding: 10px;
@@ -30,6 +54,7 @@
 }
 .modal-body {
     padding: 10px;
+    overflow: hidden;
 }
 .modal-footer {
     border-top: 1px solid lightgray;
