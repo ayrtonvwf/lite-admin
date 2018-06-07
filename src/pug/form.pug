@@ -2,12 +2,12 @@ extends layout.pug
 
 block content
     .row
-        .col-xs-12
+        .col-12
             h1.content-title
                 i.fa.fa-fw.fa-keyboard-o
                 | Forms
     .row
-        .col-xs-12
+        .col-12
             .box
                 .box-body
                     h2 Validation indicators
@@ -25,22 +25,22 @@ block content
                     p Try it yourself:
                     br
                     form
-                        .row
-                            .col-xs-6.col-sm-4.col-sm-offset-2
+                        .row.justify-content-center
+                            .col-6.col-sm-4
                                 label(for='required-input') Required field
                                 input#required-input(placeholder='Type anything here' required)
-                            .col-xs-6.col-sm-4
+                            .col-6.col-sm-4
                                 label(for='select') Required select
                                 select#required-select(required)
                                     option(value='' selected hidden disabled) Select...
                                     option(value='1') Teste 1
                                     option(value='2') Teste 2
                                     option(value='3') Teste 3
-                        .row
-                            .col-xs-6.col-sm-4.col-sm-offset-2
+                        .row.justify-content-center
+                            .col-6.col-sm-4
                                 label(for='required-number') Number between 5 and 9
                                 input#required-number(type='number' placeholder='Numeric input' required min='5' max='9')
-                            .col-xs-6.col-sm-4.text-center
+                            .col-6.col-sm-4.text-center
                                 .form-valid-supported
                                     button.btn-lg.btn-success.form-valid(type='submit')
                                         i.fa.fa-fw.fa-check
@@ -54,13 +54,13 @@ block content
                                     | Submit
 
                         br
-                        .row
-                            .col-sm-8.col-sm-offset-2
+                        .row.justify-content-center
+                            .col-sm-8
                                 .text-bold.text-center
                                     .row
-                                        .col-xs-6
+                                        .col-6
                                             .alert-info.counter-invalid-fields Invalid fields: #{' '}
-                                        .col-xs-6
+                                        .col-6
                                             .alert-info.counter-valid-fields Valid fields: #{' '}
                                     .show-on-form-valid-support
                                         .form-valid
@@ -70,8 +70,8 @@ block content
                     br
                     h3 Browser support
                     p At the moment of writing, Internet Explorer and Edge doesn't support the #[code :valid] pseudoclass on the #[code form] tag. You can use the classes #[code form-valid-supported] and #[code form-valid-unsupported] to show or hide an element based on browser support of this feature.
-                    .row
-                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3.text-center
+                    .row.justify-content-center
+                        .col-sm-10.col-md-8.col-lg-6.text-center
                             .form-valid-supported
                                 .alert-success Your browser supports the #[code :valid] pseudoclass on the #[code form] tag!
                             .form-valid-unsupported
@@ -98,8 +98,8 @@ block content
                         li If you use JS to toggle the input's required on or off, you don't need to worry about this label. It auto adjusts!
                     p Finally, here's the demo:
                     form.mark-required
-                        .row
-                            .input.col-xs-6.col-xs-offset-3.col-sm-4.col-sm-offset-4
+                        .row.justify-content-center
+                            .input.col-10.col-sm-6.col-md-5.col-lg-4
                                 input#mark-required-input(required placeholder='A required label')
                                 label(for='mark-required-input') My required label
                     hr
@@ -107,22 +107,22 @@ block content
                     p.
                         Do you know somebody who uses JS to build nice #[code checkbox]es and #[code radio]s? #[br]
                         You don't need any extra markup or class, just use them!
-                    .row
-                        .col-sm-4.col-sm-offset-2
+                    .row.justify-content-center
+                        .col-sm-4
                             fieldset
                                 legend Checkbox
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='checkbox')
                                             | Option 1
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='checkbox')
                                             | Option 2
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='checkbox')
                                             | Option 3
@@ -130,17 +130,17 @@ block content
                             fieldset
                                 legend Radio
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='radio' name='radio')
                                             | Option 1
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='radio' name='radio')
                                             | Option 2
                                 .row
-                                    .col-xs-12
+                                    .col-12
                                         label
                                             input(type='radio' name='radio')
                                             | Option 3
@@ -148,18 +148,18 @@ block content
                     hr
                     h2 Textarea resize
                     p You have four classes to control the resizing of #[code textarea]s:
-                    .row
-                        .col-xs-12.col-sm-4.col-sm-offset-2
+                    .row.justify-content-center
+                        .col-12.col-sm-4
                             label(for='textarea-no-resize') No resize
                             textarea#textarea-no-resize.no-resize(placeholder='<textarea class="no-resize"></textarea>')
-                        .col-xs-12.col-sm-4
+                        .col-12.col-sm-4
                             label(for='textarea-resize-both') Resize both
                             textarea#textarea-resize-both.resize-both(placeholder='<textarea class="resize-both"></textarea>')
-                    .row
-                        .col-xs-12.col-sm-4.col-sm-offset-2
+                    .row.justify-content-center
+                        .col-12.col-sm-4
                             label(for='textarea-resize-v') Resize vertically
                             textarea#textarea-resize-v.resize-v(placeholder='<textarea class="resize-v"></textarea>')
-                        .col-xs-12.col-sm-4
+                        .col-12.col-sm-4
                             label(for='textarea-resize-h') Resize horizontally
                             textarea#textarea-resize-h.resize-h(placeholder='<textarea class="resize-h"></textarea>')
                     hr
@@ -169,13 +169,13 @@ block content
                     p Be sure to check the example bellow in Chrome and other browsers to be sure which one you wanna choose.
                     br
                     .row
-                        .col-xs-6.input
+                        .col-6.input
                             label(for='shown-file') Visible input
                             label.btn-primary
                                 i.fa.fa-fw.fa-file
                                 | Selecione um arquivo
                                 input#shown-file(type='file')
-                        .col-xs-6.input
+                        .col-6.input
                             label(for='hidden-file') Hidden input
                             label.btn-primary
                                 i.fa.fa-fw.fa-file
@@ -187,21 +187,21 @@ block content
                     p As expected, you can simply use your #[code input]s, #[code select]s and #[code textarea]s and they will look fine. No extra classes needed:
 
                     br
-                    .row
-                        .col-xs-6.col-sm-4.col-sm-offset-2.input
+                    .row.justify-content-center
+                        .col-6.col-sm-4.input
                             label(for='input') A regular text field
                             input#input(placeholder='with a regular placeholder')
-                        .col-xs-6.col-sm-4.input
+                        .col-6.col-sm-4.input
                             label(for='select') A nice select
                             select#select
                                 option(selected hidden disabled) Select...
                                 option Teste 1
                                 option Teste 2
                                 option Teste 3
-                    .row
-                        .col-xs-6.col-sm-4.col-sm-offset-2.input
+                    .row.justify-content-center
+                        .col-6.col-sm-4.input
                             label(for='date') A date input
                             input#date(type='date' placeholder='Choose a date')
-                        .col-xs-6.col-sm-4.input
+                        .col-6.col-sm-4.input
                             label(for='range') A range input
                             input#range(type='range')

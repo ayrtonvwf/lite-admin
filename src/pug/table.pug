@@ -2,20 +2,20 @@ extends layout.pug
 
 block content
     .row
-        .col-xs-12
+        .col-12
             h1.content-title
                 i.fa.fa-fw.fa-table
                 | Table
     .row
-        .col-xs-12
+        .col-12
             .box
                 .box-body
                     h2 Responsive tables
                     p To make a table look nice, add the class #[code table] to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a #[code #{'<div class="table">'}] wrapping the table instead.
                     p The example bellow is a responsive table. Resize your browser to and see it scrolling!
                     br
-                    .row
-                        .col-md-10.col-md-offset-1
+                    .row.justify-content-center
+                        .col-md-10
                             .table
                                 table
                                     thead
@@ -59,8 +59,8 @@ block content
                     h2 Row counter
                     p You can easily append the number of rows in the #[code tbody] by using the #[code row-counter] class inside the table:
                     br
-                    .row
-                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                    .row.justify-content-center
+                        .col-sm-10.col-md-8.col-lg-6
                             table.table
                                 thead
                                     tr

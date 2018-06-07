@@ -2,19 +2,19 @@ extends layout.pug
 
 block content
     .row
-        .col-xs-12
+        .col-12
             h1.content-title
                 i.fa.fa-fw.fa-exclamation
                 | Alerts
     .row
-        .col-xs-12
+        .col-12
             .box
                 .box-body
                     h2 Simple alerts
                     p Create alerts by simply using a div with the class #[code alert-success], #[code alert-info], #[code alert-primary], #[code alert-warning] or #[code alert-danger].
                     br
-                    .row
-                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                    .row.justify-content-center
+                        .col-sm-10.col-md-8.col-lg-6
                             .alert-success #[b Success!] The file was uploaded successfully!
                             .alert-info #[b Info!] We need to verify your e-mail address!
                             .alert-primary #[b Primary!] A new version of the system is available!
@@ -25,8 +25,8 @@ block content
                     p To create a dismissible alert, add a #[code checkbox] right before the alert, with the class #[code alert-dismiss]. This checkbox will be hidden, and when it is checked, the alert will be hidden too.
                     p The alert bellow uses a #[code label] styled as a button to check the #[code input] and hide the alert. Try it:
                     br
-                    .row
-                        .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                    .row.justify-content-center
+                        .col-sm-10.col-md-8.col-lg-6
                             input#dismiss.alert-dismiss(type='checkbox')
                             .alert-primary #[b Primary!] A new version of the system is available!
                                 div

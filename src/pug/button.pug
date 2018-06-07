@@ -2,7 +2,7 @@ extends layout.pug
 
 block content
     .row
-        .col-xs-12
+        .col-12
             h1.content-title
                 i.fa.fa-fw.fa-hand-pointer-o
                 | Buttons
@@ -55,8 +55,8 @@ block content
                     p Using it is easy: add the class #[code color-trigger] to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.
                     p In the example below, the class was added in the table's rows:
                     br
-                    .row
-                        .table.col-sm-10.col-sm-offset-1.col-lg-8.col-lg-offset-2
+                    .row.justify-content-center
+                        .table.col-sm-10.col-lg-8
                             table
                                 thead
                                     tr

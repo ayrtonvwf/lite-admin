@@ -44,12 +44,12 @@
       </nav>
       <main class="content">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-12">
             <h1 class="content-title"><i class="fa fa-fw fa-keyboard-o"></i>Forms</h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-12">
             <div class="box">
               <div class="box-body">
                 <h2>Validation indicators</h2>
@@ -63,12 +63,12 @@
                 <p>You can also add the class <code>form-valid</code> and <code>form-invalid</code> to any element inside a <code>form</code> and it will be shown only when the form is valid or invalid.</p>
                 <p>Try it yourself:</p><br>
                 <form>
-                  <div class="row">
-                    <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                  <div class="row justify-content-center">
+                    <div class="col-6 col-sm-4">
                       <label for="required-input">Required field</label>
                       <input id="required-input" placeholder="Type anything here" required>
                     </div>
-                    <div class="col-xs-6 col-sm-4">
+                    <div class="col-6 col-sm-4">
                       <label for="select">Required select</label>
                       <select id="required-select" required>
                         <option value="" selected hidden disabled>Select...</option>
@@ -78,12 +78,12 @@
                       </select>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                  <div class="row justify-content-center">
+                    <div class="col-6 col-sm-4">
                       <label for="required-number">Number between 5 and 9</label>
                       <input id="required-number" type="number" placeholder="Numeric input" required min="5" max="9">
                     </div>
-                    <div class="col-xs-6 col-sm-4 text-center">
+                    <div class="col-6 col-sm-4 text-center">
                       <div class="form-valid-supported">
                         <button class="btn-lg btn-success form-valid" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
                         <button class="btn-lg btn-success disabled form-invalid" type="submit"><i class="fa fa-fw fa-times"></i>Submit</button>
@@ -93,14 +93,14 @@
                       <button class="btn-lg btn-success" type="submit"><i class="fa fa-fw fa-check"></i>Submit</button>
                     </div>
                   </div><br>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                  <div class="row justify-content-center">
+                    <div class="col-sm-8">
                       <div class="text-bold text-center">
                         <div class="row">
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="alert-info counter-invalid-fields">Invalid fields:  </div>
                           </div>
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="alert-info counter-valid-fields">Valid fields:  </div>
                           </div>
                         </div>
@@ -118,8 +118,8 @@
                 </form><br>
                 <h3>Browser support</h3>
                 <p>At the moment of writing, Internet Explorer and Edge doesn't support the <code>:valid</code> pseudoclass on the <code>form</code> tag. You can use the classes <code>form-valid-supported</code> and <code>form-valid-unsupported</code> to show or hide an element based on browser support of this feature.</p>
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                <div class="row justify-content-center">
+                  <div class="col-sm-10 col-md-8 col-lg-6 text-center">
                     <div class="form-valid-supported">
                       <div class="alert-success">Your browser supports the <code>:valid</code> pseudoclass on the <code>form</code> tag!</div>
                     </div>
@@ -150,8 +150,8 @@
                 </ul>
                 <p>Finally, here's the demo:</p>
                 <form class="mark-required">
-                  <div class="row">
-                    <div class="input col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+                  <div class="row justify-content-center">
+                    <div class="input col-10 col-sm-6 col-md-5 col-lg-4">
                       <input id="mark-required-input" required placeholder="A required label">
                       <label for="mark-required-input">My required label</label>
                     </div>
@@ -162,26 +162,26 @@
                 <p>Do you know somebody who uses JS to build nice <code>checkbox</code>es and <code>radio</code>s? <br>
                   You don't need any extra markup or class, just use them!
                 </p>
-                <div class="row">
-                  <div class="col-sm-4 col-sm-offset-2">
+                <div class="row justify-content-center">
+                  <div class="col-sm-4">
                     <fieldset>
                       <legend>Checkbox</legend>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="checkbox">Option 1
                           </label>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="checkbox">Option 2
                           </label>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="checkbox">Option 3
                           </label>
@@ -193,21 +193,21 @@
                     <fieldset>
                       <legend>Radio</legend>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="radio" name="radio">Option 1
                           </label>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="radio" name="radio">Option 2
                           </label>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                           <label>
                             <input type="radio" name="radio">Option 3
                           </label>
@@ -220,22 +220,22 @@
                 <hr>
                 <h2>Textarea resize</h2>
                 <p>You have four classes to control the resizing of <code>textarea</code>s:</p>
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-sm-4">
                     <label for="textarea-no-resize">No resize</label>
                     <textarea class="no-resize" id="textarea-no-resize" placeholder="&lt;textarea class=&quot;no-resize&quot;&gt;&lt;/textarea&gt;"></textarea>
                   </div>
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-12 col-sm-4">
                     <label for="textarea-resize-both">Resize both</label>
                     <textarea class="resize-both" id="textarea-resize-both" placeholder="&lt;textarea class=&quot;resize-both&quot;&gt;&lt;/textarea&gt;"></textarea>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-sm-4">
                     <label for="textarea-resize-v">Resize vertically</label>
                     <textarea class="resize-v" id="textarea-resize-v" placeholder="&lt;textarea class=&quot;resize-v&quot;&gt;&lt;/textarea&gt;"></textarea>
                   </div>
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-12 col-sm-4">
                     <label for="textarea-resize-h">Resize horizontally</label>
                     <textarea class="resize-h" id="textarea-resize-h" placeholder="&lt;textarea class=&quot;resize-h&quot;&gt;&lt;/textarea&gt;"></textarea>
                   </div>
@@ -246,13 +246,13 @@
                 <p>In Chrome the default file input button is hidden, but in other browsers there's still no way to do this. However, you can add the class <code>hidden</code> to you input, so only the external button will be visible, but the file name will be hidden too as it is part of the <code>input</code> itself.</p>
                 <p>Be sure to check the example bellow in Chrome and other browsers to be sure which one you wanna choose.</p><br>
                 <div class="row">
-                  <div class="col-xs-6 input">
+                  <div class="col-6 input">
                     <label for="shown-file">Visible input</label>
                     <label class="btn-primary"><i class="fa fa-fw fa-file"></i>Selecione um arquivo
                       <input id="shown-file" type="file">
                     </label>
                   </div>
-                  <div class="col-xs-6 input">
+                  <div class="col-6 input">
                     <label for="hidden-file">Hidden input</label>
                     <label class="btn-primary"><i class="fa fa-fw fa-file"></i>Selecione um arquivo
                       <input class="hidden" id="hidden-file" type="file">
@@ -262,12 +262,12 @@
                 <hr>
                 <h2>Regular inputs</h2>
                 <p>As expected, you can simply use your <code>input</code>s, <code>select</code>s and <code>textarea</code>s and they will look fine. No extra classes needed:</p><br>
-                <div class="row">
-                  <div class="col-xs-6 col-sm-4 col-sm-offset-2 input">
+                <div class="row justify-content-center">
+                  <div class="col-6 col-sm-4 input">
                     <label for="input">A regular text field</label>
                     <input id="input" placeholder="with a regular placeholder">
                   </div>
-                  <div class="col-xs-6 col-sm-4 input">
+                  <div class="col-6 col-sm-4 input">
                     <label for="select">A nice select</label>
                     <select id="select">
                       <option selected hidden disabled>Select...</option>
@@ -277,12 +277,12 @@
                     </select>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-xs-6 col-sm-4 col-sm-offset-2 input">
+                <div class="row justify-content-center">
+                  <div class="col-6 col-sm-4 input">
                     <label for="date">A date input</label>
                     <input id="date" type="date" placeholder="Choose a date">
                   </div>
-                  <div class="col-xs-6 col-sm-4 input">
+                  <div class="col-6 col-sm-4 input">
                     <label for="range">A range input</label>
                     <input id="range" type="range">
                   </div>
