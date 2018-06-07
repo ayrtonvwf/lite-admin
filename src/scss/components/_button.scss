@@ -19,6 +19,9 @@
     user-select: none;
     &:hover, &:focus {
         transition-duration: .4s;
+        box-shadow: none;
+    }
+    &:active {
         box-shadow: 2px 2px 1px rgba(0, 0, 0, .2) inset;
     }
     &[disabled], &.disabled {
@@ -26,64 +29,39 @@
         box-shadow: none;
     }
 }
-
+@mixin button-color($color) {
+    background-color: $color;
+    &:hover, &:focus {
+        background-color: darken($color, $btn-hover-darken);
+    }
+    &:active {
+        background-color: darken($color, $btn-active-darken);
+    }
+    &[disabled], &.disabled {
+        background-color: mix($color, $btn-disabled-mix);
+    }
+}
 .btn-default {
     color: rgb(100, 100, 100);
     text-shadow: none;
-    background-color: white;
     border: 1px solid lightgray;
     margin: 1px;
-    &:hover, &:focus {
-        background-color: darken(white, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix(white, $btn-disabled-mix);
-    }
+    @include button-color(white);
 }
 .btn-success {
-    background-color: $btn-success-color;
-    &:hover, &:focus {
-        background-color: darken($btn-success-color, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix($btn-success-color, $btn-disabled-mix);
-    }
+    @include button-color($btn-success-color);
 }
 .btn-info {
-    background-color: $btn-info-color;
-    &:hover, &:focus {
-        background-color: darken($btn-info-color, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix($btn-info-color, $btn-disabled-mix);
-    }
+    @include button-color($btn-info-color);
 }
 .btn-primary {
-    background-color: $btn-primary-color;
-    &:hover, &:focus {
-        background-color: darken($btn-primary-color, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix($btn-primary-color, $btn-disabled-mix);
-    }
+    @include button-color($btn-primary-color);
 }
 .btn-warning {
-    background-color: $btn-warning-color;
-    &:hover, &:focus {
-        background-color: darken($btn-warning-color, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix($btn-warning-color, $btn-disabled-mix);
-    }
+    @include button-color($btn-warning-color);
 }
 .btn-danger {
-    background-color: $btn-danger-color;
-    &:hover, &:focus {
-        background-color: darken($btn-danger-color, $btn-hover-darken);
-    }
-    &[disabled], &.disabled {
-        background-color: mix($btn-danger-color, $btn-disabled-mix);
-    }
+    @include button-color($btn-danger-color);
 }
 
 .btn-xs {
