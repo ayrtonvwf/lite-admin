@@ -52,49 +52,64 @@
           <div class="col-md-12">
             <div class="box">
               <div class="box-body">
-                <div class="tabs">
-                  <input type="radio" name="tab-toggle" id="tab-toggle-1">
-                  <label class="tab" for="tab-toggle-1">Account</label>
-                  <div class="tab-content" id="tab-1">
-                    <h2 class="h4">Account details</h2>
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-6 col-md-4 input">
-                        <label for="name">Name</label>
-                        <input id="name" placeholder="Your name">
+                <p>To create tabs, you need an <code>input</code> to keep the tab's open/closed state, a <code>label</code> to be the "button" that trigger the input change, and a <code>div</code> with your tab's content.</p>
+                <p>Take this basic code example:</p>
+                <pre><code>&lt;div class=&quot;tabs&quot;&gt;<br>
+&nbsp;&nbsp;&lt;input type=&quot;radio&quot; name=&quot;tab-toggle&quot; id=&quot;tab-toggle-1&quot;&gt;<br>
+&nbsp;&nbsp;&lt;label class=&quot;tab&quot; for=&quot;tab-toggle-1&quot;&gt;First tab&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;div class=&quot;tab-content&quot;&gt;First tab content.&lt;/div&gt;<br>
+<br>
+&nbsp;&nbsp;&lt;input type=&quot;radio&quot; name=&quot;tab-toggle&quot; id=&quot;tab-toggle-2&quot;&gt;<br>
+&nbsp;&nbsp;&lt;label class=&quot;tab&quot; for=&quot;tab-toggle-2&quot;&gt;Second tab&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;div class=&quot;tab-content&quot;&gt;Second tab content.&lt;/div&gt;<br>
+&lt;/div&gt;</code></pre>
+                <hr>
+                <h2>Live example:</h2><br>
+                <div class="row justify-content-center">
+                  <div class="tabs col-sm-11 col-md-10 col-lg-9 col-xlg-8">
+                    <input type="radio" name="tab-toggle" id="tab-toggle-1" checked>
+                    <label class="tab" for="tab-toggle-1">Account</label>
+                    <div class="tab-content">
+                      <h2 class="h4">Account details</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4 input">
+                          <label for="name">Name</label>
+                          <input id="name" placeholder="Your name">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 input">
+                          <label for="email">Email</label>
+                          <input id="email" type="email" placeholder="your@email.com">
+                        </div>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4 input">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="your@email.com">
+                      <div class="text-right">
+                        <button class="btn-success">Submit</button>
                       </div>
                     </div>
-                    <div class="text-right">
-                      <button class="btn-success">Submit</button>
-                    </div>
-                  </div>
-                  <input type="radio" name="tab-toggle" id="tab-toggle-2">
-                  <label class="tab" for="tab-toggle-2">Security</label>
-                  <div class="tab-content" id="tab-2">
-                    <h2 class="h4">Security</h2>
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-6 col-md-4 input">
-                        <label for="password">Password</label>
-                        <input id="password" type="password" placeholder="A secure one, please">
+                    <input type="radio" name="tab-toggle" id="tab-toggle-2">
+                    <label class="tab" for="tab-toggle-2">Security</label>
+                    <div class="tab-content">
+                      <h2 class="h4">Security</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4 input">
+                          <label for="password">Password</label>
+                          <input id="password" type="password" placeholder="A secure one, please">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 input">
+                          <label for="re-password">Password again</label>
+                          <input id="re-password" type="password" placeholder="Just in case of misspelling">
+                        </div>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4 input">
-                        <label for="re-password">Password again</label>
-                        <input id="re-password" type="password" placeholder="Just in case of misspelling">
+                      <div class="text-right">
+                        <button class="btn-danger">Reset password</button>
                       </div>
                     </div>
-                    <div class="text-right">
-                      <button class="btn-danger">Reset password</button>
-                    </div>
-                  </div>
-                  <input type="radio" name="tab-toggle" id="tab-toggle-3">
-                  <label class="tab" for="tab-toggle-3">One more tab</label>
-                  <div class="tab-content" id="tab-3">
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-10 col-lg-8">
-                        <div class="alert-primary text-center">One more tab content</div>
+                    <input type="radio" name="tab-toggle" id="tab-toggle-3">
+                    <label class="tab" for="tab-toggle-3">One more tab</label>
+                    <div class="tab-content">
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-sm-10 col-lg-8">
+                          <div class="alert-primary text-center">One more tab content</div>
+                        </div>
                       </div>
                     </div>
                   </div>
