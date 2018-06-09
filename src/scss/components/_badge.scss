@@ -1,0 +1,30 @@
+.badge-default, .badge-success, .badge-info, .badge-primary, .badge-warning, .badge-danger {
+    padding: 0px 10px;
+    display: inline-block;
+    margin: 2px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    border-radius: 10px;
+    line-height: 20px;
+    font-size: 11px;
+    box-shadow: -1px -1px 0px rgba(0, 0, 0, .2) inset, 1px 1px 1px rgba(0, 0, 0, .2);
+    white-space: nowrap;
+}
+.badge-default {
+    background-color: $badge-default-color;
+}
+.badge-success {
+    background-color: $badge-success-color;
+}
+.badge-info {
+    background-color: $badge-info-color;
+}
+.badge-primary {
+    background-color: $badge-primary-color;
+}
+.badge-warning {
+    background-color: $badge-warning-color;
+}
+.badge-danger {
+    background-color: $badge-danger-color;
+}
