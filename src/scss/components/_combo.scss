@@ -7,6 +7,7 @@
     margin-top: 0px;
     border: 1px solid lightgray;
     padding: 5px 0px;
+    z-index: 5;
     &::before, &::after {
         content: "";
         display: block;
