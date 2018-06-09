@@ -8,10 +8,14 @@
 .box-header {
     border-bottom: 1px solid $snow;
     font-size: 18px;
-    padding: 5px 5px 3px 5px;
+    padding: 0px 5px;
     color: $black;
     font-weight: normal;
     margin: 0px;
+    line-height: 30px;
+    .btn-default, .btn-default, .btn-info, .btn-primary, .btn-warning, .btn-danger {
+        vertical-align: baseline;
+    }
 }
 .box-footer {
     border-top: 1px solid $snow;
