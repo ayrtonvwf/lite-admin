@@ -1,0 +1,39 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    & > input {
+        display: none;
+    }
+}
+
+.tab {
+    order: 0;
+    border: 1px solid lightgray;
+    padding: 10px;
+    cursor: pointer;
+    border-right-width: 0px;
+    background-color: rgb(250, 250, 250);
+    transition: background-color .3s, border-bottom-color .3s;
+    &:last-of-type {
+        border-right-width: 1px;
+    }
+    input:checked + & {
+        border-bottom-color: white;
+        z-index: 1;
+        cursor: default;
+        background-color: white;
+    }
+}
+
+.tab-content {
+    display: none;
+    order: 1;
+    border: 1px solid lightgray;
+    margin-top: -1px;
+    width: 100%;
+    z-index: 0;
+    padding: 10px;
+    input:checked + * + & {
+        display: block;
+    }
+}

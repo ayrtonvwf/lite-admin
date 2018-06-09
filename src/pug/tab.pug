@@ -1,0 +1,47 @@
+extends layout.pug
+
+block content
+    .row
+        .col-12
+            h1.content-title
+                i.fa.fa-fw.fa-clone
+                | Tabs
+    .row
+        .col-md-12
+            .box
+                .box-body
+                    .tabs
+                        input(type='radio' name='tab-toggle' id='tab-toggle-1')
+                        label(for='tab-toggle-1').tab Account
+                        .tab-content#tab-1
+                            h2.h4 Account details
+                            .row.justify-content-center
+                                .col-12.col-sm-6.col-md-4.input
+                                    label(for='name') Name
+                                    input#name(placeholder='Your name')
+                                .col-12.col-sm-6.col-md-4.input
+                                    label(for='email') Email
+                                    input#email(type='email' placeholder='your@email.com')
+                            .text-right
+                                button.btn-success Submit
+
+                        input(type='radio' name='tab-toggle' id='tab-toggle-2')
+                        label(for='tab-toggle-2').tab Security
+                        .tab-content#tab-2
+                            h2.h4 Security
+                            .row.justify-content-center
+                                .col-12.col-sm-6.col-md-4.input
+                                    label(for='password') Password
+                                    input#password(type='password' placeholder='A secure one, please')
+                                .col-12.col-sm-6.col-md-4.input
+                                    label(for='re-password') Password again
+                                    input#re-password(type='password' placeholder='Just in case of misspelling')
+                            .text-right
+                                button.btn-danger Reset password
+
+                        input(type='radio' name='tab-toggle' id='tab-toggle-3')
+                        label(for='tab-toggle-3').tab One more tab
+                        .tab-content#tab-3
+                            .row.justify-content-center
+                                .col-12.col-sm-10.col-lg-8
+                                    .alert-primary.text-center One more tab content

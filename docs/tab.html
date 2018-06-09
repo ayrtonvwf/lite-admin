@@ -45,14 +45,60 @@
       <main class="content">
         <div class="row">
           <div class="col-12">
-            <h1 class="content-title"><i class="fa fa-fw fa-certificate"></i>Badges</h1>
+            <h1 class="content-title"><i class="fa fa-fw fa-clone"></i>Tabs</h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="box">
               <div class="box-body">
-                <div class="text-center"><span class="badge-default">.badge-default</span><span class="badge-success">.badge-success</span><span class="badge-info">.badge-info</span><span class="badge-primary">.badge-primary</span><span class="badge-warning">.badge-warning</span><span class="badge-danger">.badge-danger</span></div>
+                <div class="tabs">
+                  <input type="radio" name="tab-toggle" id="tab-toggle-1">
+                  <label class="tab" for="tab-toggle-1">Account</label>
+                  <div class="tab-content" id="tab-1">
+                    <h2 class="h4">Account details</h2>
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-sm-6 col-md-4 input">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="Your name">
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 input">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="your@email.com">
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <button class="btn-success">Submit</button>
+                    </div>
+                  </div>
+                  <input type="radio" name="tab-toggle" id="tab-toggle-2">
+                  <label class="tab" for="tab-toggle-2">Security</label>
+                  <div class="tab-content" id="tab-2">
+                    <h2 class="h4">Security</h2>
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-sm-6 col-md-4 input">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="A secure one, please">
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 input">
+                        <label for="re-password">Password again</label>
+                        <input id="re-password" type="password" placeholder="Just in case of misspelling">
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <button class="btn-danger">Reset password</button>
+                    </div>
+                  </div>
+                  <input type="radio" name="tab-toggle" id="tab-toggle-3">
+                  <label class="tab" for="tab-toggle-3">One more tab</label>
+                  <div class="tab-content" id="tab-3">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="alert-primary text-center">One more tab content</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
