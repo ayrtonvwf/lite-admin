@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+    .row
+        .col-12
+            h1.content-title
+                i.fa.fa-fw.fa-window-maximize
+                | Box
+    .row
+        .col-md-6
+            .box
+                .box-body
+                    br
+                    p Boxes are awesome containers to you content.
+                    p You can separate your content in many boxes to better organize it.
+                    br
+        .col-md-6
+            .box
+                .box-header A nice header
+                .box-body
+                    p Boxes can also have headers and footers.
+
+                .box-footer
+                    button.btn-danger.btn-sm Delete
+                    button.btn-success.btn-sm.pull-right Save
