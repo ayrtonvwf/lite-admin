@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    .row
+        .col-12
+            h1.content-title
+                i.fa.fa-fw.fa-list
+                | Combo
+    .row
+        .col-md-12
+            .box
+                .box-body
+                    .combo
+                        button.btn-success.combo-trigger Open normal combo
+                        .combo-menu
+                            .combo-item Test
+                            .combo-item Test 2
+                            .combo-item Test 3
+                    .combo.combo-right
+                        button.btn-success.combo-trigger Right right combo
+                        .combo-menu
+                            .combo-item Test
+                            .combo-item Test 2
+                            .combo-item Test 3
