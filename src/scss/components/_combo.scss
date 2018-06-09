@@ -4,7 +4,6 @@
     background-color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,.3);
     border-radius: 5px;
-    margin-top: 0px;
     border: 1px solid lightgray;
     z-index: 5;
     padding: 0px 1px;
@@ -32,6 +31,19 @@
         &::before, &::after {
             left: initial;
             right: 10px;
+        }
+    }
+    .combo-top>& {
+        bottom: calc(100% + 1px);
+        &::before, &::after {
+            transform: rotateX(180deg);
+            bottom: initial;
+        }
+        &::before {
+            top: 100%;
+        }
+        &::after {
+            top: calc(100% -1px);
         }
     }
 }
@@ -70,6 +82,7 @@
 }
 
 .combo {
+    position: relative;
     display: inline-block;
     &:hover > .combo-menu {
         display: block;

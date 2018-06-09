@@ -10,15 +10,51 @@ block content
         .col-md-12
             .box
                 .box-body
-                    .combo
-                        button.btn-success.combo-trigger Open normal combo
-                        .combo-menu
-                            .combo-item Test
-                            .combo-item Test 2
-                            .combo-item Test 3
-                    .combo.combo-right
-                        button.btn-success.combo-trigger Right right combo
-                        .combo-menu
-                            a(href='#').combo-item Test
-                            a(href='#').combo-item Test 2
-                            a(href='#').combo-item Test 3
+                    p Sometimes, your software is too amazing and you have lots of buttons to perform all the actions it has.
+                    p Of course, you don't wanna let your users confused, so you have to hide some of the less used buttons.
+                    p You can easily do this with a combo:
+                    .row.justify-content-center
+                        pre.col-md-10.col-lg-9
+                            code.
+                                #{'<div class="combo">'}#[br]
+                                &nbsp;&nbsp;#{'<button class="btn-success combo-trigger">Open combo</button>'}#[br]
+                                &nbsp;&nbsp;#{'<div class="combo-menu">'}#[br]
+                                &nbsp;&nbsp;&nbsp;&nbsp;#{'<a href="#" class="combo-item">Nice action</a>'}#[br]
+                                &nbsp;&nbsp;&nbsp;&nbsp;#{'<a href="#" class="combo-item">Another action</a>'}#[br]
+                                &nbsp;&nbsp;&nbsp;&nbsp;#{'<a href="#" class="combo-item">Even cooler action</a>'}#[br]
+                                &nbsp;&nbsp;#{'</div>'}#[br]
+                                #{'</div>'}
+                    br
+                    .text-center
+                        .combo
+                            button.btn-success.combo-trigger Open normal combo
+                            .combo-menu
+                                .combo-item Test
+                                .combo-item Test 2
+                                .combo-item Test 3
+                    br
+                    hr
+                    h2 Right limit
+                    p The combo menu is aligned to the left limit (using your trigger element as reference), but you can align it using the right limit too. Just add the class #[code combo-right] to your combo div.
+                    p Try it:
+                    br
+                    .text-center
+                        .combo.combo-right
+                            button.btn-success.combo-trigger Right right combo
+                            .combo-menu
+                                a(href='#').combo-item Test
+                                a(href='#').combo-item Test 2
+                                a(href='#').combo-item Test 3
+                    br
+                    hr
+                    h2 Top placement
+                    p You can make you combo appears to the top too. Add the #[code combo-top] to the combo div.
+                    br
+                    .text-center
+                        .combo.combo-top
+                            button.btn-success.combo-trigger Open top combo
+                            .combo-menu
+                                .combo-item Test
+                                .combo-item Test 2
+                                .combo-item Test 3
+                    br
