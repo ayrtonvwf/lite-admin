@@ -54,7 +54,8 @@
         left: 5px;
         right: 5px;
         .combo-item:focus+&, .combo-item:hover+&, .combo-item:active+& {
-            display: none;
+            left: 0px;
+            right: 0px;
         }
     }
     &:first-child::before {
