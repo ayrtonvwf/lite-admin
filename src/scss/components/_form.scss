@@ -138,7 +138,9 @@ input[type='radio'] {
         }
     }
 }
-
+.hidden {
+    display: none;
+}
 select {
     appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='7' viewBox='0 0 10 7' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 H10 L5 7 Z'/></svg>");
