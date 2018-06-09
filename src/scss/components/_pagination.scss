@@ -1,14 +1,14 @@
 .pagination {
     &>a {
         display: inline-block;
-        background-color: rgb(225, 230, 240);
+        background-color: white;
         padding: 2px 15px 0px 15px;
         line-height: 30px;
         text-align: center;
-        color: black;
         text-decoration: none;
         font-size: 14px;
-        border: solid 1px gray;
+        color: rgb(100, 100, 100);
+        border: solid 1px lightgray;
         border-right-width: 0px;
         transition: background-color .1s;
         &:first-child {
@@ -18,9 +18,11 @@
             border-radius: 0px 5px 5px 0px;
             border-right-width: 1px;
         }
-        &:hover, &:focus, &.active {
-            transition: background-color .2s;
-            background-color: darken(lightgray, 10);
+        &:hover, &:focus {
+            background-color: darken(white, $btn-hover-darken);
+        }
+        &:active {
+            background-color: darken(white, $btn-active-darken);
         }
     }
 }
