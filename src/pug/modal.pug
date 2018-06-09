@@ -10,85 +10,60 @@ block content
         .col-12
             .box
                 .box-body
-                    p Modals are basically pop-ups. They can have lots of scrollable content or even a single sentence. They can hold images, they can be large or tiny, can have header and/or footer or none. They can be plain modals or represent a success message, a danger alert, a warning, anything. Play with some examples bellow:
-                    .text-center
-                        br
-                        p
-                            a.btn-default(href='#modal-scroll') Scrollable
-                            a.btn-default(href='#modal-header') With header/footer
-                        br
-                        p
-                            a.btn-default.btn-lg(href='#modal-lg') Large
-                            a.btn-default(href='#modal-md') Medium
-                            a.btn-default.btn-sm(href='#modal-sm') Small
-                            a.btn-default.btn-xs(href='#modal-xs') Extra Small
-                        br
-                        p
-                            a.btn-success(href='#modal-success') Sucess
-                            a.btn-info(href='#modal-info') Info
-                            a.btn-primary(href='#modal-primary') Primary
-                            a.btn-warning(href='#modal-warning') Warning
-                            a.btn-danger(href='#modal-danger') Danger
-                    br
-                    p Take the example code:
+                    h2 Basics
+                    p Modals are basically pop-ups. They can have lots of scrollable content or even a single sentence. They can hold complex layouts or just text.
+                    p This is the basic markup:
                     pre
                         code.
                             #{'<a href="#modal" class="btn-info">Open Modal</a>'}#[br]
-                            #{'<div class="modal modal-info" id="modal">'}#[br]
+                            #{'<div class="modal" id="modal">'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-body">A nice modal content.</div>'}#[br]
+                            #{'</div>'}
+                    hr
+                    h2 Header and footer
+                    p Modals can have also header and/or footer:
+                    pre
+                        code.
+                            #{'<a href="#modal" class="btn-info">Open Modal</a>'}#[br]
+                            #{'<div class="modal" id="modal">'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-header">Modal header</div>'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-body">A nice modal content.</div>'}#[br]
+                            &nbsp;&nbsp;#{'<div class="modal-footer">Modal footer</div>'}#[br]
+                            #{'</div>'}
+                    hr
+                    h2 Sizes
+                    p Modals can have 4 sizes. Add the class #[code modal-lg], #[code modal-md], #[code modal-sm] or #[code modal-xs] to your modal div.
+                    p Try it:
+                    br
+                    .text-center
+                        a.btn-default.btn-lg(href='#modal-lg') Large
+                        a.btn-default(href='#modal-md') Medium
+                        a.btn-default.btn-sm(href='#modal-sm') Small
+                        a.btn-default.btn-xs(href='#modal-xs') Extra Small
+                    br
+                    hr
+                    h2 Colors
+                    p You can theme your modals to represent the type of message you are communicating. Add the class #[code modal-success], #[code modal-info], #[code modal-primary], #[code modal-warning] or #[code modal-danger] to the modal div.
+                    p Try it:
+                    br
+                    .text-center
+                        a.btn-success(href='#modal-success') Sucess
+                        a.btn-info(href='#modal-info') Info
+                        a.btn-primary(href='#modal-primary') Primary
+                        a.btn-warning(href='#modal-warning') Warning
+                        a.btn-danger(href='#modal-danger') Danger
+                    br
+                    hr
+                    h2 Full example
+                    p Use this full example code as reference:
+                    pre
+                        code.
+                            #{'<a href="#modal" class="btn-info">Open Modal</a>'}#[br]
+                            #{'<div class="modal modal-sm modal-info" id="modal">'}#[br]
                             &nbsp;&nbsp;#{'<div class="modal-header">My nice modal</div>'}#[br]
                             &nbsp;&nbsp;#{'<div class="modal-body">Incredible modal content.</div>'}#[br]
                             &nbsp;&nbsp;#{'<div class="modal-footer">That was the modal</div>'}#[br]
                             #{'</div>'}
-
-
-    .modal#modal-scroll
-        .modal-body
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-            p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-            p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-            p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
-            a.btn-danger(href='#')
-                i.fa.fa-fw.fa-times
-                | Exit
-            a.btn-success.pull-right(href='#modal-header') With header modal
-                i.fa.fa-fw.fa-arrow-right
-    a.modal-close(href='#')
-
-    .modal#modal-header
-        h2.modal-header This modal have lots of content
-        .modal-body
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-            p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-            p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet metus sapien, a accumsan ex pretium et. Fusce eu varius purus. Duis ut tempor neque. Sed metus mi, condimentum quis efficitur ac, auctor ut purus. Mauris quam arcu, elementum nec est quis, interdum viverra ligula. Etiam commodo velit vitae vestibulum cursus. In convallis dapibus congue. Quisque mattis non felis a pulvinar.
-            p Nulla ac hendrerit risus, vel blandit nibh. Curabitur maximus tortor ex, et ultrices ligula aliquam vitae. Mauris a commodo urna, ut molestie arcu. Nam vitae dui eget lacus placerat sagittis at nec sem. Etiam auctor pharetra nibh, et mattis augue viverra nec. Aenean a ex mollis, interdum augue feugiat, interdum tellus. Quisque enim sem, dapibus vitae ornare ac, tincidunt a neque. Quisque placerat lacinia egestas. Praesent diam nunc, malesuada in maximus placerat, condimentum non nisi. Duis vitae justo sed velit mattis gravida. Maecenas purus odio, lobortis in condimentum id, vulputate in risus. Quisque malesuada volutpat vestibulum. Maecenas quis pharetra sem. Quisque eleifend nibh quis mauris pharetra pulvinar. Nunc venenatis lacinia ligula, sed consequat dolor pulvinar at.
-            p Donec nec commodo nisi, vel sodales orci. Sed volutpat faucibus orci et blandit. Cras ipsum nisi, rutrum et tincidunt eu, sodales sit amet lorem. Quisque tincidunt pellentesque est ut fermentum. Aliquam eu maximus ante, id placerat quam. Etiam congue efficitur auctor. Nulla ut massa lorem. Curabitur convallis ligula a orci consequat, nec pharetra metus dictum.
-            p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
-        .modal-footer
-            a.btn-danger(href='#modal-scroll')
-                i.fa.fa-fw.fa-arrow-left
-                | Scrollable modal
-            a.btn-success.pull-right(href='#modal-lg') Large modal
-                i.fa.fa-fw.fa-arrow-right
-    a.modal-close(href='#')
 
     .modal.modal-lg#modal-lg
         h2.modal-header I'm very large
@@ -98,9 +73,9 @@ block content
             p Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.
             p Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.
         .modal-footer
-            a.btn-danger.btn-sm(href='#modal-header')
-                i.fa.fa-fw.fa-arrow-left
-                | With header/footer modal
+            a.btn-danger.btn-sm(href='#')
+                i.fa.fa-fw.fa-times
+                | Exit
             a.btn-success.btn-sm.pull-right(href='#modal-md') Medium modal
                 i.fa.fa-fw.fa-arrow-right
     a.modal-close(href='#')
@@ -135,8 +110,8 @@ block content
             a.btn-danger.btn-sm(href='#modal-sm')
                 i.fa.fa-fw.fa-arrow-left
                 | Small modal
-            a.btn-success.btn-sm.pull-right(href='#modal-success') Success modal
-                i.fa.fa-fw.fa-arrow-right
+            a.btn-success.btn-sm.pull-right(href='#') Exit
+                i.fa.fa-fw.fa-times
     a.modal-close(href='#')
 
     .modal.modal-xs.modal-success#modal-success
@@ -144,9 +119,9 @@ block content
         .modal-body
             p You have just discovered a new modal!
         .modal-footer
-            a.btn-danger.btn-sm(href='#modal-xs')
-                i.fa.fa-fw.fa-arrow-left
-                | Small modal
+            a.btn-danger.btn-sm(href='#')
+                i.fa.fa-fw.fa-times
+                | Exit
             a.btn-success.btn-sm.pull-right(href='#modal-info') Info modal
                 i.fa.fa-fw.fa-arrow-right
     a.modal-close(href='#')
