@@ -6,8 +6,8 @@
     border-radius: 5px;
     margin-top: 0px;
     border: 1px solid lightgray;
-    padding: 5px 0px;
     z-index: 5;
+    padding: 0px 1px;
     &::before, &::after {
         content: "";
         display: block;
@@ -36,11 +36,21 @@
     }
 }
 .combo-item {
-    padding: 7px 15px;
     display: block;
+    position: relative;
+    padding: 7px 15px;
+    margin: 3px 0px;
     min-width: 170px;
     transition: background-color .2s;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    &:first-child {
+        margin-top: 5px;
+    }
+    &:last-child {
+        margin-bottom: 5px;
+    }
     &:hover {
         background-color: lightgray;
     }
@@ -50,13 +60,9 @@
         position: absolute;
         height: 1px;
         background-color: lightgray;
-        top: 0px;
+        top: -2px;
         left: 5px;
         right: 5px;
-        .combo-item:focus+&, .combo-item:hover+&, .combo-item:active+& {
-            left: 0px;
-            right: 0px;
-        }
     }
     &:first-child::before {
         display: none;
