@@ -5,7 +5,8 @@
   "respository": "ayrtonvwf/lite-admin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug -w -o docs -P src/pug"
   },
   "author": "",
   "license": "ISC",
