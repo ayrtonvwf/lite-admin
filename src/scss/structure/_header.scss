@@ -11,6 +11,13 @@
     color: white;
     position: relative;
 
+    &.material-icons {
+        padding: 0px;
+        width: 51px;
+        text-align: center;
+        line-height: 51px !important;
+        font-size: 18px;
+    }
     &:hover {
         background: $darkblue;
     }
@@ -30,8 +37,9 @@
 }
 .menu-toggle {
     margin-right: auto;
+    font-size: 24px !important;
     @media (min-width: #{$medium + 1px}) {
-        display: none;
+        display: none !important;
     }
 }
 .header-pane-holder {
@@ -127,7 +135,7 @@
     padding-top: 50px;
 }
 .user-icon {
-    font-size: 60px !important;
+    font-size: 80px !important;
     display: block !important;
     margin-bottom: 5px;
 }

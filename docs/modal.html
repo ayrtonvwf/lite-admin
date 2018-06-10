@@ -11,14 +11,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>LiteAdmin</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- faster material icon load-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <form id="form-valid-support-helper">
       <input required>
       <!-- this form is meant to help in detecting support to the form:valid selector-->
     </form>
-    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle" href="#menu"><i class="fa fa-bars"></i></a><a class="header-button" href="#pane-tickets"><i class="fa fa-calendar"></i><span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
+    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle material-icons" href="#menu">menu</a><a class="header-button material-icons" href="#pane-tickets">calendar_today<span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
       <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
         <ul class="header-pane ticket-pane">
           <li><a class="ticket-link" href="#"><span class="ticket-title">Cortar a grama</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
@@ -28,24 +30,24 @@
       </div>
       <div class="header-pane-holder" id="pane-user"><a class="header-pane-close" href="#"></a>
         <div class="header-pane user-pane">
-          <div class="user-background"><i class="fa fa-user user-icon"></i>Usuário</div>
+          <div class="user-background"><i class="material-icons user-icon">account_circle</i>Usuário</div>
           <div class="user-buttons"><a class="user-btn" href="#">Editar</a><a class="user-btn" href="#">Sair</a></div>
         </div>
       </div>
     </header>
     <div class="container">
-      <nav class="menu" id="menu"><a class="menu-close header-button" href="#"><i class="fa fa-bars"></i></a>
+      <nav class="menu" id="menu"><a class="menu-close header-button material-icons" href="#">menu</a>
         <form action="#">
           <div class="search">
             <input class="search-input" type="search" placeholder="Pesquisar...">
-            <button class="search-submit" type="submit"><i class="fa fa-search"></i></button>
+            <button class="search-submit material-icons" type="submit">search</button>
           </div>
-        </form><a class="menu-link" href="modal.html"><i class="fa fa-fw fa-window-restore"></i> Modal</a><a class="menu-link" href="tab.html"><i class="fa fa-fw fa-clone"></i> Tabs</a><a class="menu-link" href="combo.html"><i class="fa fa-fw fa-list"></i> Combo</a><a class="menu-link" href="form.html"><i class="fa fa-fw fa-keyboard-o"></i> Form</a><a class="menu-link" href="tooltip.html"><i class="fa fa-fw fa-info"></i> Tooltip</a><a class="menu-link" href="button.html"><i class="fa fa-fw fa-hand-pointer-o"></i> Button</a><a class="menu-link" href="table.html"><i class="fa fa-fw fa-table"></i> Table</a><a class="menu-link" href="box.html"><i class="fa fa-fw fa-window-maximize"></i> Box</a><a class="menu-link" href="text.html"><i class="fa fa-fw fa-font"></i> Text</a><a class="menu-link" href="badge.html"><i class="fa fa-fw fa-certificate"></i> Badges</a><a class="menu-link" href="alert.html"><i class="fa fa-fw fa-exclamation"></i> Alert</a>
+        </form><a class="menu-link" href="modal.html"><i class="material-icons">aspect_ratio</i>Modal</a><a class="menu-link" href="tab.html"><i class="material-icons">tab</i>Tabs</a><a class="menu-link" href="combo.html"><i class="material-icons">keyboard_arrow_down</i>Combo</a><a class="menu-link" href="form.html"><i class="material-icons">keyboard</i>Form</a><a class="menu-link" href="tooltip.html"><i class="material-icons">feedback</i>Tooltip</a><a class="menu-link" href="button.html"><i class="material-icons">crop_7_5</i>Button</a><a class="menu-link" href="table.html"><i class="material-icons">grid_on</i>Table</a><a class="menu-link" href="box.html"><i class="material-icons">web_asset</i>Box</a><a class="menu-link" href="text.html"><i class="material-icons">text_fields</i>Text</a><a class="menu-link" href="badge.html"><i class="material-icons">local_offer</i>Badges</a><a class="menu-link" href="alert.html"><i class="material-icons">warning</i>Alert</a>
       </nav>
       <main class="content">
         <div class="row">
           <div class="col-12">
-            <h1 class="content-title"><i class="fa fa-fw fa-window-restore"></i>Modal</h1>
+            <h1 class="content-title"><i class="material-icons">aspect_ratio</i>Modal</h1>
           </div>
         </div>
         <div class="row">
@@ -100,54 +102,54 @@
             <p>Nam tincidunt dolor est, vitae hendrerit ipsum semper sit amet. Nullam mattis feugiat felis. Integer venenatis nisl vitae rhoncus faucibus. Etiam at velit ac purus congue sodales. Maecenas eu hendrerit urna. Suspendisse placerat sem a euismod semper. Sed pulvinar, augue ac egestas ornare, elit libero tincidunt magna, et pulvinar arcu tortor a velit. Pellentesque ac ex iaculis nisl ultricies blandit quis sed mauris.</p>
             <p>Nunc est sem, pharetra eu fermentum in, egestas non risus. Cras enim leo, porttitor vel mauris sed, egestas pharetra eros. Etiam at nunc eu erat congue malesuada. Praesent venenatis quis diam nec porta. Duis id mauris finibus, imperdiet ipsum id, accumsan ipsum. Curabitur risus sapien, sagittis nec ex eu, iaculis porttitor eros. Proin non orci nulla. Etiam sit amet arcu auctor, imperdiet est eget, tristique risus. Etiam nec feugiat orci. Proin semper, justo et pulvinar rutrum, augue felis pulvinar augue, sit amet sollicitudin elit orci vitae libero. Aliquam in bibendum elit, ut viverra arcu. Maecenas vel leo egestas, lacinia nibh vitae, iaculis magna. Sed ac tristique magna. Proin non eros facilisis, venenatis risus quis, pellentesque purus. Curabitur maximus massa sit amet metus sollicitudin facilisis. Nulla facilisi.</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#"><i class="fa fa-fw fa-times"></i>Exit</a><a class="btn-success btn-sm pull-right" href="#modal-md">Medium modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#"><i class="material-icons">close</i>Exit</a><a class="btn-success btn-sm pull-right" href="#modal-md">Medium modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal" id="modal-md">
           <h2 class="modal-header">I'm a medium modal</h2>
           <div class="modal-body">
             <p>I don't need any extra class, cause this is the default size!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-lg"><i class="fa fa-fw fa-arrow-left"></i>Large modal</a><a class="btn-success btn-sm pull-right" href="#modal-sm">Small modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-lg"><i class="material-icons">navigate_before</i>Large modal</a><a class="btn-success btn-sm pull-right" href="#modal-sm">Small modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-sm" id="modal-sm">
           <div class="modal-body">
             <p>I'm small!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-md"><i class="fa fa-fw fa-arrow-left"></i>Medium modal</a><a class="btn-success btn-sm pull-right" href="#modal-xs">Extra small modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-md"><i class="material-icons">navigate_before</i>Medium modal</a><a class="btn-success btn-sm pull-right" href="#modal-xs">Extra small modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs" id="modal-xs">
           <div class="modal-body">
             <p>I'm <b>really</b> small!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-sm"><i class="fa fa-fw fa-arrow-left"></i>Small modal</a><a class="btn-success btn-sm pull-right" href="#">Exit<i class="fa fa-fw fa-times"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-sm"><i class="material-icons">navigate_before</i>Small modal</a><a class="btn-success btn-sm pull-right" href="#">Exit<i class="material-icons">close</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs modal-success" id="modal-success">
           <h2 class="modal-header">Congratulations!</h2>
           <div class="modal-body">
             <p>You have just discovered a new modal!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#"><i class="fa fa-fw fa-times"></i>Exit</a><a class="btn-success btn-sm pull-right" href="#modal-info">Info modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#"><i class="material-icons">close</i>Exit</a><a class="btn-success btn-sm pull-right" href="#modal-info">Info modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs modal-info" id="modal-info">
           <h2 class="modal-header">Did you know?</h2>
           <div class="modal-body">
             <p>Modals are awesome, and require no JS!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-success"><i class="fa fa-fw fa-arrow-left"></i>Success modal</a><a class="btn-success btn-sm pull-right" href="#modal-primary">Primary modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-success"><i class="material-icons">navigate_before</i>Success modal</a><a class="btn-success btn-sm pull-right" href="#modal-primary">Primary modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs modal-primary" id="modal-primary">
           <h2 class="modal-header">Drink water!</h2>
           <div class="modal-body">
             <p>Keeping hydrated is important to your health.</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-info"><i class="fa fa-fw fa-arrow-left"></i>Info modal</a><a class="btn-success btn-sm pull-right" href="#modal-warning">Warning modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-info"><i class="material-icons">navigate_before</i>Info modal</a><a class="btn-success btn-sm pull-right" href="#modal-warning">Warning modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs modal-warning" id="modal-warning">
           <h2 class="modal-header">Hey!</h2>
           <div class="modal-body">
             <p>Your account is gonna be deactivated soon!</p>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-primary"><i class="fa fa-fw fa-arrow-left"></i>Primary modal</a><a class="btn-success btn-sm pull-right" href="#modal-danger">Danger modal<i class="fa fa-fw fa-arrow-right"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-primary"><i class="material-icons">navigate_before</i>Primary modal</a><a class="btn-success btn-sm pull-right" href="#modal-danger">Danger modal<i class="material-icons">navigate_next</i></a></div>
         </div><a class="modal-close" href="#"></a>
         <div class="modal modal-xs modal-danger" id="modal-danger">
           <h2 class="modal-header">Are you sure?</h2>
@@ -162,7 +164,7 @@
               </div>
             </form>
           </div>
-          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-warning"><i class="fa fa-fw fa-arrow-left"></i>Warning modal</a><a class="btn-success btn-sm pull-right" href="#">Exit<i class="fa fa-fw fa-times"></i></a></div>
+          <div class="modal-footer"><a class="btn-danger btn-sm" href="#modal-warning"><i class="material-icons">navigate_before</i>Warning modal</a><a class="btn-success btn-sm pull-right" href="#">Exit<i class="material-icons">close</i></a></div>
         </div><a class="modal-close" href="#"></a>
       </main>
     </div>

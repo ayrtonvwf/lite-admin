@@ -24,4 +24,8 @@
     margin: 7px 0px;
     font-size: 25px;
     font-weight: normal;
+    &>.material-icons {
+        margin-top: -5px;
+        margin-right: 5px;
+    }
 }

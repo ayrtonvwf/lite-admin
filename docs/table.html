@@ -11,14 +11,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>LiteAdmin</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- faster material icon load-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <form id="form-valid-support-helper">
       <input required>
       <!-- this form is meant to help in detecting support to the form:valid selector-->
     </form>
-    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle" href="#menu"><i class="fa fa-bars"></i></a><a class="header-button" href="#pane-tickets"><i class="fa fa-calendar"></i><span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
+    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle material-icons" href="#menu">menu</a><a class="header-button material-icons" href="#pane-tickets">calendar_today<span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
       <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
         <ul class="header-pane ticket-pane">
           <li><a class="ticket-link" href="#"><span class="ticket-title">Cortar a grama</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
@@ -28,24 +30,24 @@
       </div>
       <div class="header-pane-holder" id="pane-user"><a class="header-pane-close" href="#"></a>
         <div class="header-pane user-pane">
-          <div class="user-background"><i class="fa fa-user user-icon"></i>Usuário</div>
+          <div class="user-background"><i class="material-icons user-icon">account_circle</i>Usuário</div>
           <div class="user-buttons"><a class="user-btn" href="#">Editar</a><a class="user-btn" href="#">Sair</a></div>
         </div>
       </div>
     </header>
     <div class="container">
-      <nav class="menu" id="menu"><a class="menu-close header-button" href="#"><i class="fa fa-bars"></i></a>
+      <nav class="menu" id="menu"><a class="menu-close header-button material-icons" href="#">menu</a>
         <form action="#">
           <div class="search">
             <input class="search-input" type="search" placeholder="Pesquisar...">
-            <button class="search-submit" type="submit"><i class="fa fa-search"></i></button>
+            <button class="search-submit material-icons" type="submit">search</button>
           </div>
-        </form><a class="menu-link" href="modal.html"><i class="fa fa-fw fa-window-restore"></i> Modal</a><a class="menu-link" href="tab.html"><i class="fa fa-fw fa-clone"></i> Tabs</a><a class="menu-link" href="combo.html"><i class="fa fa-fw fa-list"></i> Combo</a><a class="menu-link" href="form.html"><i class="fa fa-fw fa-keyboard-o"></i> Form</a><a class="menu-link" href="tooltip.html"><i class="fa fa-fw fa-info"></i> Tooltip</a><a class="menu-link" href="button.html"><i class="fa fa-fw fa-hand-pointer-o"></i> Button</a><a class="menu-link" href="table.html"><i class="fa fa-fw fa-table"></i> Table</a><a class="menu-link" href="box.html"><i class="fa fa-fw fa-window-maximize"></i> Box</a><a class="menu-link" href="text.html"><i class="fa fa-fw fa-font"></i> Text</a><a class="menu-link" href="badge.html"><i class="fa fa-fw fa-certificate"></i> Badges</a><a class="menu-link" href="alert.html"><i class="fa fa-fw fa-exclamation"></i> Alert</a>
+        </form><a class="menu-link" href="modal.html"><i class="material-icons">aspect_ratio</i>Modal</a><a class="menu-link" href="tab.html"><i class="material-icons">tab</i>Tabs</a><a class="menu-link" href="combo.html"><i class="material-icons">keyboard_arrow_down</i>Combo</a><a class="menu-link" href="form.html"><i class="material-icons">keyboard</i>Form</a><a class="menu-link" href="tooltip.html"><i class="material-icons">feedback</i>Tooltip</a><a class="menu-link" href="button.html"><i class="material-icons">crop_7_5</i>Button</a><a class="menu-link" href="table.html"><i class="material-icons">grid_on</i>Table</a><a class="menu-link" href="box.html"><i class="material-icons">web_asset</i>Box</a><a class="menu-link" href="text.html"><i class="material-icons">text_fields</i>Text</a><a class="menu-link" href="badge.html"><i class="material-icons">local_offer</i>Badges</a><a class="menu-link" href="alert.html"><i class="material-icons">warning</i>Alert</a>
       </nav>
       <main class="content">
         <div class="row">
           <div class="col-12">
-            <h1 class="content-title"><i class="fa fa-fw fa-table"></i>Table</h1>
+            <h1 class="content-title"><i class="material-icons">grid_on</i>Table</h1>
           </div>
         </div>
         <div class="row">
@@ -76,7 +78,7 @@
                             <td>john.doe@email.com</td>
                             <td>johndoe</td>
                             <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
                           </tr>
                           <tr>
                             <td>John Doe</td>
@@ -84,7 +86,7 @@
                             <td>john.doe@email.com</td>
                             <td>johndoe</td>
                             <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
                           </tr>
                           <tr>
                             <td>John Doe</td>
@@ -92,7 +94,7 @@
                             <td>john.doe@email.com</td>
                             <td>johndoe</td>
                             <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="fa fa-fw fa-trash"></i></a></td>
+                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
                           </tr>
                         </tbody>
                       </table>

@@ -11,6 +11,7 @@ div, header, nav, main, footer, section, article, aside {
     font-weight: 300;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"), sans-serif;
 }
+$font-family: "system", sans-serif;
 
 body {
     margin: 0px;
@@ -18,7 +19,7 @@ body {
     background: $background;
     overflow-x: hidden;
     &, button {
-        font-family: "system", sans-serif;
+        font-family: $font-family;
     }
 }
 
@@ -29,4 +30,14 @@ input:not([type='range']), select {
     padding: 0px;
     margin: 0px;
     box-shadow: none;
+}
+i.material-icons {
+    font-size: inherit;
+    margin-right: .1em;
+}
+.material-icons {
+    vertical-align: middle;
+    &>* {
+        font-family: $font-family;
+    }
 }

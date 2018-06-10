@@ -67,6 +67,12 @@
     color: $snow;
     text-decoration: none;
     transition: background .2s;
+    &>.material-icons {
+        font-size: 18px;
+        display: inline-block;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
     &:hover {
         background: darken($black, 8);
         border-left-color: $blue;
@@ -80,7 +86,12 @@
 .menu-close {
     position: absolute;
     margin-top: -51px;
+    padding: 0px;
+    line-height: 51px !important;
+    width: 51px;
+    text-align: center;
+    font-size: 24px !important;
     @media (min-width: $medium) {
-        display: none;
+        display: none !important;
     }
 }

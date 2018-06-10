@@ -17,6 +17,10 @@
     box-shadow: -1px -1px 0px rgba(0, 0, 0, .2) inset, 1px 1px 1px rgba(0, 0, 0, .2);
     vertical-align: top;
     user-select: none;
+    &>.material-icons {
+        font-size: 1.2em;
+        margin-top: -0.1em;
+    }
     &:hover, &:focus {
         transition-duration: .4s;
         box-shadow: none;

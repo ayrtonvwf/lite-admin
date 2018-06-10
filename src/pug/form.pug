@@ -4,7 +4,7 @@ block content
     .row
         .col-12
             h1.content-title
-                i.fa.fa-fw.fa-keyboard-o
+                i.material-icons keyboard
                 | Forms
     .row
         .col-12
@@ -43,14 +43,14 @@ block content
                             .col-6.col-sm-4.text-center
                                 .form-valid-supported
                                     button.btn-lg.btn-success.form-valid(type='submit')
-                                        i.fa.fa-fw.fa-check
+                                        i.material-icons check
                                         | Submit
                                     button.btn-lg.btn-success.disabled.form-invalid(type='submit')
-                                        i.fa.fa-fw.fa-times
+                                        i.material-icons warning
                                         | Submit
                             .form-valid-unsupported
                                 button.btn-lg.btn-success(type='submit')
-                                    i.fa.fa-fw.fa-check
+                                    i.material-icons check
                                     | Submit
 
                         br
@@ -172,13 +172,13 @@ block content
                         .col-6.input
                             label(for='shown-file') Visible input
                             label.btn-primary
-                                i.fa.fa-fw.fa-file
+                                i.material-icons insert_drive_file
                                 | Selecione um arquivo
                                 input#shown-file(type='file')
                         .col-6.input
                             label(for='hidden-file') Hidden input
                             label.btn-primary
-                                i.fa.fa-fw.fa-file
+                                i.material-icons insert_drive_file
                                 | Selecione um arquivo
                                 input.hidden#hidden-file(type='file')
                     br
