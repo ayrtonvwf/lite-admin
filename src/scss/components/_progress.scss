@@ -1,81 +1,78 @@
-@mixin progress-value($color) {
-    color: $color; // IE
-    &::-webkit-progress-value {
-        position: relative;
-        border-radius: 3px;
-        background-color: $color;
-    }
-    &::-moz-progress-bar {
-        position: relative;
-        border-radius: 3px;
-        background-color: $color;
-    }
-    &::-ms-fill {
-        position: relative;
-        border-radius: 3px;
-        background-color: $color;
-    }
-}
-@mixin indeterminate() {
-    border-radius: 3px;
+$progress-inner-shadow: 2px 2px 3px rgba(0,0,0,.5) inset;
+$progress-border-radius: 3px;
+
+@mixin progress-style() {
     background-color: whitesmoke;
-    background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%);
+    height: 20px;
+    border-radius: $progress-border-radius;
+    box-shadow: $progress-inner-shadow;
+    background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.1) 66%, transparent 66%);
     background-size: 35px 20px;
     animation-duration: .5s;
     animation-name: animate-indeterminate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    box-shadow: 0px 2px 3px rgba(0,0,0,.3) inset;
-}
-
-@keyframes animate-indeterminate {
-    from { background-position-x: 0px }
-    to { background-position-x: 35px }
-}
-progress {
-    appearance: none;
     border: none;
     width: 100%;
-    height: 20px;
-    border-radius: 3px;
-    box-shadow: 0px 2px 3px rgba(0,0,0,.3) inset;
-    position: relative;
-    margin: 0px 0px 10px;
-
-    animation-duration: .5s;
-    animation-name: animate-indeterminate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    &::-webkit-progress-bar {
-        @include indeterminate;
+}
+@mixin progress-color($color) {
+    color: $color;
+    &::-webkit-progress-value {
+        background-color: $color;
     }
     &::-moz-progress-bar {
-        @include indeterminate;
+        background-color: $color;
+    }
+}
+progress {
+    @include progress-style();
+    margin-bottom: 10px;
+    &::-ms-fill {
+        animation-name: none;
+    }
+    &::-webkit-progress-bar {
+        @include progress-style();
+    }
+    &::-moz-progress-bar {
+        @include progress-style();
     }
     &[value] {
-        &::-moz-progress-bar {
-            background-image: none;
-            animation-name: none;
+        background-image: none;
+        &::-ms-fill {
+            box-shadow: $progress-inner-shadow;
+            border: none;
+            border-radius: $progress-border-radius;
         }
         &::-webkit-progress-bar {
             background-image: none;
-            animation-name: none;
         }
-        @include progress-value(gray);
+        &::-webkit-progress-value {
+            box-shadow: $progress-inner-shadow;
+            border-radius: $progress-border-radius;
+        }
+        &::-moz-progress-bar {
+            background-image: none;
+        }
+
+        @include progress-color($progress-default-color);
         &.progress-success {
-            @include progress-value($btn-success-color);
+            @include progress-color($progress-success-color);
         }
         &.progress-info {
-            @include progress-value($btn-info-color);
+            @include progress-color($progress-info-color);
         }
         &.progress-primary {
-            @include progress-value($btn-primary-color);
+            @include progress-color($progress-primary-color);
         }
         &.progress-warning {
-            @include progress-value($btn-warning-color);
+            @include progress-color($progress-warning-color);
         }
         &.progress-danger {
-            @include progress-value($btn-danger-color);
+            @include progress-color($progress-danger-color);
         }
     }
+}
+@keyframes animate-indeterminate {
+    from { background-position-x: 0px }
+    to { background-position-x: 35px }
 }
