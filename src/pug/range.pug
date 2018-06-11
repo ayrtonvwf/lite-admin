@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+    .row
+        .col-12
+            h1.content-title
+                i.material-icons sort
+                | Progress bar
+    .row
+        .col-md-12
+            .box
+                .box-body
+                    h2 Basics
+                    p Just use the standard #[code #{'<input type="range">'}] and it'll look nice in all browsers. I promise.
+                    br
+                    .row.justify-content-center
+                        .col-6
+                            input(type='range')
+                    br
+                    hr
+                    h2 Coloring
+                    p To set a nice color, use the classes #[code range-success], #[code range-info], #[code range-primary], #[code range-warning] or #[code range-danger].
+                    br
+                    .row.justify-content-center
+                        .col-12.col-sm-6
+                            input.range-success(type='range' min='0' max='100' value='10')
+                    .row.justify-content-center
+                        .col-12.col-sm-6
+                            input.range-info(type='range' min='0' max='100' value='30')
+                    .row.justify-content-center
+                        .col-12.col-sm-6
+                            input.range-primary(type='range' min='0' max='100' value='50')
+                    .row.justify-content-center
+                        .col-12.col-sm-6
+                            input.range-warning(type='range' min='0' max='100' value='70')
+                    .row.justify-content-center
+                        .col-12.col-sm-6
+                            input.range-danger(type='range' min='0' max='100' value='90')
