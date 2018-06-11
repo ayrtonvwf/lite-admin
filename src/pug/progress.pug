@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+    .row
+        .col-12
+            h1.content-title
+                i.material-icons sort
+                | Progress bar
+    .row
+        .col-md-12
+            .box
+                .box-body
+                    progress
+                    progress(min='0' max='100')
+                    progress(min='0' max='100' value='50')
+                    progress.progress-success(min='0' max='100' value='50')
+                    progress.progress-info(min='0' max='100' value='50')
+                    progress.progress-primary(min='0' max='100' value='50')
+                    progress.progress-warning(min='0' max='100' value='50')
+                    progress.progress-danger(min='0' max='100' value='50')

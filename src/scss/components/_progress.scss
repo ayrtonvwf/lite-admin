@@ -1,73 +1,81 @@
-progress:not(value) {
-    // indeterminate
+@mixin progress-value($color) {
+    color: $color; // IE
+    &::-webkit-progress-value {
+        position: relative;
+        border-radius: 3px;
+        background-color: $color;
+    }
+    &::-moz-progress-bar {
+        position: relative;
+        border-radius: 3px;
+        background-color: $color;
+    }
+    &::-ms-fill {
+        position: relative;
+        border-radius: 3px;
+        background-color: $color;
+    }
+}
+@mixin indeterminate() {
+    border-radius: 3px;
+    background-color: whitesmoke;
+    background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%);
+    background-size: 35px 20px;
+    animation-duration: .5s;
+    animation-name: animate-indeterminate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3) inset;
 }
 
-progress[value] {
+@keyframes animate-indeterminate {
+    from { background-position-x: 0px }
+    to { background-position-x: 35px }
+}
+progress {
     appearance: none;
     border: none;
     width: 100%;
     height: 20px;
-    background-color: whiteSmoke;
     border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-    color: royalblue; // progress value bar on IE
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3) inset;
     position: relative;
-    margin: 0 0 1.5em;
+    margin: 0px 0px 10px;
+
+    animation-duration: .5s;
+    animation-name: animate-indeterminate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     &::-webkit-progress-bar {
-        background-color: whiteSmoke;
-        border-radius: 3px;
-        box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-    }
-    &::-webkit-progress-value {
-        position: relative;
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-        border-radius:3px;
-        animation: animate-stripes 5s linear infinite;
-        &::-webkit-progress-value:after {
-            content: '';
-            position: absolute;
-            width:5px;
-            height:5px;
-            top:7px;
-            right:7px;
-            background-color: white;
-            border-radius: 100%;
-        }
+        @include indeterminate;
     }
     &::-moz-progress-bar {
-        background-image:
-                -moz-linear-gradient( 135deg,
-                        transparent,
-                        transparent 33%,
-                        rgba(0,0,0,.1) 33%,
-                        rgba(0,0,0,.1) 66%,
-                        transparent 66%),
-                -moz-linear-gradient( top,
-                        rgba(255, 255, 255, .25),
-                        rgba(0,0,0,.2)),
-                -moz-linear-gradient( left, #09c, #f44);
-
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-        border-radius:3px;
+        @include indeterminate;
     }
-}
-
-@keyframes animate-stripes { 100% { background-position: -100px 0; } }
-
-
-/* Fallback technique styles */
-.progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-    width: 100%;
-    height:20px;
-}
-
-.progress-bar span {
-    background-color: royalblue;
-    border-radius: 3px;
-
-    display: block;
-    text-indent: -9999px;
+    &[value] {
+        &::-moz-progress-bar {
+            background-image: none;
+            animation-name: none;
+        }
+        &::-webkit-progress-bar {
+            background-image: none;
+            animation-name: none;
+        }
+        @include progress-value(gray);
+        &.progress-success {
+            @include progress-value($btn-success-color);
+        }
+        &.progress-info {
+            @include progress-value($btn-info-color);
+        }
+        &.progress-primary {
+            @include progress-value($btn-primary-color);
+        }
+        &.progress-warning {
+            @include progress-value($btn-warning-color);
+        }
+        &.progress-danger {
+            @include progress-value($btn-danger-color);
+        }
+    }
 }

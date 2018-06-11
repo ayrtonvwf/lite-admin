@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="theme-color" content="#3c8dbc">
+    <meta name="msapplication-TileColor" content="#3c8dbc">
+    <meta name="msapplication-navbutton-color" content="#3c8dbc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>LiteAdmin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- faster material icon load-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <form id="form-valid-support-helper">
+      <input required>
+      <!-- this form is meant to help in detecting support to the form:valid selector-->
+    </form>
+    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle material-icons" href="#menu">menu</a><a class="header-button material-icons" href="#pane-tickets">calendar_today<span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
+      <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
+        <ul class="header-pane ticket-pane">
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Cortar a grama</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Limpar a cozinha</span><span class="ticket-description">John Doe<br>hoje</span></a></li>
+          <li><a class="ticket-link" href="#"><span class="ticket-title">Essa é uma tarefa com um texto mais longo, para testar o quanto a notificação aguenta</span><span class="ticket-description">Essa é uma descrição bem mais longa do que as outras, e é assim tão longa justamente para testar como se comportam notificações com texto longo.<br>hoje</span></a></li>
+        </ul>
+      </div>
+      <div class="header-pane-holder" id="pane-user"><a class="header-pane-close" href="#"></a>
+        <div class="header-pane user-pane">
+          <div class="user-background"><i class="material-icons user-icon">account_circle</i>Usuário</div>
+          <div class="user-buttons"><a class="user-btn" href="#">Editar</a><a class="user-btn" href="#">Sair</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="menu" id="menu"><a class="menu-close header-button material-icons" href="#">menu</a>
+        <form action="#">
+          <div class="search">
+            <input class="search-input" type="search" placeholder="Pesquisar...">
+            <button class="search-submit material-icons" type="submit">search</button>
+          </div>
+        </form><a class="menu-link" href="modal.html"><i class="material-icons">aspect_ratio</i>Modal</a><a class="menu-link" href="tab.html"><i class="material-icons">tab</i>Tabs</a><a class="menu-link" href="combo.html"><i class="material-icons">keyboard_arrow_down</i>Combo</a><a class="menu-link" href="form.html"><i class="material-icons">keyboard</i>Form</a><a class="menu-link" href="tooltip.html"><i class="material-icons">feedback</i>Tooltip</a><a class="menu-link" href="button.html"><i class="material-icons">crop_7_5</i>Button</a><a class="menu-link" href="table.html"><i class="material-icons">grid_on</i>Table</a><a class="menu-link" href="progress.html"><i class="material-icons">sort</i>Progress bar</a><a class="menu-link" href="box.html"><i class="material-icons">web_asset</i>Box</a><a class="menu-link" href="text.html"><i class="material-icons">text_fields</i>Text</a><a class="menu-link" href="badge.html"><i class="material-icons">local_offer</i>Badges</a><a class="menu-link" href="alert.html"><i class="material-icons">warning</i>Alert</a>
+      </nav>
+      <main class="content">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="content-title"><i class="material-icons">sort</i>Progress bar</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box">
+              <div class="box-body">
+                <progress></progress>
+                <progress min="0" max="100"></progress>
+                <progress min="0" max="100" value="50"></progress>
+                <progress class="progress-success" min="0" max="100" value="50"></progress>
+                <progress class="progress-info" min="0" max="100" value="50"></progress>
+                <progress class="progress-primary" min="0" max="100" value="50"></progress>
+                <progress class="progress-warning" min="0" max="100" value="50"></progress>
+                <progress class="progress-danger" min="0" max="100" value="50"></progress>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
