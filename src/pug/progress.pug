@@ -10,10 +10,35 @@ block content
         .col-md-12
             .box
                 .box-body
-                    progress
-                    progress(min='0' max='100' value='50')
-                    progress.progress-success(min='0' max='100' value='50')
-                    progress.progress-info(min='0' max='100' value='50')
-                    progress.progress-primary(min='0' max='100' value='50')
-                    progress.progress-warning(min='0' max='100' value='50')
-                    progress.progress-danger(min='0' max='100' value='50')
+                    h2 Basics
+                    p You can use the standard #[code progress] element to create a nice progress bar. You don't need any extra class to create this:
+                    .row
+                        .col-6
+                            p Indeterminate progress
+                            progress
+                        .col-6
+                            p 50% progress
+                            progress(min='0' max='100' value='50')
+                    br
+                    hr
+                    h2 Color
+                    p To set the progress color, add one of these classes: #[code progress-success], #[code progress-info], #[code progress-primary], #[code progress-warning] or #[code progress danger].
+                    br
+                    .row.justify-content-center
+                        .col-12.col-sm-6.col-md-4.col-lg-3
+                            p 10% downloaded
+                            progress.progress-success(min='0' max='100' value='10')
+                        .col-12.col-sm-6.col-md-4.col-lg-3
+                            p 30% downloaded
+                            progress.progress-info(min='0' max='100' value='30')
+                    .row.justify-content-center
+                        .col-12.col-sm-6.col-md-4.col-lg-3
+                            p 50% downloaded
+                            progress.progress-primary(min='0' max='100' value='50')
+                        .col-12.col-sm-6.col-md-4.col-lg-3
+                            p 70% downloaded
+                            progress.progress-warning(min='0' max='100' value='70')
+                    .row.justify-content-center
+                        .col-12.col-sm-6.col-md-4.col-lg-3
+                            p 90% downloaded
+                            progress.progress-danger(min='0' max='100' value='90')
