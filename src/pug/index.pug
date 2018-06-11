@@ -12,24 +12,39 @@ block content
                 h1.box-header Welcome to LiteAdmin!
                 .box-body
                     h2 What is it?
-                    p.
-                        LiteAdmin is a feature-rich CSS-only admin template! #[br]
-                        Does #[b feature-rich] and #[b CSS-only] sound weird together? Cause it shouldn't! #[br]
-                        This template provide the most advanced features that CSS can power, out of the box, just use it!
+                    p LiteAdmin is a feature-rich CSS-only admin template! #[br]
+                    p It provides a nice interface using the most advanced CSS #[del hacks] features, so you can just care about building your nice app, and we take care about making it work on all browsers without a single line of JS!
                     h2 What can it do?
                     p Common template things:
                     ul
-                        li nice buttons
-                        li nice input
-                        li text styles
-                        li alert messages
+                        li nice #[a(href='button.html' target='_blank') buttons]
+                        li nice #[a(href='form.html' target='_blank') input]
+                        li nice #[a(href='text.html' target='_blank') text styles]
                         li etc, you get it, all those thing you already know
-                    p Cool things built purely with #[b CSS]:
+                    p Cool features built purely with #[b CSS]:
                     ul
-                        li nice modals
-                        li custom checkbox/radio
-                        li automatic table row counter
-                        li automatic required field indicators
-                        li valid/invalid fields counters
-                        li hide element on valid/invalid form
-                        li show/hide side menu on mobile
+                        li nice #[a(href='modal.html' target='_blank') modals]/popups
+                        li nice #[a(href='tab.html' target='_blank') tabs] of content
+                        li nice #[a(href='combo.html' target='_blank') combo] of links/buttons
+                        li nice #[a(href='form.html#checkbox_radio' target='_blank') checkbox/radio]
+                        li nice #[a(href='range.html' target='_blank') range] inputs
+                        li nice #[a(href='progress.html' target='_blank') progress bars]
+                        li nice #[a(href='tooltip.html' target='_blank') tooltips]
+                        li nice responsible #[a(href='table.html' target='_blank') tables]
+                        li automatic #[a(href='table.html#row_counter' target='_blank') table row counter]
+                        li automatic #[a(href='form.html#auto_required' target='_blank') required field indicators]
+                        li #[a(href='form.html#validation_indicators' target='_blank') valid/invalid fields counters]
+                        li #[a(href='form.html#validation_indicators' target='_blank') hide element on valid/invalid form]
+                        li sliding side #[a.tooltip(href='#menu' title='Try it on a small screen') menu] on smaller screens
+                    h2 So I cannot use JS with this template?
+                    p #[b Of course you can!] You just don't have to add a lot of dependencies to make basic things.
+                    ul
+                        li CSS won't break the rest of your code if something fails;
+                        li CSS is a bit more secure. #[small.text-striked (of course you read every line of all JS dependencies, so you are sure your users are secure, don't you?)];
+                        li Only one CSS file. Only one request;
+                        li Use the elements you already have. Don't reinvent the wheel nesting divs to create a custom element (such as a progress or a range input) than struggle to control it with JS.
+                    p JS is welcome to:
+                    ul
+                        li Add functionality to your nice app;
+                        li Improve things where CSS is limited;
+                        li Polyfill features to older browsers.

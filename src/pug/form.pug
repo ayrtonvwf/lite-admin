@@ -10,7 +10,7 @@ block content
         .col-12
             .box
                 .box-body
-                    h2 Validation indicators
+                    h2#validation_indicators Validation indicators
                     p
                         | Just include a
                         |
@@ -77,7 +77,7 @@ block content
                             .form-valid-unsupported
                                 .alert-danger Your browser doesn't support the #[code :valid] pseudoclass on the #[code form] tag.
                     hr
-                    h2 Auto required hints
+                    h2#auto_required Auto required hints
                     p We can auto-add asterisks ( * ) to the label of required fields! Here's how to do this:
                     ol
                         li add a #[code mark-required] class to your form;
@@ -103,7 +103,7 @@ block content
                                 input#mark-required-input(required placeholder='A required label')
                                 label(for='mark-required-input') My required label
                     hr
-                    h2 Checkbox and Radio
+                    h2#checkbox_radio Checkbox and Radio
                     p.
                         Do you know somebody who uses JS to build nice #[code checkbox]es and #[code radio]s? #[br]
                         You don't need any extra markup or class, just use them!

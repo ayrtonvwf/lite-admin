@@ -56,28 +56,47 @@
               <h1 class="box-header">Welcome to LiteAdmin!</h1>
               <div class="box-body">
                 <h2>What is it?</h2>
-                <p>LiteAdmin is a feature-rich CSS-only admin template! <br>
-                  Does <b>feature-rich</b> and <b>CSS-only</b> sound weird together? Cause it shouldn't! <br>
-                  This template provide the most advanced features that CSS can power, out of the box, just use it!
+                <p>LiteAdmin is a feature-rich CSS-only admin template! <br></p>
+                <p>It provides a nice interface using the most advanced CSS 
+                  <del>hacks</del> features, so you can just care about building your nice app, and we take care about making it work on all browsers without a single line of JS!
                 </p>
                 <h2>What can it do?</h2>
                 <p>Common template things:</p>
                 <ul>
-                  <li>nice buttons</li>
-                  <li>nice input</li>
-                  <li>text styles</li>
-                  <li>alert messages</li>
+                  <li>nice <a href="button.html" target="_blank">buttons</a></li>
+                  <li>nice <a href="form.html" target="_blank">input</a></li>
+                  <li>nice <a href="text.html" target="_blank">text styles</a></li>
                   <li>etc, you get it, all those thing you already know</li>
                 </ul>
-                <p>Cool things built purely with <b>CSS</b>:</p>
+                <p>Cool features built purely with <b>CSS</b>:</p>
                 <ul>
-                  <li>nice modals</li>
-                  <li>custom checkbox/radio</li>
-                  <li>automatic table row counter</li>
-                  <li>automatic required field indicators</li>
-                  <li>valid/invalid fields counters</li>
-                  <li>hide element on valid/invalid form</li>
-                  <li>show/hide side menu on mobile</li>
+                  <li>nice <a href="modal.html" target="_blank">modals</a>/popups</li>
+                  <li>nice <a href="tab.html" target="_blank">tabs</a> of content</li>
+                  <li>nice <a href="combo.html" target="_blank">combo</a> of links/buttons</li>
+                  <li>nice <a href="form.html#checkbox_radio" target="_blank">checkbox/radio</a></li>
+                  <li>nice <a href="range.html" target="_blank">range</a> inputs</li>
+                  <li>nice <a href="progress.html" target="_blank">progress bars</a></li>
+                  <li>nice <a href="tooltip.html" target="_blank">tooltips</a></li>
+                  <li>nice responsible <a href="table.html" target="_blank">tables</a></li>
+                  <li>automatic <a href="table.html#row_counter" target="_blank">table row counter</a></li>
+                  <li>automatic <a href="form.html#auto_required" target="_blank">required field indicators</a></li>
+                  <li><a href="form.html#validation_indicators" target="_blank">valid/invalid fields counters</a></li>
+                  <li><a href="form.html#validation_indicators" target="_blank">hide element on valid/invalid form</a></li>
+                  <li>sliding side <a class="tooltip" href="#menu" title="Try it on a small screen">menu</a> on smaller screens</li>
+                </ul>
+                <h2>So I cannot use JS with this template?</h2>
+                <p><b>Of course you can!</b> You just don't have to add a lot of dependencies to make basic things.</p>
+                <ul>
+                  <li>CSS won't break the rest of your code if something fails;</li>
+                  <li>CSS is a bit more secure. <small class="text-striked">(of course you read every line of all JS dependencies, so you are sure your users are secure, don't you?)</small>;</li>
+                  <li>Only one CSS file. Only one request;</li>
+                  <li>Use the elements you already have. Don't reinvent the wheel nesting divs to create a custom element (such as a progress or a range input) than struggle to control it with JS.</li>
+                </ul>
+                <p>JS is welcome to:</p>
+                <ul>
+                  <li>Add functionality to your nice app;</li>
+                  <li>Improve things where CSS is limited;</li>
+                  <li>Polyfill features to older browsers.</li>
                 </ul>
               </div>
             </div>
