@@ -1,13 +1,15 @@
 $progress-inner-shadow: 2px 2px 3px rgba(0,0,0,.5) inset;
 $progress-border-radius: 3px;
+$progress-height: 20px;
 
 @mixin progress-style() {
+    position: relative;
     background-color: whitesmoke;
-    height: 20px;
+    height: $progress-height;
     border-radius: $progress-border-radius;
     box-shadow: $progress-inner-shadow;
     background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.1) 66%, transparent 66%);
-    background-size: 35px 20px;
+    background-size: 35px $progress-height;
     animation-duration: .5s;
     animation-name: animate-indeterminate;
     animation-iteration-count: infinite;
@@ -30,8 +32,21 @@ progress {
     &::-ms-fill {
         animation-name: none;
     }
+    &::-webkit-progress-bar, &::after {
+        // this will create a animated overlay on webkit
+        // styles applied to ::-webkit-progress-bar will be reset in the next selectors
+        content: '';
+        @include progress-style;
+        background-color: transparent;
+        box-shadow: none;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
     &::-webkit-progress-bar {
         @include progress-style();
+        background-image: none;
     }
     &::-moz-progress-bar {
         @include progress-style();
@@ -43,7 +58,7 @@ progress {
             border: none;
             border-radius: $progress-border-radius;
         }
-        &::-webkit-progress-bar {
+        &::-webkit-progress-bar, &::after {
             background-image: none;
         }
         &::-webkit-progress-value {
