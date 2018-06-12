@@ -1,3 +1,59 @@
 .pull-right {
     float: right;
 }
+.no-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+.margin-h-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.margin-h-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.margin-h-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.margin-h-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.margin-w-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.margin-w-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margin-w-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.margin-w-15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.bg-success {
+    background-color: $bg-success-color;
+}
+.bg-info {
+    background-color: $bg-info-color;
+}
+.bg-primary {
+    background-color: $bg-primary-color;
+}
+.bg-warning {
+    background-color: $bg-warning-color;
+}
+.bg-danger {
+    background-color: $bg-danger-color;
+}
