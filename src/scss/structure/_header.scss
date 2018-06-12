@@ -124,6 +124,9 @@
     padding: 10px;
     max-height: 400px;
     overflow-y: auto;
+    @media (max-height: 600px) {
+        max-height: calc(100vh - 200px);
+    }
 }
 .header-pane-footer {
     border-top: 1px solid lightgray;
