@@ -22,42 +22,80 @@ html
         header.header
             a.header-button.main-button(href='index.html') LiteAdmin
             a.header-button.menu-toggle.material-icons(href='#menu') menu
-            a.header-button.material-icons(href='#pane-tickets') calendar_today
-                span.header-button-label-red 5
-            a.header-button(href='#pane-user') John Doe
-            .header-pane-holder#pane-tickets
-                a.header-pane-close(href='#')
-                ul.header-pane.ticket-pane
-                    li
-                        a.ticket-link(href='#')
-                            span.ticket-title Trim the grass
-                            span.ticket-description
-                                | John Doe
-                                br
-                                | today
-                    li
-                        a.ticket-link(href='#')
-                            span.ticket-title Clean the kitchen
-                            span.ticket-description
-                                | John Doe
-                                br
-                                | today
-                    li
-                        a.ticket-link(href='#')
-                            span.ticket-title A larger notification that would take more space and should break the line.
-                            span.ticket-description
-                                | That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
-                                br
-                                | yestarday
-            .header-pane-holder#pane-user
-                a.header-pane-close(href='#')
-                .header-pane.user-pane
-                    .user-background
-                        i.material-icons.user-icon account_circle
-                        | John Doe
-                    .user-buttons
-                        a.user-btn(href='#') Account
-                        a.user-btn(href='#') Log out
+            .header-pane
+                button.header-button.material-icons(type='button') calendar_today
+                    span.header-button-label-red 5
+                .header-pane-popup
+                    .header-pane-header
+                        i.material-icons notifications
+                        | Notifications
+                    ul.header-pane-body
+                        li
+                            a.no-link(href='#')
+                                .notification-title Trim the grass
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title Clean the kitchen
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title A larger notification that would take more space and should break the line.
+                                .notification-description That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                                    .text-muted yesterday
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title Trim the grass
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title Clean the kitchen
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title A larger notification that would take more space and should break the line.
+                                .notification-description That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                                    .text-muted yesterday
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title Trim the grass
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title Clean the kitchen
+                                .notification-description John Doe
+                                    .text-muted today
+                            hr.margin-h-15
+                        li
+                            a.no-link(href='#')
+                                .notification-title A larger notification that would take more space and should break the line.
+                                .notification-description That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                                    .text-muted yesterday
+            .header-pane
+                button.header-button(type='button') John Doe
+                .header-pane-popup
+                    .header-pane-body.text-center.bg-primary.text-white
+                        br
+                        .text-80
+                            i.material-icons.user-icon account_circle
+                        .text-20 John Doe
+                        br
+                        br
+                    .header-pane-footer
+                        a.btn-default.btn-sm(href='#') Account
+                        a.btn-default.btn-sm.pull-right(href='#') Log out
         div.container
             nav.menu#menu
                 a.menu-close.header-button.material-icons(href='#') menu

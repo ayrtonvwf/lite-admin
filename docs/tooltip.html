@@ -20,18 +20,84 @@
       <input required>
       <!-- this form is meant to help in detecting support to the form:valid selector-->
     </form>
-    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle material-icons" href="#menu">menu</a><a class="header-button material-icons" href="#pane-tickets">calendar_today<span class="header-button-label-red">5</span></a><a class="header-button" href="#pane-user">John Doe</a>
-      <div class="header-pane-holder" id="pane-tickets"><a class="header-pane-close" href="#"></a>
-        <ul class="header-pane ticket-pane">
-          <li><a class="ticket-link" href="#"><span class="ticket-title">Trim the grass</span><span class="ticket-description">John Doe<br>today</span></a></li>
-          <li><a class="ticket-link" href="#"><span class="ticket-title">Clean the kitchen</span><span class="ticket-description">John Doe<br>today</span></a></li>
-          <li><a class="ticket-link" href="#"><span class="ticket-title">A larger notification that would take more space and should break the line.</span><span class="ticket-description">That's an even larger description, that would take a lot of lines and should still look nice in any screen size.<br>yestarday</span></a></li>
-        </ul>
+    <header class="header"><a class="header-button main-button" href="index.html">LiteAdmin</a><a class="header-button menu-toggle material-icons" href="#menu">menu</a>
+      <div class="header-pane">
+        <button class="header-button material-icons" type="button">calendar_today<span class="header-button-label-red">5</span></button>
+        <div class="header-pane-popup">
+          <div class="header-pane-header"><i class="material-icons">notifications</i>Notifications</div>
+          <ul class="header-pane-body">
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Trim the grass</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Clean the kitchen</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">A larger notification that would take more space and should break the line.</div>
+                <div class="notification-description">That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                  <div class="text-muted">yesterday</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Trim the grass</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Clean the kitchen</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">A larger notification that would take more space and should break the line.</div>
+                <div class="notification-description">That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                  <div class="text-muted">yesterday</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Trim the grass</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">Clean the kitchen</div>
+                <div class="notification-description">John Doe
+                  <div class="text-muted">today</div>
+                </div></a>
+              <hr class="margin-h-15">
+            </li>
+            <li><a class="no-link" href="#">
+                <div class="notification-title">A larger notification that would take more space and should break the line.</div>
+                <div class="notification-description">That's an even larger description, that would take a lot of lines and should still look nice in any screen size.
+                  <div class="text-muted">yesterday</div>
+                </div></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="header-pane-holder" id="pane-user"><a class="header-pane-close" href="#"></a>
-        <div class="header-pane user-pane">
-          <div class="user-background"><i class="material-icons user-icon">account_circle</i>John Doe</div>
-          <div class="user-buttons"><a class="user-btn" href="#">Account</a><a class="user-btn" href="#">Log out</a></div>
+      <div class="header-pane">
+        <button class="header-button" type="button">John Doe</button>
+        <div class="header-pane-popup">
+          <div class="header-pane-body text-center bg-primary text-white"><br>
+            <div class="text-80"><i class="material-icons user-icon">account_circle</i></div>
+            <div class="text-20">John Doe</div><br><br>
+          </div>
+          <div class="header-pane-footer"><a class="btn-default btn-sm" href="#">Account</a><a class="btn-default btn-sm pull-right" href="#">Log out</a></div>
         </div>
       </div>
     </header>
