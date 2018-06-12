@@ -1,5 +1,7 @@
 .combo-menu {
-    display: none;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
     position: absolute;
     background-color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,.3);
@@ -85,13 +87,19 @@
     position: relative;
     display: inline-block;
     &:hover > .combo-menu {
-        display: block;
+        transition: opacity .3s;
+        opacity: 1;
+        user-select: initial;
+        pointer-events: initial;
     }
 }
 .combo-trigger {
     &:focus, &:hover, &:active {
         & + .combo-menu {
-            display: block;
+            transition: opacity .3s;
+            opacity: 1;
+            user-select: initial;
+            pointer-events: initial;
         }
     }
 }
