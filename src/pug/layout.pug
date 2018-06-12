@@ -142,5 +142,19 @@ html
                 a(href='alert.html').menu-link
                     i.material-icons warning
                     | Alert
+                a(href='#').menu-link
+                    i.material-icons arrow_downward
+                    | A submenu
+                    i.material-icons.menu-submenu-indicator expand_more
+                .menu-submenu
+                    a.menu-link(href='#')
+                        i.material-icons assignment_ind
+                        | A submenu link
+                    a.menu-link(href='#')
+                        i.material-icons accessibility_new
+                        | Another submenu link
+                    a.menu-link(href='#')
+                        i.material-icons account_balance
+                        | One more submenu link
             main.content
                 block content

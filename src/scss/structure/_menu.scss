@@ -58,6 +58,7 @@
     }
 }
 .menu-link {
+    position: relative;
     background-color: $softblack;
     display: block;
     padding: 12px 15px;
@@ -66,7 +67,7 @@
     line-height: 20px;
     color: $snow;
     text-decoration: none;
-    transition: background .2s;
+    transition: background-color .2s;
     &>.material-icons {
         font-size: 18px;
         display: inline-block;
@@ -76,6 +77,27 @@
     &:hover {
         background: darken($black, 8);
         border-left-color: $blue;
+    }
+    .menu-submenu>& {
+        background-color: $snow;
+        color: $softblack;
+        transition: background-color .2s, color .2s;
+        &:hover {
+            background-color: $darkgray;
+            color: $snow;
+        }
+    }
+}
+.menu-submenu-indicator {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    padding: 5px;
+}
+.menu-submenu {
+    display: none;
+    &.active, .menu-link:hover+&, &:hover {
+        display: block;
     }
 }
 .menu-active {
