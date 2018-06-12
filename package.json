@@ -9,7 +9,7 @@
     "pug": "pug -w -o docs -P src/pug"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "browserslist": [
     "> 0.1%",
     "ie >= 7"
