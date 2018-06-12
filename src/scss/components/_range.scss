@@ -4,12 +4,15 @@ $thumb-size: 20px;
 $thumb-border-width: 2px;
 
 @mixin track() {
+    appearance: none;
+    outline: none;
     width: 100%;
     height: $track-size;
     box-shadow: 2px 2px 2px rgba(0,0,0,.6) inset;
     border-radius: #{$track-size/2};
 }
 @mixin thumb() {
+    appearance: none;
     box-shadow: 1px 1px 2px rgba(0,0,0,.6), 1px 1px 2px rgba(0,0,0,.5) inset;
     border: $thumb-border-width solid;
     height: $thumb-size;
@@ -21,6 +24,7 @@ $thumb-border-width: 2px;
     box-sizing: border-box;
     margin-top: #{$thumb-size/-2 + $track-size/2};
     transition: box-shadow .3s, background-color .2s;
+    outline: none;
 }
 @mixin thumb-hover {
     background-color: white;
@@ -33,8 +37,10 @@ $thumb-border-width: 2px;
         background-color: $color;
         transition: background-color .3s;
     }
-    &:hover::-webkit-slider-runnable-track {
-        background-color: $hover-color;
+    &:hover, &:focus {
+        &::-webkit-slider-runnable-track {
+            background-color: $hover-color;
+        }
     }
     &::-webkit-slider-thumb {
         border-color: $thumb-color;
@@ -43,8 +49,10 @@ $thumb-border-width: 2px;
         background-color: $color;
         transition: background-color .3s;
     }
-    &:hover::-moz-range-track {
-        background-color: $hover-color;
+    &:hover, &:focus {
+        &::-moz-range-track {
+            background-color: $hover-color;
+        }
     }
     &::-moz-range-thumb {
         border-color: $thumb-color;
@@ -53,15 +61,17 @@ $thumb-border-width: 2px;
         background-color: $color;
         transition: background-color .3s;
     }
-    &:hover::-ms-fill-lower, &:hover::-ms-fill-upper {
-        background-color: $hover-color;
+    &:hover, &:focus {
+        &::-ms-fill-lower, &::-ms-fill-upper {
+            background-color: $hover-color;
+        }
     }
     &::-ms-thumb {
         border-color: $thumb-color;
     }
 }
 input[type=range] {
-    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     cursor: pointer;
     outline: none;
@@ -101,7 +111,7 @@ input[type=range] {
         @include thumb-hover;
     }
 
-    &:hover {
+    &:hover, &:focus {
         &::-webkit-slider-thumb {
             @include thumb-hover;
         }
