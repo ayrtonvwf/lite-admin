@@ -41,3 +41,8 @@ i.material-icons {
         font-family: $font-family;
     }
 }
+hr {
+    height: 1px;
+    background: linear-gradient(to right, transparent, lightgray 15%, lightgray 85%, transparent);
+    border: none;
+}
