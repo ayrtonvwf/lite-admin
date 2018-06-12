@@ -4,19 +4,24 @@
 }
 h1, .h1 {
     @extend %title;
-    font-size: 32px;
+    font-size: 44px;
 }
 h2, .h2 {
     @extend %title;
-    font-size: 28px;
+    font-size: 36px;
 }
 h3, .h3 {
     @extend %title;
-    font-size: 24px;
+    font-size: 28px;
 }
 h4, .h4 {
     @extend %title;
     font-size: 20px;
+}
+h5, .h5 {
+    @extend %title;
+    font-size: 20px;
+    color: rgb(80, 80, 80);
 }
 
 p {
