@@ -2,6 +2,7 @@ table.table, .table>table {
     counter-reset: table-rows;
     width: 100%;
     border-collapse: collapse;
+    margin: 10px 0px;
 
     th {
         text-align: left;
@@ -25,4 +26,16 @@ table.table, .table>table {
 }
 div.table {
     overflow-x: auto;
+}
+table>caption {
+    background-color: lightgray;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-style: italic;
+    &.table-caption-bottom {
+        caption-side: bottom;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
 }
