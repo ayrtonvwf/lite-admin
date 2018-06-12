@@ -1,5 +1,7 @@
 .modal {
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    user-select: none;
     position: fixed;
     top: 20px;
     background-color: white;
@@ -13,7 +15,10 @@
         left: 5%;
     }
     &:target {
-        display: block;
+        opacity: 1;
+        pointer-events: initial;
+        user-select: initial;
+        transition: opacity .3s;
     }
     &.modal-lg {
         width: 1100px;
@@ -98,7 +103,9 @@
     background-color: white;
 }
 .modal-close {
-    display: none;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
     background-color: rgba(0,0,0,.3);
     position: fixed;
     top: 0px;
@@ -107,6 +114,8 @@
     left: 0px;
     z-index: 9;
     .modal:target+& {
-        display: block;
+        pointer-events: initial;
+        transition: opacity .3s;
+        opacity: 1;
     }
 }
