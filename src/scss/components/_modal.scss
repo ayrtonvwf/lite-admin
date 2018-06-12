@@ -1,4 +1,5 @@
 .modal {
+    contain: strict;
     pointer-events: none;
     opacity: 0;
     user-select: none;
@@ -15,6 +16,7 @@
         left: 5%;
     }
     &:target {
+        contain: layout paint;
         opacity: 1;
         pointer-events: initial;
         user-select: initial;
