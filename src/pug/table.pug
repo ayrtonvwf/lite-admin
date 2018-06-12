@@ -1,84 +1,80 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons grid_on
-                | Table
-    .row
-        .col-12
-            .box
-                .box-body
-                    h2 Responsive tables
-                    p To make a table look nice, add the class #[code table] to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a #[code #{'<div class="table">'}] wrapping the table instead.
-                    p The example bellow is a responsive table. Resize your browser to and see it scrolling!
-                    br
-                    .row.justify-content-center
-                        .col-md-10
-                            .table
-                                table
-                                    thead
-                                        tr
-                                            th Name
-                                            th Phone
-                                            th Email
-                                            th User
-                                            th Address
-                                            th &nbsp;
-                                    tbody
-                                        tr
-                                            td John Doe
-                                            td (12) 1234-1234
-                                            td john.doe@email.com
-                                            td johndoe
-                                            td Street Test, City Testland, TS, US
-                                            td.text-right
-                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                                    i.material-icons delete
-                                        tr
-                                            td John Doe
-                                            td (12) 1234-1234
-                                            td john.doe@email.com
-                                            td johndoe
-                                            td Street Test, City Testland, TS, US
-                                            td.text-right
-                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                                    i.material-icons delete
-                                        tr
-                                            td John Doe
-                                            td (12) 1234-1234
-                                            td john.doe@email.com
-                                            td johndoe
-                                            td Street Test, City Testland, TS, US
-                                            td.text-right
-                                                a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
-                                                    i.material-icons delete
-                    br
-                    hr
-                    h2#row_counter Row counter
-                    p You can easily append the number of rows in the #[code tbody] by using the #[code row-counter] class inside the table:
-                    br
-                    .row.justify-content-center
-                        .col-sm-10.col-md-8.col-lg-6
-                            table.table
-                                thead
-                                    tr
-                                        th #
-                                        th This row isn't included in the counter because it's in the #[code thead]
-                                tbody
-                                    tr
-                                        td.row-counter
-                                        td A tbody row
-                                    tr
-                                        td.row-counter
-                                        td A tbody row
-                                    tr
-                                        td.row-counter
-                                        td A tbody row
-                                    tr
-                                        td.row-counter
-                                        td A tbody row
-                                tfoot
-                                    tr
-                                        td(colspan='2') Total rows in the #[code tbody]: #[span.row-counter]
+    h1.content-title
+        i.material-icons grid_on
+        | Table
+    article.box
+        .box-body
+            h2 Responsive tables
+            p To make a table look nice, add the class #[code table] to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a #[code #{'<div class="table">'}] wrapping the table instead.
+            p The example bellow is a responsive table. Resize your browser to and see it scrolling!
+            br
+            .row.justify-content-center
+                .col-md-10
+                    .table
+                        table
+                            thead
+                                tr
+                                    th Name
+                                    th Phone
+                                    th Email
+                                    th User
+                                    th Address
+                                    th &nbsp;
+                            tbody
+                                tr
+                                    td John Doe
+                                    td (12) 1234-1234
+                                    td john.doe@email.com
+                                    td johndoe
+                                    td Street Test, City Testland, TS, US
+                                    td.text-right
+                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                            i.material-icons delete
+                                tr
+                                    td John Doe
+                                    td (12) 1234-1234
+                                    td john.doe@email.com
+                                    td johndoe
+                                    td Street Test, City Testland, TS, US
+                                    td.text-right
+                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                            i.material-icons delete
+                                tr
+                                    td John Doe
+                                    td (12) 1234-1234
+                                    td john.doe@email.com
+                                    td johndoe
+                                    td Street Test, City Testland, TS, US
+                                    td.text-right
+                                        a.btn-sm.btn-danger.tooltip.tooltip-left(href='#' title='Excluir')
+                                            i.material-icons delete
+            br
+            hr
+            h2#row_counter Row counter
+            p You can easily append the number of rows in the #[code tbody] by using the #[code row-counter] class inside the table:
+            br
+            .row.justify-content-center
+                .col-sm-10.col-md-8.col-lg-6
+                    table.table
+                        thead
+                            tr
+                                th #
+                                th This row isn't included in the counter because it's in the #[code thead]
+                        tbody
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                            tr
+                                td.row-counter
+                                td A tbody row
+                        tfoot
+                            tr
+                                td(colspan='2') Total rows in the #[code tbody]: #[span.row-counter]

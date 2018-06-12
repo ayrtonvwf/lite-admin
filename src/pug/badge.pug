@@ -1,22 +1,18 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons local_offer
-                | Badges
-    .row
-        .col-md-12
-            .box
-                .box-body
-                    p If you need badge-like labels, you can just use a #[code span] with the class of the color you want: #[code badge-default], #[code badge-success], #[code badge-info], #[code badge-primary], #[code badge-warning] or #[code badge-danger].
-                    br
-                    .text-center
-                        span.badge-default .badge-default
-                        span.badge-success .badge-success
-                        span.badge-info .badge-info
-                        span.badge-primary .badge-primary
-                        span.badge-warning .badge-warning
-                        span.badge-danger .badge-danger
-                    br
+    h1.content-title
+        i.material-icons local_offer
+        | Badges
+    article.box
+        .box-body
+            p If you need badge-like labels, you can just use a #[code span] with the class of the color you want: #[code badge-default], #[code badge-success], #[code badge-info], #[code badge-primary], #[code badge-warning] or #[code badge-danger].
+            br
+            .text-center
+                span.badge-default .badge-default
+                span.badge-success .badge-success
+                span.badge-info .badge-info
+                span.badge-primary .badge-primary
+                span.badge-warning .badge-warning
+                span.badge-danger .badge-danger
+            br

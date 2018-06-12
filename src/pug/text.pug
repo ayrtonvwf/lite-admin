@@ -1,114 +1,110 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons text_fields
-                | Texts
-    .row
-        .col-12
-            .box
-                .box-body
-                    h2 Titles
-                    p Use the html tags #[code h1], #[code h2], #[code h3] and #[code h4] wisely to hierarchically structure your page. If you need another element to look like a title, you can use the classes #[code h1], #[code h2], #[code h3] and #[code h4].
-                    .row.justify-content-center
-                        .col-sm-8.col-lg-6
-                            .row.text-center
-                                .col-sm-3.h1 1.h1
-                                .col-sm-3.h2 1.1.h2
-                                .col-sm-3.h3 1.1.1.h3
-                                .col-sm-3.h4 1.1.1.1.h4
-                    hr
-                    h2 Alignment
-                    p You can easily control the alignment of text with the classes #[code text-left], #[code text-center], #[code text-right] and #[code text-justify]:
-                    br
-                    .row.justify-content-center
-                        .col-sm-8.col-md-6
-                            .row
-                                .col-4
-                                    .alert.alert-primary.text-left .text-left
-                                .col-4
-                                    .alert.alert-primary.text-center .text-center
-                                .col-4
-                                    .alert.alert-primary.text-right .text-right
-                            .row
-                                .col-12
-                                    .alert.alert-primary.text-justify This is a #[b.text-underlined justified] text so it's gonna be shrink to fit the parent. This test text needs to be this long cause the last line is not justified by default.
-                    hr
-                    h2 Last line alignment
-                    p You can control separately the alignment of the last line, with the classes #[code text-last-left], #[code text-last-center], #[code text-last-right] and #[code text-last-justify]:
+    h1.content-title
+        i.material-icons text_fields
+        | Texts
+    article.box
+        .box-body
+            h2 Titles
+            p Use the html tags #[code h1], #[code h2], #[code h3] and #[code h4] wisely to hierarchically structure your page. If you need another element to look like a title, you can use the classes #[code h1], #[code h2], #[code h3] and #[code h4].
+            .row.justify-content-center
+                .col-sm-8.col-lg-6
+                    .row.text-center
+                        .col-sm-3.h1 1.h1
+                        .col-sm-3.h2 1.1.h2
+                        .col-sm-3.h3 1.1.1.h3
+                        .col-sm-3.h4 1.1.1.1.h4
+            hr
+            h2 Alignment
+            p You can easily control the alignment of text with the classes #[code text-left], #[code text-center], #[code text-right] and #[code text-justify]:
+            br
+            .row.justify-content-center
+                .col-sm-8.col-md-6
                     .row
-                        .col-6
-                            .alert.alert-primary.text-right.text-last-left This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left.
-                        .col-6
-                            .alert.alert-primary.text-last-right This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right.
-                        .col-6
-                            .alert.alert-primary.text-right.text-last-center This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered.
-                        .col-6
-                            .alert.alert-primary.text-right.text-last-justify This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified.
-                    hr
-                    h2 Colors
-                    p You have these classes to change the text color:
-                    .row.justify-content-center
-                        .col-sm-10.col-md-8.col-lg-6
-                            .row.text-center
-                                .col-3.text-muted .text-muted
-                                .col-3.text-success .text-success
-                                .col-3.text-info .text-info
-                                .col-3.text-primary .text-primary
-                                .col-3.text-warning .text-warning
-                                .col-3.text-danger .text-danger
-                                .col-3.text-black .text-black
-                                .col-3.text-white(style='background-color: gray') .text-white
-                    hr
-                    h2 Styling
-                    p You also have plenty of classes to style your text. Some give you unique features like controlling the text case, other's are useful in occasions when you don't wanna use the html tags for some reason (not messing up with semantics, easy style toggling with JS, etc).
-                    .row.justify-content-center
-                        .col-sm-10.col-md-8.col-lg-6
-                            .row
-                                .col-4.text-underlined .text-underlined
-                                .col-4.text-striked .text-striked
-                                .col-4.text-overlined .text-overlined
+                        .col-4
+                            .alert.alert-primary.text-left .text-left
+                        .col-4
+                            .alert.alert-primary.text-center .text-center
+                        .col-4
+                            .alert.alert-primary.text-right .text-right
+                    .row
+                        .col-12
+                            .alert.alert-primary.text-justify This is a #[b.text-underlined justified] text so it's gonna be shrink to fit the parent. This test text needs to be this long cause the last line is not justified by default.
+            hr
+            h2 Last line alignment
+            p You can control separately the alignment of the last line, with the classes #[code text-last-left], #[code text-last-center], #[code text-last-right] and #[code text-last-justify]:
+            .row
+                .col-6
+                    .alert.alert-primary.text-right.text-last-left This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left. This text is aligned to the right but the last line is set to the left.
+                .col-6
+                    .alert.alert-primary.text-last-right This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right. This text is aligned to the left but the last line is set to the right.
+                .col-6
+                    .alert.alert-primary.text-right.text-last-center This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered. This text is aligned to the right but the last line is centered.
+                .col-6
+                    .alert.alert-primary.text-right.text-last-justify This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified. This text is aligned to the right but the last line is justified.
+            hr
+            h2 Colors
+            p You have these classes to change the text color:
+            .row.justify-content-center
+                .col-sm-10.col-md-8.col-lg-6
+                    .row.text-center
+                        .col-3.text-muted .text-muted
+                        .col-3.text-success .text-success
+                        .col-3.text-info .text-info
+                        .col-3.text-primary .text-primary
+                        .col-3.text-warning .text-warning
+                        .col-3.text-danger .text-danger
+                        .col-3.text-black .text-black
+                        .col-3.text-white(style='background-color: gray') .text-white
+            hr
+            h2 Styling
+            p You also have plenty of classes to style your text. Some give you unique features like controlling the text case, other's are useful in occasions when you don't wanna use the html tags for some reason (not messing up with semantics, easy style toggling with JS, etc).
+            .row.justify-content-center
+                .col-sm-10.col-md-8.col-lg-6
+                    .row
+                        .col-4.text-underlined .text-underlined
+                        .col-4.text-striked .text-striked
+                        .col-4.text-overlined .text-overlined
 
-                                .col-4.text-bold .text-bold
-                                .col-4.text-italic .text-italic
+                        .col-4.text-bold .text-bold
+                        .col-4.text-italic .text-italic
 
-                                .col-4.text-uppercase .text-uppercase
-                                .col-4.text-lowercase .text-lowercase
-                                .col-4.text-capitalize .text-capitalize
+                        .col-4.text-uppercase .text-uppercase
+                        .col-4.text-lowercase .text-lowercase
+                        .col-4.text-capitalize .text-capitalize
 
-                                .col-4
-                                    span.text-sub .text-sub
-                                    span normal
-                                    span.text-sup .text-sup
-                    hr
-                    h2 Quoting
-                    p Your quotes will be automatically styled, just use the #[code blockquote] tag for a quotation block, #[code p] for paragraphs and the #[code cite] tag for author reference.
-                    p Of course, the default styling is boring, so choose a class to your #[code blockquote] element: #[code quote-success], #[code quote-info], #[code quote-primary], #[code quote-warning] or #[code quote-danger].
-                    .row.justify-content-center
-                        .col-md-10.col-lg-8
-                            blockquote
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
-                            blockquote.quote-success
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
-                            blockquote.quote-info
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
-                            blockquote.quote-primary
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
-                            blockquote.quote-warning
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
-                            blockquote.quote-danger
-                                p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
-                                p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
-                                cite Johann Wolfgang von Goethe
+                        .col-4
+                            span.text-sub .text-sub
+                            span normal
+                            span.text-sup .text-sup
+            hr
+            h2 Quoting
+            p Your quotes will be automatically styled, just use the #[code blockquote] tag for a quotation block, #[code p] for paragraphs and the #[code cite] tag for author reference.
+            p Of course, the default styling is boring, so choose a class to your #[code blockquote] element: #[code quote-success], #[code quote-info], #[code quote-primary], #[code quote-warning] or #[code quote-danger].
+            .row.justify-content-center
+                .col-md-10.col-lg-8
+                    blockquote
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe
+                    blockquote.quote-success
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe
+                    blockquote.quote-info
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe
+                    blockquote.quote-primary
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe
+                    blockquote.quote-warning
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe
+                    blockquote.quote-danger
+                        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. [...]
+                        p I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. [...]
+                        cite Johann Wolfgang von Goethe

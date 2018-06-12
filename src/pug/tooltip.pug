@@ -1,49 +1,45 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons feedback
-                | Tooltip
-    .row
-        .col-md-12
-            .box
-                .box-body
-                    h2 Basic
-                    p You can add tooltips to any element you like. Just add a #[code tooltip] class to it, and by default the title will be used as the message.
-                    br
-                    .text-center
-                        button.btn-success.tooltip(title='This is a nice tooltip') Hover me
-                    br
-                    hr
-                    h2 Custom message
-                    p If you need to use the element's title for another purpose, and want a custom message for the tooltip, you can override it with the #[code data-tooltip] attribute.
-                    br
-                    .text-center
-                        button.btn-danger.tooltip(title='This title will not appear in the tooltip' data-tooltip='This is the tooltip message') Hover me
-                    br
-                    hr
-                    h2 Placement
-                    p You can change the default placement of the tooltip (top) with the classes #[code tooltip-left], #[code tooltip-right] and #[code tooltip-bottom].
-                    br
-                    .text-center
-                        button.btn-warning.tooltip(title='This is a nice tooltip') Default
-                        button.btn-warning.tooltip.tooltip-left(title='This is a nice tooltip') Left
-                        button.btn-warning.tooltip.tooltip-right(title='This is a nice tooltip') Right
-                        button.btn-warning.tooltip.tooltip-bottom(title='This is a nice tooltip') Bottom
-                    br
-                    hr
-                    h2 Limit Alignment
-                    p By default, the tooltip is aligned at the start (top or left) limit of the trigger. You can change this by using the class #[code tooltip-end], so the tooltip will be aligned at the end (bottom or right) limit of the trigger.
-                    br
-                    .text-center
-                        button.btn-primary.tooltip(title='This is a nice tooltip') Top left
-                        button.btn-primary.tooltip.tooltip-end(title='This is a nice tooltip') Top right
-                        button.btn-primary.tooltip.tooltip-left(title='This is a nice tooltip') Left top
-                        button.btn-primary.tooltip.tooltip-left.tooltip-end(title='This is a nice tooltip') Left bottom
-                        button.btn-primary.tooltip.tooltip-right(title='This is a nice tooltip') Right top
-                        button.btn-primary.tooltip.tooltip-right.tooltip-end(title='This is a nice tooltip') Right bottom
-                        button.btn-primary.tooltip.tooltip-bottom(title='This is a nice tooltip') Bottom left
-                        button.btn-primary.tooltip.tooltip-bottom.tooltip-end(title='This is a nice tooltip') Bottom right
-                    br
+    h1.content-title
+        i.material-icons feedback
+        | Tooltip
+    article.box
+        .box-body
+            h2 Basic
+            p You can add tooltips to any element you like. Just add a #[code tooltip] class to it, and by default the title will be used as the message.
+            br
+            .text-center
+                button.btn-success.tooltip(title='This is a nice tooltip') Hover me
+            br
+            hr
+            h2 Custom message
+            p If you need to use the element's title for another purpose, and want a custom message for the tooltip, you can override it with the #[code data-tooltip] attribute.
+            br
+            .text-center
+                button.btn-danger.tooltip(title='This title will not appear in the tooltip' data-tooltip='This is the tooltip message') Hover me
+            br
+            hr
+            h2 Placement
+            p You can change the default placement of the tooltip (top) with the classes #[code tooltip-left], #[code tooltip-right] and #[code tooltip-bottom].
+            br
+            .text-center
+                button.btn-warning.tooltip(title='This is a nice tooltip') Default
+                button.btn-warning.tooltip.tooltip-left(title='This is a nice tooltip') Left
+                button.btn-warning.tooltip.tooltip-right(title='This is a nice tooltip') Right
+                button.btn-warning.tooltip.tooltip-bottom(title='This is a nice tooltip') Bottom
+            br
+            hr
+            h2 Limit Alignment
+            p By default, the tooltip is aligned at the start (top or left) limit of the trigger. You can change this by using the class #[code tooltip-end], so the tooltip will be aligned at the end (bottom or right) limit of the trigger.
+            br
+            .text-center
+                button.btn-primary.tooltip(title='This is a nice tooltip') Top left
+                button.btn-primary.tooltip.tooltip-end(title='This is a nice tooltip') Top right
+                button.btn-primary.tooltip.tooltip-left(title='This is a nice tooltip') Left top
+                button.btn-primary.tooltip.tooltip-left.tooltip-end(title='This is a nice tooltip') Left bottom
+                button.btn-primary.tooltip.tooltip-right(title='This is a nice tooltip') Right top
+                button.btn-primary.tooltip.tooltip-right.tooltip-end(title='This is a nice tooltip') Right bottom
+                button.btn-primary.tooltip.tooltip-bottom(title='This is a nice tooltip') Bottom left
+                button.btn-primary.tooltip.tooltip-bottom.tooltip-end(title='This is a nice tooltip') Bottom right
+            br

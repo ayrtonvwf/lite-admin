@@ -1,64 +1,60 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons tab
-                | Tabs
-    .row
-        .col-md-12
-            .box
-                .box-body
-                    p To create tabs, you need an #[code input] to keep the tab's open/closed state, a #[code label] to be the "button" that trigger the input change, and a #[code div] with your tab's content.
-                    p Take this basic code example:
-                    pre
-                        code.
-                            #{'<div class="tabs">'}#[br]
-                            &nbsp;&nbsp;#{'<input type="radio" name="tab-toggle" id="tab-toggle-1">'}#[br]
-                            &nbsp;&nbsp;#{'<label class="tab" for="tab-toggle-1">First tab</label>'}#[br]
-                            &nbsp;&nbsp;#{'<div class="tab-content">First tab content.</div>'}#[br]
-                            #[br]
-                            &nbsp;&nbsp;#{'<input type="radio" name="tab-toggle" id="tab-toggle-2">'}#[br]
-                            &nbsp;&nbsp;#{'<label class="tab" for="tab-toggle-2">Second tab</label>'}#[br]
-                            &nbsp;&nbsp;#{'<div class="tab-content">Second tab content.</div>'}#[br]
-                            #{'</div>'}
-                    hr
-                    h2 Live example:
-                    br
-                    .row.justify-content-center
-                        .tabs.col-sm-11.col-md-10.col-lg-9.col-xlg-8
-                            input(type='radio' name='tab-toggle' id='tab-toggle-1' checked)
-                            label(for='tab-toggle-1').tab Account
-                            .tab-content
-                                h2.h4 Account details
-                                .row.justify-content-center
-                                    .col-12.col-sm-6.col-md-4.input
-                                        label(for='name') Name
-                                        input#name(placeholder='Your name')
-                                    .col-12.col-sm-6.col-md-4.input
-                                        label(for='email') Email
-                                        input#email(type='email' placeholder='your@email.com')
-                                .text-right
-                                    button.btn-success Submit
+    h1.content-title
+        i.material-icons tab
+        | Tabs
+    article.box
+        .box-body
+            p To create tabs, you need an #[code input] to keep the tab's open/closed state, a #[code label] to be the "button" that trigger the input change, and a #[code div] with your tab's content.
+            p Take this basic code example:
+            pre
+                code.
+                    #{'<div class="tabs">'}#[br]
+                    &nbsp;&nbsp;#{'<input type="radio" name="tab-toggle" id="tab-toggle-1">'}#[br]
+                    &nbsp;&nbsp;#{'<label class="tab" for="tab-toggle-1">First tab</label>'}#[br]
+                    &nbsp;&nbsp;#{'<div class="tab-content">First tab content.</div>'}#[br]
+                    #[br]
+                    &nbsp;&nbsp;#{'<input type="radio" name="tab-toggle" id="tab-toggle-2">'}#[br]
+                    &nbsp;&nbsp;#{'<label class="tab" for="tab-toggle-2">Second tab</label>'}#[br]
+                    &nbsp;&nbsp;#{'<div class="tab-content">Second tab content.</div>'}#[br]
+                    #{'</div>'}
+            hr
+            h2 Live example:
+            br
+            .row.justify-content-center
+                .tabs.col-sm-11.col-md-10.col-lg-9.col-xlg-8
+                    input(type='radio' name='tab-toggle' id='tab-toggle-1' checked)
+                    label(for='tab-toggle-1').tab Account
+                    .tab-content
+                        h2.h4 Account details
+                        .row.justify-content-center
+                            .col-12.col-sm-6.col-md-4.input
+                                label(for='name') Name
+                                input#name(placeholder='Your name')
+                            .col-12.col-sm-6.col-md-4.input
+                                label(for='email') Email
+                                input#email(type='email' placeholder='your@email.com')
+                        .text-right
+                            button.btn-success Submit
 
-                            input(type='radio' name='tab-toggle' id='tab-toggle-2')
-                            label(for='tab-toggle-2').tab Security
-                            .tab-content
-                                h2.h4 Security
-                                .row.justify-content-center
-                                    .col-12.col-sm-6.col-md-4.input
-                                        label(for='password') Password
-                                        input#password(type='password' placeholder='A secure one, please')
-                                    .col-12.col-sm-6.col-md-4.input
-                                        label(for='re-password') Password again
-                                        input#re-password(type='password' placeholder='Just in case of misspelling')
-                                .text-right
-                                    button.btn-danger Reset password
+                    input(type='radio' name='tab-toggle' id='tab-toggle-2')
+                    label(for='tab-toggle-2').tab Security
+                    .tab-content
+                        h2.h4 Security
+                        .row.justify-content-center
+                            .col-12.col-sm-6.col-md-4.input
+                                label(for='password') Password
+                                input#password(type='password' placeholder='A secure one, please')
+                            .col-12.col-sm-6.col-md-4.input
+                                label(for='re-password') Password again
+                                input#re-password(type='password' placeholder='Just in case of misspelling')
+                        .text-right
+                            button.btn-danger Reset password
 
-                            input(type='radio' name='tab-toggle' id='tab-toggle-3')
-                            label(for='tab-toggle-3').tab One more tab
-                            .tab-content
-                                .row.justify-content-center
-                                    .col-12.col-sm-10.col-lg-8
-                                        .alert-primary.text-center One more tab content
+                    input(type='radio' name='tab-toggle' id='tab-toggle-3')
+                    label(for='tab-toggle-3').tab One more tab
+                    .tab-content
+                        .row.justify-content-center
+                            .col-12.col-sm-10.col-lg-8
+                                .alert-primary.text-center One more tab content

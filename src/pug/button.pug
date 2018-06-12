@@ -1,116 +1,112 @@
 extends layout.pug
 
 block content
-    .row
-        .col-12
-            h1.content-title
-                i.material-icons crop_7_5
-                | Buttons
-    .row
-        .col-md-12
-            .box
-                .box-body
-                    h2 Colors
-                    p To create a nice button, just choose a class: #[code btn-primary], #[code btn-success], #[code btn-info], #[code btn-primary], #[code btn-warning], #[code btn-danger].
-                    br
-                    .text-center
-                        button.btn-default .btn-default
-                        button.btn-success .btn-success
-                        button.btn-info .btn-info
-                        button.btn-primary .btn-primary
-                        button.btn-warning .btn-warning
-                        button.btn-danger .btn-danger
-                    hr
-                    h2 Disabled
-                    p You have two options to disable a button:
-                    ul
-                        li Use the #[b attribute] #[code disabled] and really disable it;
-                        li Use the #[b class] #[code disabled] and only make it look disabled.
-                    p When you use only the class, actions continue to be triggered when you click the button.
-                    p In the example bellow, all buttons would trigger an alert, but the first three are disabled with the attribute, so it won't work. Try clicking on them:
-                    br
-                    .text-center
-                        button(onclick='alert("I am disabled")' disabled).btn-default Attribute
-                        button(onclick='alert("I am disabled")' disabled).btn-success Attribute
-                        button(onclick='alert("I am disabled")' disabled).btn-info Attribute
-                        button(onclick='alert("I am disabled")').btn-primary.disabled Class
-                        button(onclick='alert("I am disabled")').btn-warning.disabled Class
-                        button(onclick='alert("I am disabled")').btn-danger.disabled Class
-                    br
-                    p Note that links don't support the #[code disabled] attribute, so they will behave as if using the class instead of the attribute.
-                    p To get a behavior close to the disabled button, you can use the class #[code disable-pointer] so the element wont respond to mouse events (click and hover), and use the a negative #[code tabindex] to prevent the focus on keyboard navigation.
-                    hr
-                    h2 Sizes
-                    p To set a different size, just add the class #[code btn-xs], #[code btn-sm] or #[code btn-lg] to your button.
-                    br
-                    br
-                    .text-center
-                        button.btn-default.btn-xs .btn-xs
-                        button.btn-default.btn-sm .btn-sm
-                        button.btn-default Default
-                        button.btn-default.btn-lg .btn-lg
-                    hr
-                    h2 Color Trigger
-                    p LiteAdmin also provides discrete buttons, that are highlighted when the user needs them.
-                    p Using it is easy: add the class #[code color-trigger] to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.
-                    p In the example below, the class was added in the table's rows:
-                    br
-                    .row.justify-content-center
-                        .table.col-md-10.col-lg-9.col-xlg-8
-                            table
-                                thead
-                                    tr
-                                        th User
-                                        th Email
-                                        th.text-center Actions
-                                tbody
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe@email.com
-                                        td.text-right
-                                            button.btn-sm.btn-primary
-                                                i.material-icons search
-                                                | Profile
-                                            button.btn-sm.btn-warning
-                                                i.material-icons edit
-                                                | Edit
-                                            button.btn-sm.btn-danger
-                                                i.material-icons delete
-                                                | Delete
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe#[wbr]@email.com
-                                        td.text-right
-                                            button.btn-sm.btn-primary
-                                                i.material-icons search
-                                                | Profile
-                                            button.btn-sm.btn-warning
-                                                i.material-icons edit
-                                                | Edit
-                                            button.btn-sm.btn-danger
-                                                i.material-icons delete
-                                                | Delete
-                                    tr.btn-color-trigger
-                                        td John Doe
-                                        td john.doe#[wbr]@email.com
-                                        td.text-right
-                                            button.btn-sm.btn-primary
-                                                i.material-icons search
-                                                | Profile
-                                            button.btn-sm.btn-warning
-                                                i.material-icons edit
-                                                | Edit
-                                            button.btn-sm.btn-danger
-                                                i.material-icons delete
-                                                | Delete
-                    p In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.
-                    hr
-                    h2 Pagination
-                    p If you need pagination, we've got you covered. Just create a #[code #{'<div class="pagination">'}] with links inside, and you're good to go.
-                    br
-                    .pagination.text-center
-                        a(href='#') First
-                        a(href='#') 1
-                        a.active(href='#') 2
-                        a(href='#') 3
-                        a(href='#') »
+    h1.content-title
+        i.material-icons crop_7_5
+        | Buttons
+    article.box
+        .box-body
+            h2 Colors
+            p To create a nice button, just choose a class: #[code btn-primary], #[code btn-success], #[code btn-info], #[code btn-primary], #[code btn-warning], #[code btn-danger].
+            br
+            .text-center
+                button.btn-default .btn-default
+                button.btn-success .btn-success
+                button.btn-info .btn-info
+                button.btn-primary .btn-primary
+                button.btn-warning .btn-warning
+                button.btn-danger .btn-danger
+            hr
+            h2 Disabled
+            p You have two options to disable a button:
+            ul
+                li Use the #[b attribute] #[code disabled] and really disable it;
+                li Use the #[b class] #[code disabled] and only make it look disabled.
+            p When you use only the class, actions continue to be triggered when you click the button.
+            p In the example bellow, all buttons would trigger an alert, but the first three are disabled with the attribute, so it won't work. Try clicking on them:
+            br
+            .text-center
+                button(onclick='alert("I am disabled")' disabled).btn-default Attribute
+                button(onclick='alert("I am disabled")' disabled).btn-success Attribute
+                button(onclick='alert("I am disabled")' disabled).btn-info Attribute
+                button(onclick='alert("I am disabled")').btn-primary.disabled Class
+                button(onclick='alert("I am disabled")').btn-warning.disabled Class
+                button(onclick='alert("I am disabled")').btn-danger.disabled Class
+            br
+            p Note that links don't support the #[code disabled] attribute, so they will behave as if using the class instead of the attribute.
+            p To get a behavior close to the disabled button, you can use the class #[code disable-pointer] so the element wont respond to mouse events (click and hover), and use the a negative #[code tabindex] to prevent the focus on keyboard navigation.
+            hr
+            h2 Sizes
+            p To set a different size, just add the class #[code btn-xs], #[code btn-sm] or #[code btn-lg] to your button.
+            br
+            br
+            .text-center
+                button.btn-default.btn-xs .btn-xs
+                button.btn-default.btn-sm .btn-sm
+                button.btn-default Default
+                button.btn-default.btn-lg .btn-lg
+            hr
+            h2 Color Trigger
+            p LiteAdmin also provides discrete buttons, that are highlighted when the user needs them.
+            p Using it is easy: add the class #[code color-trigger] to any element and the buttons inside it will be discrete, being highlighted when the user hovers the given element.
+            p In the example below, the class was added in the table's rows:
+            br
+            .row.justify-content-center
+                .table.col-md-10.col-lg-9.col-xlg-8
+                    table
+                        thead
+                            tr
+                                th User
+                                th Email
+                                th.text-center Actions
+                        tbody
+                            tr.btn-color-trigger
+                                td John Doe
+                                td john.doe@email.com
+                                td.text-right
+                                    button.btn-sm.btn-primary
+                                        i.material-icons search
+                                        | Profile
+                                    button.btn-sm.btn-warning
+                                        i.material-icons edit
+                                        | Edit
+                                    button.btn-sm.btn-danger
+                                        i.material-icons delete
+                                        | Delete
+                            tr.btn-color-trigger
+                                td John Doe
+                                td john.doe#[wbr]@email.com
+                                td.text-right
+                                    button.btn-sm.btn-primary
+                                        i.material-icons search
+                                        | Profile
+                                    button.btn-sm.btn-warning
+                                        i.material-icons edit
+                                        | Edit
+                                    button.btn-sm.btn-danger
+                                        i.material-icons delete
+                                        | Delete
+                            tr.btn-color-trigger
+                                td John Doe
+                                td john.doe#[wbr]@email.com
+                                td.text-right
+                                    button.btn-sm.btn-primary
+                                        i.material-icons search
+                                        | Profile
+                                    button.btn-sm.btn-warning
+                                        i.material-icons edit
+                                        | Edit
+                                    button.btn-sm.btn-danger
+                                        i.material-icons delete
+                                        | Delete
+            p In devices that are not good to hover (like touchscreens) or in browsers that we can't detect it, the buttons are colored by default, for accessibility.
+            hr
+            h2 Pagination
+            p If you need pagination, we've got you covered. Just create a #[code #{'<div class="pagination">'}] with links inside, and you're good to go.
+            br
+            .pagination.text-center
+                a(href='#') First
+                a(href='#' rel='prev') 1
+                a.active(href='#') 2
+                a(href='#' rel='next') 3
+                a(href='#' rel='next') »

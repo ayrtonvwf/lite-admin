@@ -45,104 +45,96 @@
         </form><a class="menu-link" href="modal.html"><i class="material-icons">aspect_ratio</i>Modal</a><a class="menu-link" href="tab.html"><i class="material-icons">tab</i>Tabs</a><a class="menu-link" href="combo.html"><i class="material-icons">keyboard_arrow_down</i>Combo</a><a class="menu-link" href="form.html"><i class="material-icons">keyboard</i>Form</a><a class="menu-link" href="tooltip.html"><i class="material-icons">feedback</i>Tooltip</a><a class="menu-link" href="button.html"><i class="material-icons">crop_7_5</i>Button</a><a class="menu-link" href="table.html"><i class="material-icons">grid_on</i>Table</a><a class="menu-link" href="progress.html"><i class="material-icons">sort</i>Progress bar</a><a class="menu-link" href="range.html"><i class="material-icons">tune</i>Range input</a><a class="menu-link" href="box.html"><i class="material-icons">web_asset</i>Box</a><a class="menu-link" href="text.html"><i class="material-icons">text_fields</i>Text</a><a class="menu-link" href="badge.html"><i class="material-icons">local_offer</i>Badges</a><a class="menu-link" href="alert.html"><i class="material-icons">warning</i>Alert</a>
       </nav>
       <main class="content">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="content-title"><i class="material-icons">grid_on</i>Table</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="box">
-              <div class="box-body">
-                <h2>Responsive tables</h2>
-                <p>To make a table look nice, add the class <code>table</code> to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a <code>&lt;div class=&quot;table&quot;&gt;</code> wrapping the table instead.</p>
-                <p>The example bellow is a responsive table. Resize your browser to and see it scrolling!</p><br>
-                <div class="row justify-content-center">
-                  <div class="col-md-10">
-                    <div class="table">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>User</th>
-                            <th>Address</th>
-                            <th>&nbsp;</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>John Doe</td>
-                            <td>(12) 1234-1234</td>
-                            <td>john.doe@email.com</td>
-                            <td>johndoe</td>
-                            <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>John Doe</td>
-                            <td>(12) 1234-1234</td>
-                            <td>john.doe@email.com</td>
-                            <td>johndoe</td>
-                            <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>John Doe</td>
-                            <td>(12) 1234-1234</td>
-                            <td>john.doe@email.com</td>
-                            <td>johndoe</td>
-                            <td>Street Test, City Testland, TS, US</td>
-                            <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div><br>
-                <hr>
-                <h2 id="row_counter">Row counter</h2>
-                <p>You can easily append the number of rows in the <code>tbody</code> by using the <code>row-counter</code> class inside the table:</p><br>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10 col-md-8 col-lg-6">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>This row isn't included in the counter because it's in the <code>thead</code></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="row-counter"></td>
-                          <td>A tbody row</td>
-                        </tr>
-                        <tr>
-                          <td class="row-counter"></td>
-                          <td>A tbody row</td>
-                        </tr>
-                        <tr>
-                          <td class="row-counter"></td>
-                          <td>A tbody row</td>
-                        </tr>
-                        <tr>
-                          <td class="row-counter"></td>
-                          <td>A tbody row</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td colspan="2">Total rows in the <code>tbody</code>: <span class="row-counter"></span></td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
+        <h1 class="content-title"><i class="material-icons">grid_on</i>Table</h1>
+        <article class="box">
+          <div class="box-body">
+            <h2>Responsive tables</h2>
+            <p>To make a table look nice, add the class <code>table</code> to it. If you want that table to be responsive (scroll horizontally on smaller screens), create a <code>&lt;div class=&quot;table&quot;&gt;</code> wrapping the table instead.</p>
+            <p>The example bellow is a responsive table. Resize your browser to and see it scrolling!</p><br>
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <div class="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>User</th>
+                        <th>Address</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>(12) 1234-1234</td>
+                        <td>john.doe@email.com</td>
+                        <td>johndoe</td>
+                        <td>Street Test, City Testland, TS, US</td>
+                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
+                      </tr>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>(12) 1234-1234</td>
+                        <td>john.doe@email.com</td>
+                        <td>johndoe</td>
+                        <td>Street Test, City Testland, TS, US</td>
+                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
+                      </tr>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>(12) 1234-1234</td>
+                        <td>john.doe@email.com</td>
+                        <td>johndoe</td>
+                        <td>Street Test, City Testland, TS, US</td>
+                        <td class="text-right"><a class="btn-sm btn-danger tooltip tooltip-left" href="#" title="Excluir"><i class="material-icons">delete</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+            </div><br>
+            <hr>
+            <h2 id="row_counter">Row counter</h2>
+            <p>You can easily append the number of rows in the <code>tbody</code> by using the <code>row-counter</code> class inside the table:</p><br>
+            <div class="row justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-6">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>This row isn't included in the counter because it's in the <code>thead</code></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                    <tr>
+                      <td class="row-counter"></td>
+                      <td>A tbody row</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2">Total rows in the <code>tbody</code>: <span class="row-counter"></span></td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </main>
     </div>
   </body>
