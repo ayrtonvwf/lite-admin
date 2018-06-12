@@ -20,6 +20,9 @@ table.table, .table>table {
         border-top: 1px solid lightgray;
         padding: 5px 10px;
     }
+    tfoot {
+        border-top: 2px solid gray;
+    }
     .row-counter::after {
         content: counter(table-rows);
     }
