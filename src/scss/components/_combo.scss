@@ -9,6 +9,7 @@
     border: 1px solid lightgray;
     z-index: 5;
     padding: 0px 1px;
+    transition: opacity .3s;
     &::before, &::after {
         content: "";
         display: block;
@@ -87,7 +88,6 @@
     position: relative;
     display: inline-block;
     &:hover > .combo-menu {
-        transition: opacity .3s;
         opacity: 1;
         user-select: initial;
         pointer-events: initial;
@@ -96,7 +96,6 @@
 .combo-trigger {
     &:focus, &:hover, &:active {
         & + .combo-menu {
-            transition: opacity .3s;
             opacity: 1;
             user-select: initial;
             pointer-events: initial;
