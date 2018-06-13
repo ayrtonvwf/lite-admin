@@ -99,13 +99,13 @@
         <article class="box">
           <div class="box-body">
             <h2>Basic</h2>
-            <p>You can add tooltips to any element you like. Just add a <code>tooltip</code> class to it, and by default the title will be used as the message.</p><br>
+            <p>You can add tooltips to any element you like. Just add a <code>tooltip</code> class to it, and by default the <code>title</code> attribute will be used as the message.</p><br>
             <div class="text-center">
               <button class="btn-success tooltip" title="This is a nice tooltip">Hover me</button>
             </div><br>
             <hr>
-            <h2>Custom message</h2>
-            <p>If you need to use the element's title for another purpose, and want a custom message for the tooltip, you can override it with the <code>data-tooltip</code> attribute.</p><br>
+            <h2>Custom message attribute</h2>
+            <p>If you need to use the element's <code>title</code> for another purpose, or if you don't want the default browser's behavior of the title appearing together with the tooltip, you can use the <code>data-tooltip</code> instead of the <code>title</code> attribute.</p><br>
             <div class="text-center">
               <button class="btn-danger tooltip" title="This title will not appear in the tooltip" data-tooltip="This is the tooltip message">Hover me</button>
             </div><br>
@@ -113,13 +113,13 @@
             <h2>Placement</h2>
             <p>You can change the default placement of the tooltip (top) with the classes <code>tooltip-left</code>, <code>tooltip-right</code> and <code>tooltip-bottom</code>.</p><br>
             <div class="text-center">
-              <button class="btn-warning tooltip" title="This is a nice tooltip">Default</button>
-              <button class="btn-warning tooltip tooltip-left" title="This is a nice tooltip">Left</button>
-              <button class="btn-warning tooltip tooltip-right" title="This is a nice tooltip">Right</button>
-              <button class="btn-warning tooltip tooltip-bottom" title="This is a nice tooltip">Bottom</button>
+              <button class="btn-warning tooltip" data-tooltip="This is a nice tooltip">Default</button>
+              <button class="btn-warning tooltip tooltip-left" data-tooltip="This is a nice tooltip">Left</button>
+              <button class="btn-warning tooltip tooltip-right" data-tooltip="This is a nice tooltip">Right</button>
+              <button class="btn-warning tooltip tooltip-bottom" data-tooltip="This is a nice tooltip">Bottom</button>
             </div><br>
             <hr>
-            <h2>Limit Alignment</h2>
+            <h2>Alignment</h2>
             <p>By default, the tooltip is aligned at the center of the trigger. You can change this by using the classes <code>tooltip-start</code> and <code>tooltip-end</code>, so the tooltip will be aligned at the start (top or left) or end (bottom or right) limit of the trigger.</p>
             <p>Try it:</p><br>
             <div class="text-center">
