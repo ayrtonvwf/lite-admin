@@ -34,12 +34,26 @@ block content
             p By default, the tooltip is aligned at the start (top or left) limit of the trigger. You can change this by using the class #[code tooltip-end], so the tooltip will be aligned at the end (bottom or right) limit of the trigger.
             br
             .text-center
-                button.btn-primary.tooltip(title='This is a nice tooltip') Top left
-                button.btn-primary.tooltip.tooltip-end(title='This is a nice tooltip') Top right
-                button.btn-primary.tooltip.tooltip-left(title='This is a nice tooltip') Left top
-                button.btn-primary.tooltip.tooltip-left.tooltip-end(title='This is a nice tooltip') Left bottom
-                button.btn-primary.tooltip.tooltip-right(title='This is a nice tooltip') Right top
-                button.btn-primary.tooltip.tooltip-right.tooltip-end(title='This is a nice tooltip') Right bottom
-                button.btn-primary.tooltip.tooltip-bottom(title='This is a nice tooltip') Bottom left
-                button.btn-primary.tooltip.tooltip-bottom.tooltip-end(title='This is a nice tooltip') Bottom right
+                h3 Top
+                button.btn-primary.tooltip(title='This is a nice tooltip') Start
+                button.btn-primary.tooltip.tooltip-center(title='This is a nice tooltip') Center
+                button.btn-primary.tooltip.tooltip-end(title='This is a nice tooltip') End
+            br
+            .text-center
+                h3 Left
+                button.btn-primary.tooltip.tooltip-left(title='This is a nice tooltip') Start
+                button.btn-primary.tooltip.tooltip-left.tooltip-center(title='This is a nice tooltip') Center
+                button.btn-primary.tooltip.tooltip-left.tooltip-end(title='This is a nice tooltip') End
+            br
+            .text-center
+                h3 Right
+                button.btn-primary.tooltip.tooltip-right(title='This is a nice tooltip') Start
+                button.btn-primary.tooltip.tooltip-right.tooltip-center(title='This is a nice tooltip') Center
+                button.btn-primary.tooltip.tooltip-right.tooltip-end(title='This is a nice tooltip') End
+            br
+            .text-center
+                h3 Bottom
+                button.btn-primary.tooltip.tooltip-bottom(title='This is a nice tooltip') Start
+                button.btn-primary.tooltip.tooltip-bottom.tooltip-center(title='This is a nice tooltip') Center
+                button.btn-primary.tooltip.tooltip-bottom.tooltip-end(title='This is a nice tooltip') End
             br

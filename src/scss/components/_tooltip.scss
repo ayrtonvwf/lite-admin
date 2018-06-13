@@ -39,6 +39,26 @@
         opacity: 1;
     }
 
+    &.tooltip-center {
+        &::before {
+            left: calc(50% - 4px);
+        }
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &.tooltip-left, &.tooltip-right {
+            &::before {
+                top: calc(50% - 3px);
+            }
+            &::after {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
     &.tooltip-end {
         &::before {
             left: initial;
