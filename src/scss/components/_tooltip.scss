@@ -8,11 +8,12 @@
         transition: opacity .7s;
         z-index: 10;
         pointer-events: none;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &::before {
         content: "";
         bottom: calc(100% - 4px);
-        left: 15px;
         width: 0px;
         height: 0px;
         border-top: 6px solid black;
@@ -20,7 +21,6 @@
         border-right: 4px solid transparent;
     }
     &::after {
-        left: 0px;
         content: attr(title);
         background: black;
         color: white;
@@ -38,90 +38,114 @@
     &:hover::before, &:hover::after {
         opacity: 1;
     }
-
-    &.tooltip-center {
-        &::before {
-            left: calc(50% - 4px);
-        }
-        &::after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &.tooltip-left, &.tooltip-right {
-            &::before {
-                top: calc(50% - 3px);
-            }
-            &::after {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
+}
+.tooltip-start {
+    &::before {
+        left: 15px;
+        transform: none;
+    }
+    &::after {
+        left: 0px;
+        transform: none;
     }
 
+}
+.tooltip-end {
+    &::before {
+        left: initial;
+        right: 15px;
+        transform: none;
+    }
+    &::after {
+        left: initial;
+        right: 0px;
+        transform: none;
+    }
+}
+.tooltip-bottom {
+    &::before {
+        bottom: initial;
+        top: calc(100% - 2px);
+        transform: rotateX(180deg) translateX(-50%);
+    }
+    &::after {
+        bottom: initial;
+        top: calc(100% + 4px);
+    }
+}
+.tooltip-left, .tooltip-right {
+    &::before {
+        top: 50%;
+    }
+    &::after {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: initial;
+    }
+}
+.tooltip-left {
+    &::before {
+        transform: rotateZ(-90deg) translateX(50%);
+        left: initial;
+        right: calc(100% - 3px);
+    }
+    &::after {
+        left: initial;
+        right: calc(100% + 4px);
+    }
+    &.tooltip-start {
+        &::before {
+            top: 5px;
+            transform: rotateZ(-90deg);
+        }
+        &::after{
+            top: 0px;
+            transform: none;
+        }
+    }
     &.tooltip-end {
         &::before {
-            left: initial;
-            right: 15px;
-        }
-        &::after {
-            left: initial;
-            right: 0px;
-        }
-
-        &.tooltip-left, &.tooltip-right {
-            &::before {
-                top: initial;
-                bottom: 5px;
-            }
-            &::after {
-                top: initial;
-                bottom: 0px;
-            }
-        }
-    }
-
-    &.tooltip-left {
-        &::before {
+            top: initial;
+            bottom: 5px;
             transform: rotateZ(-90deg);
-            left: initial;
-            right: calc(100% - 4px);
-            top: 5px;
-            bottom: initial;
         }
         &::after {
-            left: initial;
-            right: calc(100% + 2px);
-            bottom: initial;
-            top: 0px;
+            top: initial;
+            bottom: 0px;
+            transform: none;
         }
     }
+}
+.tooltip-right {
+    &::before {
+        transform: rotateZ(90deg) translateX(-50%);
+        left: calc(100% - 3px);
+    }
+    &::after {
+        left: calc(100% + 4px);
+        right: initial;
+    }
 
-    &.tooltip-right {
+    &.tooltip-start {
         &::before {
+            top: 5px;
             transform: rotateZ(90deg);
-            right: initial;
-            left: calc(100% - 4px);
-            top: 5px;
-            bottom: initial;
         }
-        &::after {
-            right: initial;
-            left: calc(100% + 2px);
-            bottom: initial;
+        &::after{
             top: 0px;
+            transform: none;
         }
     }
-
-    &.tooltip-bottom {
+    &.tooltip-end {
         &::before {
-            transform: rotateX(180deg);
-            bottom: initial;
-            top: calc(100% - 4px);
+            top: initial;
+            bottom: 5px;
+            transform: rotateZ(90deg);
         }
         &::after {
-            bottom: initial;
-            top: calc(100% + 2px);
+            top: initial;
+            bottom: 0px;
+            transform: none;
         }
     }
 }
