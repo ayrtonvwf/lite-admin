@@ -4,9 +4,9 @@ table.table, .table>table {
     border-collapse: collapse;
     margin: 10px 0px;
 
-    th {
+    th, td {
         text-align: left;
-        padding: 5px 10px;
+        padding: 10px 15px;
     }
     tbody>tr {
         counter-increment: table-rows;
@@ -18,7 +18,6 @@ table.table, .table>table {
     }
     td {
         border-top: 1px solid lightgray;
-        padding: 5px 10px;
     }
     tfoot {
         border-top: 2px solid gray;
@@ -40,5 +39,15 @@ table>caption {
         caption-side: bottom;
         margin-bottom: 0px;
         margin-top: 5px;
+    }
+}
+.table-condensed {
+    th, td {
+        padding: 5px 10px !important;
+    }
+}
+.table-comfortable {
+    th, td {
+        padding: 15px 20px !important;
     }
 }
