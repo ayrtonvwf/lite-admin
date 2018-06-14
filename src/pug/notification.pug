@@ -1,0 +1,53 @@
+extends layout.pug
+
+block content
+    h1.content-title
+        i.material-icons error_outline
+        | Notification
+    article.box
+        .box-body
+            h2 Basic
+            p To create a notification, you need this basic code:
+            pre
+                code.
+                    #{'<!-- This input makes all notifications start hidden -->'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle notification-start-hidden" checked>'}
+
+                    #{'<!-- This input hides all notifications when the users clicks on dismiss -->'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="no-notification">'}
+
+                    #{'<!-- This input controls the status of the next notification -->'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="my-notification-toggle">'}
+                    #{'<div class="notification">'}
+                    &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss">Got it!</label>'}
+                    &nbsp;&nbsp;This is my very first notification!
+
+                    #{'<!-- This input controls the status of the next notification -->'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="my-notification-toggle-2">'}
+                    #{'<div class="notification notification-success">'}
+                    &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss material-icons">close</label>'}
+                    &nbsp;&nbsp;#{'<div class="notification-icon material-icons">check</label>'}
+                    &nbsp;&nbsp;#{'<div class="notification-title">This is my title!</label>'}
+                    &nbsp;&nbsp;This is my second notification!
+                    #{'</div>'}
+
+                    #{'<!-- Lets create the notification triggers -->'}
+                    #{'<label class="btn-primary" for="my-notification-toggle">First notification</label>'}
+                    #{'<label class="btn-success" for="my-notification-toggle-2">Second notification</label>'}
+            br
+            .text-center
+                label.btn-primary(for='basic-notification') First notification
+                label.btn-success(for='complete-notification') Second notification
+            br
+    input.notification-toggle.notification-start-hidden(type='radio' name='notification-toggle' checked)
+    input.notification-toggle#no-notification(type='radio' name='notification-toggle')
+    input.notification-toggle#basic-notification(type='radio' name='notification-toggle')
+    .notification
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is my very first notification!
+    input.notification-toggle#complete-notification(type='radio' name='notification-toggle')
+    .notification.notification-success
+        label.notification-dismiss.material-icons(for='no-notification') close
+        .notification-icon.material-icons check
+        .notification-title This is my title!
+        | This is my second notification!

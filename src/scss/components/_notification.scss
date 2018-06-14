@@ -1,0 +1,90 @@
+.notification {
+    width: 370px;
+    box-sizing: border-box;
+    background-color: $notification-default-color;
+    padding: 15px;
+    border-radius: 3px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.7);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    animation: notification-hide .5s;
+    animation-fill-mode: both;
+    .notification-toggle:checked+& {
+        animation: notification-show .5s;
+        animation-fill-mode: both;
+    }
+    .notification-start-hidden:checked~& {
+        animation: notification-hide .5s;
+        animation-delay: -.5s;
+        animation-fill-mode: both;
+    }
+}
+.notification-success {
+    background-color: $notification-success-color;
+}
+.notification-info {
+    background-color: $notification-info-color;
+}
+.notification-primary {
+    background-color: $notification-primary-color;
+}
+.notification-warning {
+    background-color: $notification-warning-color;
+}
+.notification-danger {
+    background-color: $notification-danger-color;
+}
+.notification-auto {
+    animation: notification-auto 5s;
+    animation-fill-mode: both;
+}
+.notification-toggle {
+    display: none !important;
+}
+.notification-dismiss {
+    z-index: 5;
+    padding: 0px;
+    float: right;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    font-size: 15px !important;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    font-weight: normal;
+}
+.notification-icon {
+    float: left;
+    margin: 5px;
+    margin-right: 10px;
+    position: relative;
+    line-height: 36px;
+    width: 36px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    user-select: none;
+}
+.notification-title {
+    pointer-events: none;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+@keyframes notification-show {
+    from { transform: translateX(100%) translateX(10px) }
+    to { transform: none }
+}
+@keyframes notification-hide {
+    from { transform: none }
+    to { transform: translateX(100%) translateX(10px) }
+}
+@keyframes notification-auto {
+    0% { transform: translateX(100%) translateX(10px) }
+    10% { transform: none }
+    90% { transform: none }
+    100% { transform: translateX(100%) translateX(10px) }
+}
