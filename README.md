@@ -1,6 +1,6 @@
 # LiteAdmin
-
-![alt text](https://img.badgesize.io/ayrtonvwf/lite-admin/master/dist/style.css?compression=gzip "Build CSS size")
+![alt text](https://img.badgesize.io/ayrtonvwf/lite-admin/master/dist/style.css?compression=gzip "CSS gzip size")
+![alt text](https://img.shields.io/github/license/mashape/apistatus.svg "License")
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fayrtonvwf%2Flite-admin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fayrtonvwf%2Flite-admin?ref=badge_shield)
 
 LiteAdmin is a feature-rich CSS-only admin panel template, built with HTML (pug) and CSS (scss). See it working on the [demo/docs](https://ayrtonvwf.github.io/lite-admin).
