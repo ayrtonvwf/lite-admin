@@ -8,4 +8,4 @@ The layout is heavily inspired by [AdminLTE](https://adminlte.io/themes/AdminLTE
 
 [![alt text](https://p14.zdusercontent.com/attachment/1015988/ZgNjNKvLMabisHBe8COM5iFGr?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..YYVideVktpgwAhBm98k_dw.b912LUJNlqMSv8tAS4HY1uyyFbbbzdPla8otz5G5zpmJBuM1sVoLThgPx5Dz9TKeROQAWP_VDe8dQC8J2-_SRc9KFkacQsHu_pNThrcm_h7nyNPIfTmuaOcDwaOi_f6ar564p-u8bT0JeXMQJ3V8v_iaUvTp7ZS48v39LNOKI4YPFT3r6KNedwm1oh_kxaZJYF86AO7A53rRZcpBYPLmoCk7i25WaLQHc5_SMhWf0G40rzYc96X5JyM-BkOsOpsGIzEiO-Rs8P0WhmZ25fKeAJYyHINEiv7uTLDv8aVwab8.Sqsv2ZjGuZdLg30MUKkFEQ "BrowserStack - Web and Mobile App testing platform")](https://browserstack.com)
 
-Thanks to BrowserStack, LiteAdmin is heavily tested on many modern and old browsers, to be able to work for git diffall of your users.
+Thanks to BrowserStack, LiteAdmin is heavily tested on many modern and old browsers, to be able to work for all of your users.
