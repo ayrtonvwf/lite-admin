@@ -14,6 +14,9 @@
     right: 10px;
     animation: notification-hide .5s;
     animation-fill-mode: both;
+    @media (max-width: 400px) {
+        width: calc(100vw - 30px);
+    }
     .notification-toggle:checked+& {
         animation: notification-show .5s;
         animation-fill-mode: both;
