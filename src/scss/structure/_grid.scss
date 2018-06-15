@@ -1,0 +1,26 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import '../../../node_modules/bootstrap/scss/mixins/grid';
+@import '../../../node_modules/bootstrap/scss/mixins/grid-framework';
+
+// wont import the next to avoid conflict with .container
+//@import "../../../node_modules/bootstrap/scss/grid";
+.row {
+  @include make-row();
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@include make-grid-columns();
+
+@import "../../../node_modules/bootstrap/scss/utilities/display";
+@import "../../../node_modules/bootstrap/scss/utilities/flex";

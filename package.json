@@ -15,6 +15,7 @@
     "ie >= 7"
   ],
   "devDependencies": {
+    "bootstrap": "^4.1.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",
