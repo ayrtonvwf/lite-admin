@@ -93,12 +93,12 @@
         &::after, &::before {
             transition: opacity .5s;
             opacity: 1;
-            pointer-events: initial;
+            pointer-events: auto;
         }
         &+.header-pane-popup {
             transition: opacity .5s;
-            user-select: initial;
-            pointer-events: initial;
+            user-select: auto;
+            pointer-events: auto;
             opacity: 1;
         }
     }

@@ -1,5 +1,4 @@
 .modal {
-    contain: strict;
     pointer-events: none;
     opacity: 0;
     user-select: none;
@@ -16,10 +15,9 @@
         left: 5%;
     }
     &:target {
-        contain: layout paint;
         opacity: 1;
-        pointer-events: initial;
-        user-select: initial;
+        pointer-events: auto;
+        user-select: auto;
         transition: opacity .3s;
     }
     &.modal-lg {
@@ -116,7 +114,7 @@
     left: 0px;
     z-index: 9;
     .modal:target+& {
-        pointer-events: initial;
+        pointer-events: auto;
         transition: opacity .3s;
         opacity: 1;
     }
