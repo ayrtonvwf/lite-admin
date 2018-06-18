@@ -1,6 +1,7 @@
 .tooltip {
     position: relative;
     outline: none;
+    overflow: visible; // IE is crazy
     &::before, &::after {
         display: block;
         position: absolute;
@@ -33,7 +34,7 @@
         text-align: center;
         font-size: 13px;
         user-select: none;
-        text-shadow: initial;
+        text-shadow: auto;
     }
     &[data-tooltip]::after {
         content: attr(data-tooltip);
@@ -48,7 +49,7 @@
 .tooltip-left, .tooltip-right {
     &::before, &::after {
         top: 50%;
-        bottom: initial;
+        bottom: auto;
         transform: translateY(-50%);
     }
 
@@ -62,7 +63,7 @@
     }
     &.tooltip-end {
         &::before, &::after {
-            top: initial;
+            top: auto;
         }
         &::before {
             bottom: 5px;
@@ -89,7 +90,7 @@
 }
 .tooltip-end, .tooltip-left {
     &::before, &::after {
-        left: initial;
+        left: auto;
     }
 }
 .tooltip-end {
@@ -126,7 +127,7 @@
 }
 .tooltip-bottom {
     &::before, &::after {
-        bottom: initial;
+        bottom: auto;
     }
     &::before {
         top: calc(100% - 2px);
