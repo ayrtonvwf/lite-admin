@@ -32,7 +32,7 @@
     .combo-right>& {
         right: 0px;
         &::before, &::after {
-            left: initial;
+            left: auto;
             right: 10px;
         }
     }
@@ -40,7 +40,7 @@
         bottom: calc(100% + 1px);
         &::before, &::after {
             transform: rotateX(180deg);
-            bottom: initial;
+            bottom: auto;
         }
         &::before {
             top: 100%;
@@ -89,16 +89,16 @@
     display: inline-block;
     &:hover > .combo-menu {
         opacity: 1;
-        user-select: initial;
-        pointer-events: initial;
+        user-select: auto;
+        pointer-events: auto;
     }
 }
 .combo-trigger {
     &:focus, &:hover, &:active {
         & + .combo-menu {
             opacity: 1;
-            user-select: initial;
-            pointer-events: initial;
+            user-select: auto;
+            pointer-events: auto;
         }
     }
 }
