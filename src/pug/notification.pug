@@ -6,48 +6,113 @@ block content
         | Notification
     article.box
         .box-body
-            h2 Basic
-            p To create a notification, you need this basic code:
+            h2 Basics
+            p To create nice notifications, you need:
+            ul
+                li One toggle to make all notifications start hidden, without animation;
+                li One toggle to hide any notification with an animation;
+                li One toggle to control each notification.
+            p Heres the basic code:
             pre
                 code.
                     #{'<!-- This input makes all notifications start hidden -->'}
                     #{'<input type="radio" name="notification-toggle" class="notification-toggle notification-start-hidden" checked>'}
 
-                    #{'<!-- This input hides all notifications when the users clicks on dismiss -->'}
+                    #{'<!-- This input hides any notification when the users clicks on dismiss -->'}
                     #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="no-notification">'}
 
                     #{'<!-- This input controls the status of the next notification -->'}
-                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="my-notification-toggle">'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="first-notification-toggle">'}
                     #{'<div class="notification">'}
                     &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss">Got it!</label>'}
                     &nbsp;&nbsp;This is my very first notification!
+                    #{'</div>'}
 
                     #{'<!-- This input controls the status of the next notification -->'}
-                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="my-notification-toggle-2">'}
-                    #{'<div class="notification notification-success">'}
-                    &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss material-icons">close</label>'}
-                    &nbsp;&nbsp;#{'<div class="notification-icon material-icons">check</label>'}
-                    &nbsp;&nbsp;#{'<div class="notification-title">This is my title!</label>'}
+                    #{'<input type="radio" name="notification-toggle" class="notification-toggle" id="second-notification-toggle">'}
+                    #{'<div class="notification">'}
+                    &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss">Got it!</label>'}
                     &nbsp;&nbsp;This is my second notification!
                     #{'</div>'}
 
                     #{'<!-- Lets create the notification triggers -->'}
-                    #{'<label class="btn-primary" for="my-notification-toggle">First notification</label>'}
-                    #{'<label class="btn-success" for="my-notification-toggle-2">Second notification</label>'}
+                    #{'<label class="btn-primary" for="first-notification-toggle">First notification</label>'}
+                    #{'<label class="btn-success" for="second-notification-toggle">Second notification</label>'}
+            br
+            p Try it:
             br
             .text-center
-                label.btn-primary(for='basic-notification') First notification
-                label.btn-success(for='complete-notification') Second notification
+                label.btn-primary(for='first-notification-toggle') First notification
+                label.btn-success(for='second-notification-toggle') Second notification
             br
+            hr
+            h2 Color
+            p You can choose the color by adding the class #[code notification-success], #[code notification-info], #[code notification-primary], #[code notification-warning], #[code notification-danger] to the notification div.
+            p Try it:
+            br
+            .text-center
+                label.btn-success(for='success-notification-toggle') Success notification
+                label.btn-info(for='info-notification-toggle') Info notification
+                label.btn-primary(for='primary-notification-toggle') Primary notification
+                label.btn-warning(for='warning-notification-toggle') Warning notification
+                label.btn-danger(for='danger-notification-toggle') Danger notification
+            br
+            hr
+            h2 Title and icons
+            p Add a title and icons to make it even cooler!
+            pre
+                code.
+                    #{'<div class="notification notification-success">'}
+                    &nbsp;&nbsp;#{'<label for="no-notification" class="notification-dismiss material-icons">close</label>'}
+                    &nbsp;&nbsp;#{'<div class="notification-icon material-icons">check</label>'}
+                    &nbsp;&nbsp;#{'<div class="notification-title">A nice title</label>'}
+                    &nbsp;&nbsp;I am a full notification! I have a title, a message icon and a close icon!
+                    #{'</div>'}
+            br
+            .text-center
+                label.btn-primary(for='full-notification-toggle') Show me this notification!
+            br
+
     input.notification-toggle.notification-start-hidden(type='radio' name='notification-toggle' checked)
     input.notification-toggle#no-notification(type='radio' name='notification-toggle')
-    input.notification-toggle#basic-notification(type='radio' name='notification-toggle')
+    
+    input.notification-toggle#first-notification-toggle(type='radio' name='notification-toggle')
     .notification
         label.notification-dismiss(for='no-notification') Got it!
         | This is my very first notification!
-    input.notification-toggle#complete-notification(type='radio' name='notification-toggle')
+    input.notification-toggle#second-notification-toggle(type='radio' name='notification-toggle')
+    .notification
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is my second notification!
+    
+    input.notification-toggle#success-notification-toggle(type='radio' name='notification-toggle')
+    .notification.notification-success
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is a #[b success] notification!
+    
+    input.notification-toggle#info-notification-toggle(type='radio' name='notification-toggle')
+    .notification.notification-info
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is a #[b info] notification!
+    
+    input.notification-toggle#primary-notification-toggle(type='radio' name='notification-toggle')
+    .notification.notification-primary
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is a #[b primary] notification!
+    
+    input.notification-toggle#warning-notification-toggle(type='radio' name='notification-toggle')
+    .notification.notification-warning
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is a #[b warning] notification!
+    
+    input.notification-toggle#danger-notification-toggle(type='radio' name='notification-toggle')
+    .notification.notification-danger
+        label.notification-dismiss(for='no-notification') Got it!
+        | This is a #[b danger] notification!
+    
+    input.notification-toggle#full-notification-toggle(type='radio' name='notification-toggle')
     .notification.notification-success
         label.notification-dismiss.material-icons(for='no-notification') close
         .notification-icon.material-icons check
-        .notification-title This is my title!
-        | This is my second notification!
+        .notification-title A nice title
+        | I am a full notification! I have a title, a message icon and a close icon!

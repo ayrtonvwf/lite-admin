@@ -98,49 +98,102 @@
         <h1 class="content-title"><i class="material-icons">error_outline</i>Notification</h1>
         <article class="box">
           <div class="box-body">
-            <h2>Basic</h2>
-            <p>To create a notification, you need this basic code:</p>
+            <h2>Basics</h2>
+            <p>To create nice notifications, you need:</p>
+            <ul>
+              <li>One toggle to make all notifications start hidden, without animation;</li>
+              <li>One toggle to hide any notification with an animation;</li>
+              <li>One toggle to control each notification.</li>
+            </ul>
+            <p>Heres the basic code:</p>
             <pre><code>&lt;!-- This input makes all notifications start hidden --&gt;
 &lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle notification-start-hidden&quot; checked&gt;
 
-&lt;!-- This input hides all notifications when the users clicks on dismiss --&gt;
+&lt;!-- This input hides any notification when the users clicks on dismiss --&gt;
 &lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle&quot; id=&quot;no-notification&quot;&gt;
 
 &lt;!-- This input controls the status of the next notification --&gt;
-&lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle&quot; id=&quot;my-notification-toggle&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle&quot; id=&quot;first-notification-toggle&quot;&gt;
 &lt;div class=&quot;notification&quot;&gt;
 &nbsp;&nbsp;&lt;label for=&quot;no-notification&quot; class=&quot;notification-dismiss&quot;&gt;Got it!&lt;/label&gt;
 &nbsp;&nbsp;This is my very first notification!
+&lt;/div&gt;
 
 &lt;!-- This input controls the status of the next notification --&gt;
-&lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle&quot; id=&quot;my-notification-toggle-2&quot;&gt;
-&lt;div class=&quot;notification notification-success&quot;&gt;
-&nbsp;&nbsp;&lt;label for=&quot;no-notification&quot; class=&quot;notification-dismiss material-icons&quot;&gt;close&lt;/label&gt;
-&nbsp;&nbsp;&lt;div class=&quot;notification-icon material-icons&quot;&gt;check&lt;/label&gt;
-&nbsp;&nbsp;&lt;div class=&quot;notification-title&quot;&gt;This is my title!&lt;/label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;notification-toggle&quot; class=&quot;notification-toggle&quot; id=&quot;second-notification-toggle&quot;&gt;
+&lt;div class=&quot;notification&quot;&gt;
+&nbsp;&nbsp;&lt;label for=&quot;no-notification&quot; class=&quot;notification-dismiss&quot;&gt;Got it!&lt;/label&gt;
 &nbsp;&nbsp;This is my second notification!
 &lt;/div&gt;
 
 &lt;!-- Lets create the notification triggers --&gt;
-&lt;label class=&quot;btn-primary&quot; for=&quot;my-notification-toggle&quot;&gt;First notification&lt;/label&gt;
-&lt;label class=&quot;btn-success&quot; for=&quot;my-notification-toggle-2&quot;&gt;Second notification&lt;/label&gt;</code></pre><br>
+&lt;label class=&quot;btn-primary&quot; for=&quot;first-notification-toggle&quot;&gt;First notification&lt;/label&gt;
+&lt;label class=&quot;btn-success&quot; for=&quot;second-notification-toggle&quot;&gt;Second notification&lt;/label&gt;</code></pre><br>
+            <p>Try it:</p><br>
             <div class="text-center">
-              <label class="btn-primary" for="basic-notification">First notification</label>
-              <label class="btn-success" for="complete-notification">Second notification</label>
+              <label class="btn-primary" for="first-notification-toggle">First notification</label>
+              <label class="btn-success" for="second-notification-toggle">Second notification</label>
+            </div><br>
+            <hr>
+            <h2>Color</h2>
+            <p>You can choose the color by adding the class <code>notification-success</code>, <code>notification-info</code>, <code>notification-primary</code>, <code>notification-warning</code>, <code>notification-danger</code> to the notification div.</p>
+            <p>Try it:</p><br>
+            <div class="text-center">
+              <label class="btn-success" for="success-notification-toggle">Success notification</label>
+              <label class="btn-info" for="info-notification-toggle">Info notification</label>
+              <label class="btn-primary" for="primary-notification-toggle">Primary notification</label>
+              <label class="btn-warning" for="warning-notification-toggle">Warning notification</label>
+              <label class="btn-danger" for="danger-notification-toggle">Danger notification</label>
+            </div><br>
+            <hr>
+            <h2>Title and icons</h2>
+            <p>Add a title and icons to make it even cooler!</p>
+            <pre><code>&lt;div class=&quot;notification notification-success&quot;&gt;
+&nbsp;&nbsp;&lt;label for=&quot;no-notification&quot; class=&quot;notification-dismiss material-icons&quot;&gt;close&lt;/label&gt;
+&nbsp;&nbsp;&lt;div class=&quot;notification-icon material-icons&quot;&gt;check&lt;/label&gt;
+&nbsp;&nbsp;&lt;div class=&quot;notification-title&quot;&gt;A nice title&lt;/label&gt;
+&nbsp;&nbsp;I am a full notification! I have a title, a message icon and a close icon!
+&lt;/div&gt;</code></pre><br>
+            <div class="text-center">
+              <label class="btn-primary" for="full-notification-toggle">Show me this notification!</label>
             </div><br>
           </div>
         </article>
         <input class="notification-toggle notification-start-hidden" type="radio" name="notification-toggle" checked>
         <input class="notification-toggle" id="no-notification" type="radio" name="notification-toggle">
-        <input class="notification-toggle" id="basic-notification" type="radio" name="notification-toggle">
+        <input class="notification-toggle" id="first-notification-toggle" type="radio" name="notification-toggle">
         <div class="notification">
           <label class="notification-dismiss" for="no-notification">Got it!</label>This is my very first notification!
         </div>
-        <input class="notification-toggle" id="complete-notification" type="radio" name="notification-toggle">
+        <input class="notification-toggle" id="second-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is my second notification!
+        </div>
+        <input class="notification-toggle" id="success-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification notification-success">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is a <b>success</b> notification!
+        </div>
+        <input class="notification-toggle" id="info-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification notification-info">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is a <b>info</b> notification!
+        </div>
+        <input class="notification-toggle" id="primary-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification notification-primary">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is a <b>primary</b> notification!
+        </div>
+        <input class="notification-toggle" id="warning-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification notification-warning">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is a <b>warning</b> notification!
+        </div>
+        <input class="notification-toggle" id="danger-notification-toggle" type="radio" name="notification-toggle">
+        <div class="notification notification-danger">
+          <label class="notification-dismiss" for="no-notification">Got it!</label>This is a <b>danger</b> notification!
+        </div>
+        <input class="notification-toggle" id="full-notification-toggle" type="radio" name="notification-toggle">
         <div class="notification notification-success">
           <label class="notification-dismiss material-icons" for="no-notification">close</label>
           <div class="notification-icon material-icons">check</div>
-          <div class="notification-title">This is my title!</div>This is my second notification!
+          <div class="notification-title">A nice title</div>I am a full notification! I have a title, a message icon and a close icon!
         </div>
       </main>
     </div>
