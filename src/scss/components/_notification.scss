@@ -42,10 +42,6 @@
 .notification-danger {
     background-color: $notification-danger-color;
 }
-.notification-auto {
-    animation: notification-auto 5s;
-    animation-fill-mode: both;
-}
 .notification-toggle {
     display: none !important;
 }
@@ -84,10 +80,4 @@
 @keyframes notification-hide {
     from { transform: none }
     to { transform: translateX(100%) translateX(10px) }
-}
-@keyframes notification-auto {
-    0% { transform: translateX(100%) translateX(10px) }
-    10% { transform: none }
-    90% { transform: none }
-    100% { transform: translateX(100%) translateX(10px) }
 }
