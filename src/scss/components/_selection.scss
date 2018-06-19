@@ -1,0 +1,30 @@
+.selection-success, .selection-info, .selection-primary, .selection-warning, .selection-danger {
+    &::selection, & *::selection {
+        color: white;
+    }
+}
+.selection-success {
+    &::selection, & *::selection {
+        background-color: $selection-success-color;
+    }
+}
+.selection-info {
+    &::selection, & *::selection {
+        background-color: $selection-info-color;
+    }
+}
+.selection-primary {
+    &::selection, & *::selection {
+        background-color: $selection-primary-color;
+    }
+}
+.selection-warning {
+    &::selection, & *::selection {
+        background-color: $selection-warning-color;
+    }
+}
+.selection-danger {
+    &::selection, & *::selection {
+        background-color: $selection-danger-color;
+    }
+}
