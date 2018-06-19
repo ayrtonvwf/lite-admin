@@ -28,3 +28,7 @@
         background-color: $selection-danger-color;
     }
 }
+
+.selection-none {
+    user-select: none;
+}
