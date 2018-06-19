@@ -46,3 +46,7 @@ hr {
     background: linear-gradient(to right, transparent, lightgray 15%, lightgray 85%, transparent);
     border: none;
 }
+
+img {
+    user-select: none;
+}
