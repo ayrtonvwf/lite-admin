@@ -4,8 +4,10 @@ table.table, .table>table {
     border-collapse: collapse;
     margin: 10px 0px;
 
-    th, td {
+    th {
         text-align: left;
+    }
+    th, td {
         padding: 10px 15px;
     }
     tbody>tr {
