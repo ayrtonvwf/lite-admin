@@ -1,24 +1,35 @@
 $progress-inner-shadow: 2px 2px 3px rgba(0,0,0,.5) inset;
 $progress-border-radius: 3px;
 $progress-height: 20px;
+$progress-background-color: whitesmoke;
+$progress-indeterminate-speed: .5s;
+$progress-margin-bottom: 10px;
 
 @mixin progress-style() {
     position: relative;
-    background-color: whitesmoke;
+    display: block;
+    width: 100%;
     height: $progress-height;
+    border: none;
+    background-color: $progress-background-color;
     border-radius: $progress-border-radius;
     box-shadow: $progress-inner-shadow;
-    background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.1) 66%, transparent 66%);
+
+    /*
+    the background-image appears only in
+    the indeterminate state, being overridden
+    when there's a value in the progress
+    */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSdsaWdodGdyYXknIGhlaWdodD0nMjAnIHdpZHRoPSczNScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMCAyMCBMMTcgMCBIMzUgTDE3IDIwIFonLz48L3N2Zz4="); // for browsers that does not support linear-gradient
+    background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%); // for browsers that does not support svg backgrounds
     background-size: 35px $progress-height;
-    animation-duration: .5s;
     animation-name: animate-indeterminate;
-    animation-iteration-count: infinite;
+    animation-duration: $progress-indeterminate-speed;
     animation-timing-function: linear;
-    border: none;
-    width: 100%;
+    animation-iteration-count: infinite;
 }
 @mixin progress-color($color) {
-    color: $color;
+    color: $color; // IE progress value color
     &::-webkit-progress-value {
         background-color: $color;
     }
@@ -28,21 +39,42 @@ $progress-height: 20px;
 }
 progress {
     @include progress-style();
-    margin-bottom: 10px;
+    margin-bottom: $progress-margin-bottom;
+
+    /*
+    for old browsers that does not
+    support the progress element at all
+    */
+    &:before {
+        content: ''; // value / max will appear if a value is set
+        line-height: $progress-height;
+        color: black;
+        text-align: center;
+        @include progress-style();
+    }
+    &::-webkit-progress-bar, &::before {
+        /*
+        Webkit supports ::before on the
+        progress, we need to remove it
+        */
+        display: none;
+    }
+
     &::-ms-fill {
-        animation-name: none;
+        animation-name: none; // remove default dot animation on IE
     }
     &::-webkit-progress-bar, &::after {
-        // this will create a animated overlay on webkit
-        // styles applied to ::-webkit-progress-bar will be reset in the next selectors
+        /*
+        this creates an animated overlay on webkit
+        with progress:after styles here applied to
+        ::-webkit-progress-bar will be reset later
+        */
+        @include progress-style();
         content: '';
-        @include progress-style;
-        background-color: transparent;
-        box-shadow: none;
         position: absolute;
         top: 0px;
-        width: 100%;
-        height: 100%;
+        background-color: transparent;
+        box-shadow: none;
     }
     &::-webkit-progress-bar {
         @include progress-style();
@@ -53,6 +85,10 @@ progress {
     }
     &[value] {
         background-image: none;
+        &:before {
+            content: attr(value)' / 'attr(max);
+        }
+        @include progress-color($progress-default-color);
         &::-ms-fill {
             box-shadow: $progress-inner-shadow;
             border: none;
@@ -62,14 +98,18 @@ progress {
             background-image: none;
         }
         &::-webkit-progress-value {
+            /*
+            the inner shadow applied to the
+            progress element and the ::-webkit-progress-bar
+            is bellow the ::-webkit-progress-value
+            (in other browsers it's above, so no need to set it again)
+            */
             box-shadow: $progress-inner-shadow;
             border-radius: $progress-border-radius;
         }
         &::-moz-progress-bar {
             background-image: none;
         }
-
-        @include progress-color($progress-default-color);
         &.progress-success {
             @include progress-color($progress-success-color);
         }
