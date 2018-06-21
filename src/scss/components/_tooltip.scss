@@ -4,6 +4,7 @@
     overflow: visible; // IE is crazy
     &::before, &::after {
         display: block;
+        white-space: normal;
         position: absolute;
         opacity: 0;
         transition-property: opacity;
