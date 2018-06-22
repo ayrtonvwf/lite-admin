@@ -23,6 +23,10 @@ label {
     display: inline-block;
     font-weight: bold;
     color: $black;
+    .material-icons {
+        font-size: 18px;
+        margin-top: -2px;
+    }
 }
 
 input:not([type='checkbox']):not([type='radio']), select, textarea {
