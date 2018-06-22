@@ -9,7 +9,7 @@ form {
         order: -1;
     }
     &>input, &>select, &>textarea {
-        form.mark-required &:required+label::after {
+        .mark-required &:required+label::after {
             content: " *";
             color: red;
             font-size: .9em;
